@@ -1,5 +1,7 @@
 # Ajustes de revisão antes de main — 31/10/2026
 
+**English:** [AJUSTES-PRE-MAIN.en.md](AJUSTES-PRE-MAIN.en.md)
+
 ## Pontes
 
 Por correção explícita do operador, revertida a preferência M5 por menos condições. `src/motor/ponte.ts` retorna ao desenho de 63d31ff: candidatas com antecedentes mais restritivos primeiro e seleção de até quatro com diversidade. Para o mesmo consequente, A∧B→C compromete menos que A→C. Isso não estabelece uma ordenação semântica total entre antecedentes incomparáveis.

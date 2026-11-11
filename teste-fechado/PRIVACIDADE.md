@@ -1,5 +1,7 @@
 # Aviso de privacidade do teste fechado do Cosmos
 
+**English:** [PRIVACIDADE.en.md](PRIVACIDADE.en.md)
+
 > **RASCUNHO para revisão.** Preparado para orientar o teste, à luz da LGPD (Lei 13.709/2018); não é parecer jurídico.
 > Precisa ser revisado por um advogado e completado com os dados do controlador antes de usar com pessoas de fora.
 

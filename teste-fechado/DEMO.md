@@ -1,5 +1,7 @@
 # Demo pública do Cosmos — 31/10/2026
 
+**English:** [DEMO.en.md](DEMO.en.md)
+
 Três execuções reais do núcleo local, sem conta privada. Modelo qwen3:4b `359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7`, Ollama 0.40.12, cego-v2, temperatura0, semente0, contexto4096, vocabulário proposto pelo modelo. GPU integrada, não usada pelo modelo.
 
 Primeiro foram feitas as três traduções reais. Depois o modelo foi descarregado, e `executar`, `lerProposta`, `conferirProposta` (Z3), `cenarioDoSalto` e `resumoEmTexto` processaram exatamente as traduções registradas, sem outra inferência. Esse arranjo em duas etapas evita coexistência de modelo e Z3 nesta máquina. Não é screenshot da Conversa autenticada, nem o teste de rede M12; a ponte de autenticação não foi contornada. Nenhuma resposta abaixo foi substituída por expectativa do teste.

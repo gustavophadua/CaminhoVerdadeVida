@@ -1,5 +1,7 @@
 # M12 — confirmação manual do operador, 31/10/2026
 
+**English:** [M12-CONFIRMACAO-MANUAL.en.md](M12-CONFIRMACAO-MANUAL.en.md)
+
 ## Fato, fonte e limite
 
 | Fato | Fonte | Limite |

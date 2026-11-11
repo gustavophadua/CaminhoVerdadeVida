@@ -1,5 +1,7 @@
 # M12 — conexão da página e do processo Node, separadas
 
+**English:** [M12-REDE.en.md](M12-REDE.en.md)
+
 A redefinição do operador em 31/10/2026 substitui o critério anterior que incluía todo o navegador. **A aceitação exige as três partes abaixo.** Não há automação de navegador ou controle de janela neste procedimento.
 
 ## 1. Página: trava por código

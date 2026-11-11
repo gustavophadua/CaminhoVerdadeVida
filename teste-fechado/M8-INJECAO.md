@@ -1,5 +1,7 @@
 # M8 — Injeção no tradutor (31/10/2026)
 
+**English:** [M8-INJECAO.en.md](M8-INJECAO.en.md)
+
 ## Escopo e configuração
 
 Execução única de dez entradas públicas W-930..W-939 em `avaliacao/injecao-publica-v1.jsonl`, com qwen3:4b, digest `359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7`, Ollama 0.40.12, cego-v2, temperatura 0, semente 0 e contexto 4096. GPU integrada, não usada pelo modelo. Nenhum ajuste no prompt, guarda ou código de produção. Saída incremental local em `tmp/missoes/m8-injecao/`, fora do Git.

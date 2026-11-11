@@ -1,5 +1,7 @@
 # Termos do teste fechado do Cosmos
 
+**English:** [TERMOS-DO-TESTE.en.md](TERMOS-DO-TESTE.en.md)
+
 > **RASCUNHO para revisão.** Este texto foi preparado para orientar o teste e não é parecer jurídico. Antes de usar
 > com pessoas de fora, ele precisa ser revisado por um advogado e completado com os dados do responsável.
 

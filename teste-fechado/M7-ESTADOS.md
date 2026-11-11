@@ -1,5 +1,7 @@
 # M7 - estados da Conversa
 
+**English:** [M7-ESTADOS.en.md](M7-ESTADOS.en.md)
+
 Conferência de 31/10/2026. As capturas foram feitas com fixtures públicas, transporte/solver falsos e componentes reais, em servidor separado http://127.0.0.1:5180 com HMR desativado. Não houve modelo real, chave, conta, senha ou acesso ao cofre. A fixture não comprova que um argumento recebeu aquela classe no solver; comprova a apresentação do estado fornecido. Não foi reproduzida navegação de uma conta autenticada. O servidor e a aba temporários foram encerrados após a conferência.
 
 | Caso | Origem do texto | Captura |

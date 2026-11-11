@@ -1,5 +1,7 @@
 # M10 — Fidelidade das explicações M1 (31/10/2026)
 
+**English:** [M10-FIDELIDADE.en.md](M10-FIDELIDADE.en.md)
+
 ## Correção de atribuição
 
 O código atual **não extrai os cenários da Conversa do modelo do Z3**. O Z3 decide a classe; `ollama-node.ts` chama `cenarioDoSalto`, em `src/motor/revisor.ts:123`, que usa o motor finito do Caderno, sem Z3, até quatro objetos/200.000 nós/um mundo/prazo de 5s. Por isso esta auditoria identifica a origem corretamente em vez de atribuir ao Z3 um modelo que ele não forneceu.

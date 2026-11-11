@@ -1,5 +1,7 @@
 # M12 redefinida — resultado em 31/10/2026
 
+**English:** [M12-RESULTADOS.en.md](M12-RESULTADOS.en.md)
+
 **Três partes da M12 registradas no escopo do ensaio, com ressalvas. Confirmação manual recebida do Gustavo; ver [registro manual](M12-CONFIRMACAO-MANUAL.md).** Sem automação de navegador, acesso pelo executor à conta real/privado/cofre, Groq ou alteração de autenticação. A etapa manual foi feita pelo próprio operador, com login informado por ele e sem compartilhar credenciais. A definição anterior que contabilizava todo o Chrome foi substituída pelo operador. O monitor antigo de controle de navegador foi excluído.
 
 | Parte | Fato | Fonte | Limite |

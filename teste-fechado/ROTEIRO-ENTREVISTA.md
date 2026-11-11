@@ -1,5 +1,7 @@
 # Roteiro de entrevista
 
+**English:** [ROTEIRO-ENTREVISTA.en.md](ROTEIRO-ENTREVISTA.en.md)
+
 Proposta de 30/10/2026, adaptada da Entrega C, seção 24. Público ainda não escolhido; duas versões. Não houve entrevista ou contato. Pedir autorização, usar exemplos públicos/fictícios e evitar dados de terceiros. Não perguntar por senhas, chaves ou conteúdo privado. Preço será uma proposta concreta posterior, não promessa no recrutamento.
 
 ## Pessoas

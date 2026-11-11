@@ -1,5 +1,7 @@
 # M6 - medição da guarda de repetição
 
+**English:** [M6-GUARDA.en.md](M6-GUARDA.en.md)
+
 Medição única em 31/10/2026: qwen3:4b 359d7dd4, cego-v2, temperatura/semente 0, contexto 4096. Não houve mudança da guarda nem do prompt.
 
 | Grupo | Itens | Conclusão vazia | Falha/resultado não classificável como vazio | Não vazia |

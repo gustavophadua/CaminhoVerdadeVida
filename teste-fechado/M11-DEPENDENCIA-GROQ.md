@@ -1,5 +1,7 @@
 # M11 — Cosmos + 120b na metade de teste: dependência externa
 
+**English:** [M11-DEPENDENCIA-GROQ.en.md](M11-DEPENDENCIA-GROQ.en.md)
+
 Em 31/10/2026, a verificação booleana de presença de `GROQ_API_KEY` no ambiente deste processo retornou **falta**. Nenhum valor de credencial foi lido, exibido ou gravado; não se procurou chave em arquivo, perfil, cofre ou outra sessão.
 
 **Medição não executada.** Não há novo número Cosmos+120b/100, não houve chamada pública e não se extrapolou a antiga amostra parcial. A falta da variável não é falha do Groq nem resultado do modelo.

@@ -1,5 +1,7 @@
 # Protocolo de compreensão do resultado
 
+**English:** [PROTOCOLO-COMPREENSAO.en.md](PROTOCOLO-COMPREENSAO.en.md)
+
 Proposta de 30/10/2026. Sessão de 20 minutos com adulto e exemplos fictícios autorizados. Não executada. Não é avaliação de inteligência ou de confiabilidade da pessoa.
 
 1. Minutos 0-2: explicar finalidade e autorização, permitir desistência; registrar apenas identificador de pesquisa. Gravação exige consentimento separado.

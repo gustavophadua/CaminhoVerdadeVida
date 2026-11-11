@@ -1,5 +1,7 @@
 # Amostra do treino: 30 exemplos para ler
 
+**English:** [amostra-para-ler.en.md](amostra-para-ler.en.md)
+
 Para cada exemplo: a frase como o modelo vai receber, o que a resposta certa diz (lida de volta pelo Cosmos, sem modelo) e a classe que o Z3 deu.
 O que conferir: se o "a resposta diz" bate com a frase. Anote o número de qualquer um que pareça errado ou esquisito.
 

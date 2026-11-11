@@ -1,5 +1,7 @@
 # Protocolo de conjunto externo
 
+**English:** [PROTOCOLO-CONJUNTO-EXTERNO.en.md](PROTOCOLO-CONJUNTO-EXTERNO.en.md)
+
 Proposta de 30/10/2026. Não executado. A coleta e o uso com participantes dependem do responsável e da revisão de privacidade.
 
 ## Coleta

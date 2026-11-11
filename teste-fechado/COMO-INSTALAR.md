@@ -1,5 +1,7 @@
 # Cosmos: como instalar e usar (teste fechado)
 
+**English:** [COMO-INSTALAR.en.md](COMO-INSTALAR.en.md)
+
 **O que é.** O Cosmos lê um raciocínio escrito em português, desenha o argumento (os fatos, a ligação que falta e a
 conclusão) e diz, com prova de computador, se a conclusão decorre do que foi dito. Quem decide é um verificador lógico
 (o Z3), não a IA. Esta é uma versão de teste: pode errar, e o seu relato de erro é o que mais ajuda.

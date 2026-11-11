@@ -1,5 +1,7 @@
 # M9 — Variação e tempo (31/10/2026)
 
+**English:** [M9-VARIACAO-TEMPO.en.md](M9-VARIACAO-TEMPO.en.md)
+
 ## Protocolo e resultado
 
 Dez primeiros itens exclusivamente de `tmp/frases-gpt/revisao.jsonl`: G-001, G-002, G-006, G-008, G-013, G-015, G-016, G-017, G-018, G-020. Cinco execuções por item, **50/50 pares únicos**, sem usar a metade de teste. qwen3:4b `359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7`, Ollama 0.40.12, cego-v2, temperatura 0, semente 0, contexto4096 e vocabulário fixado pelo conjunto, como no piloto. GPU integrada, não usada pelo modelo.
