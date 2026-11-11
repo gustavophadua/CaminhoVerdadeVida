@@ -224,7 +224,7 @@ function avisosDeLicenca(arquivo: boolean): Plugin {
     },
     generateBundle() {
       if (arquivo) return
-      const nomes = ['LICENSE', 'LICENCAS.md', 'THIRD_PARTY_NOTICES.md', ...readdirSync('LICENSES').map((n) => `LICENSES/${n}`)]
+      const nomes = ['LICENSE', 'LICENCAS.md', 'LICENCAS.en.md', 'THIRD_PARTY_NOTICES.md', 'THIRD_PARTY_NOTICES.en.md', ...readdirSync('LICENSES').map((n) => `LICENSES/${n}`)]
       for (const fileName of nomes) this.emitFile({ type: 'asset', fileName, source: readFileSync(fileName) })
     },
   }

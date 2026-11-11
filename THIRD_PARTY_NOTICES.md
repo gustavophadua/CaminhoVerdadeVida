@@ -1,5 +1,7 @@
 # Avisos de terceiros
 
+**English:** [THIRD_PARTY_NOTICES.en.md](THIRD_PARTY_NOTICES.en.md)
+
 O Caderno Lógico inclui, ou leva no app publicado, estes trabalhos de
 terceiros, cada um com a sua licença. Os textos completos estão em
 [LICENSES/](LICENSES/).

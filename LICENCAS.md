@@ -1,5 +1,7 @@
 # Licenças do Caderno Lógico
 
+**English:** [LICENCAS.en.md](LICENCAS.en.md)
+
 Caderno Lógico — Copyright © 2026 Gustavo Phadua Silva da Costa e os autores do
 Caderno Lógico.
 
@@ -18,6 +20,8 @@ histórico do Git diz quem fez o quê.
 | `autor/principia/` e os textos e imagens do autor em `autor/projeto-tubo/` (os `.md`, `Selo.pdf`, as pranchas e as imagens), menos os elementos de terceiros apontados em `autor/README.md` | CC BY 4.0, por decisão do autor em 11/11/2026 | [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt) |
 | O código em `autor/projeto-tubo/` (`.js`, `.py`, `.html` e os testes em `cosmos/`) | AGPL-3.0-or-later (é código) | [LICENSE](LICENSE) |
 | Outros arquivos e dados de terceiros | A licença de cada um | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
+
+As traduções para o inglês (os arquivos `.en.md`) seguem a licença do texto que traduzem.
 
 ## O código
 
@@ -65,8 +69,10 @@ autores do Caderno Lógico, CC BY 4.0, https://github.com/onethink-stack/cosmos"
 
 O arquivo `src/dados/cifrado/principia.json` guarda, cifrado, o Principia do
 autor. Ele não está sob nenhuma das licenças deste repositório: todos os
-direitos são reservados ao autor. O texto em claro não está no repositório, e
-copiar o arquivo cifrado não dá direito nenhum sobre o conteúdo.
+direitos são reservados ao autor. Copiar o arquivo cifrado não dá direito
+nenhum sobre o conteúdo. Desde 11/11/2026 o autor também publicou o Principia em
+claro, sem o nome pessoal, em `autor/principia/`, sob CC BY 4.0 (linha da tabela
+acima).
 
 ## Contribuições
 

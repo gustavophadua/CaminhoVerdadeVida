@@ -1,5 +1,7 @@
 # Como contribuir com o Caderno Lógico
 
+**English:** [CONTRIBUTING.en.md](CONTRIBUTING.en.md)
+
 Este guia diz como propor uma mudança e o que cada mudança precisa para entrar.
 
 ## O caminho
@@ -33,8 +35,7 @@ Este guia diz como propor uma mudança e o que cada mudança precisa para entrar
 
 ## O que nunca sobe
 
-- Conteúdo privado: a pasta `privado/` fica fora do Git, e o Principia só entra
-  cifrado.
+- Conteúdo privado: a pasta `privado/` fica fora do Git.
 - Chaves, senhas, tokens ou qualquer outro segredo.
 - Texto, dados ou código de terceiros sem a licença e o crédito; veja
   [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

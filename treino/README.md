@@ -1,5 +1,7 @@
 # Treino da I-AI (fases E e F do plano de fechamento)
 
+**English:** [README.en.md](README.en.md)
+
 O treino só começa depois da linha de base (fase C) e das melhorias sem treino (fase D), e só se a meta não tiver
 sido batida. Tudo aqui é público e reproduzível; o conjunto fechado nunca entra.
 

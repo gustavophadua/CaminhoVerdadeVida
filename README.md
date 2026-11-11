@@ -2,6 +2,8 @@
 
 [![Verificador público](https://github.com/gustavophadua/Cosmos/actions/workflows/verificador-publico.yml/badge.svg)](https://github.com/gustavophadua/Cosmos/actions/workflows/verificador-publico.yml)
 
+**English:** [README.en.md](README.en.md)
+
 Aplicacao local para consulta, registro e verificacao de conhecimento. Interfaces `#/i-ai`, `#/lab`, `#/terminal` e configuracoes locais de integracao. Terminal e carteira usam simulacao sem valor financeiro; nao ha mercado publico ou consenso distribuido.
 
 ## Verificador publico

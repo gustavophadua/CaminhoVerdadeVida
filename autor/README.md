@@ -1,5 +1,7 @@
 # Do autor
 
+**English:** [README.en.md](README.en.md)
+
 Obras do autor do Cosmos, públicas desde 11/11/2026 por decisão dele. Não são resultados do Cosmos: são o que o autor
 pensa. O que o verificador já conferiu está marcado como conferido, e o resto continua sendo hipótese do autor.
 

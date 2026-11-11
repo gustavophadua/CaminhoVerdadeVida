@@ -1,5 +1,7 @@
 # Decisões do dono
 
+**English:** [decisoes-do-dono.en.md](decisoes-do-dono.en.md)
+
 As decisões de rumo do projeto, tomadas pelo dono por pergunta direta, com a data. Mudar uma delas é uma decisão nova,
 registrada aqui.
 
@@ -42,3 +44,6 @@ original apagado.
   e-mail pessoal.
 - **Licença dos textos e das imagens do autor (`autor/`): CC BY 4.0**, a mesma dos outros textos do repositório. O
   código continua AGPL. Os elementos de terceiros apontados em `autor/README.md` ficam fora.
+- **Tudo também em inglês:** cada texto ganha uma tradução para o inglês ao lado (`.en.md`), e o app ganha uma versão
+  em inglês. O original em português prevalece. As frases que a IA lê, os exemplos normativos e os conjuntos de
+  avaliação continuam em português, porque é a língua em que o modelo foi medido.

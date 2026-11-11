@@ -1,5 +1,7 @@
 # Conjunto fechado v1, revelado
 
+**English:** [LEIA-ME.en.md](LEIA-ME.en.md)
+
 Revelado em 11/11/2026, por decisão do dono, antes da terceira medição. Até então só os compromissos estavam publicados
 (`avaliacao/conjunto-fechado-v1.json`), com a raiz carimbada no Bitcoin no bloco 973304 (26/10/2026), antes de
 qualquer treino.

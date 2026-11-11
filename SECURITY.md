@@ -1,5 +1,7 @@
 # Segurança
 
+**English:** [SECURITY.en.md](SECURITY.en.md)
+
 ## Como avisar de uma falha
 
 Não abra issue pública. Use o aviso privado do GitHub: na página do
@@ -19,8 +21,8 @@ Diga:
   prova.
 - Um certificado conseguir trazer os próprios axiomas, ou trocar a fórmula que
   ele certifica.
-- Conteúdo privado sair do aparelho ou subir para o repositório: o Principia em
-  claro, notas ou chaves.
+- Conteúdo privado sair do aparelho ou subir para o repositório: notas, chaves
+  ou dados pessoais.
 - Um arquivo importado executar código, ou mudar notas que não deveria.
 
 ## O que esperar
