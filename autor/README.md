@@ -37,5 +37,11 @@ pensa. O que o verificador já conferiu está marcado como conferido, e o resto 
   outras pessoas.
 - O texto do colaborador (Apêndice A.2 do `PROMPT.md`) é citado, sem o nome dele, para a crítica da seção 3.4.
 
-Licença: veja `LICENCAS.md`. O código das pastas segue a AGPL-3.0-or-later; os textos e as imagens do autor estão
-publicados para leitura e conferência, com todos os direitos reservados a ele.
+## Licença
+
+O código das pastas segue a AGPL-3.0-or-later. Os textos e as imagens do autor estão sob CC BY 4.0 desde 11/11/2026
+(`LICENSES/CC-BY-4.0.txt`): qualquer pessoa pode copiar, adaptar e reusar, inclusive comercialmente, desde que dê o
+crédito e indique o que mudou. Crédito: "do autor do Cosmos (github.com/gustavophadua/Cosmos), CC BY 4.0".
+
+Ficam fora dessa licença os elementos de terceiros: o diagrama de onda eletromagnética da quinta imagem do `Selo.pdf` e
+o texto do colaborador (Apêndice A.2 do `PROMPT.md`). Detalhes em `LICENCAS.md`.

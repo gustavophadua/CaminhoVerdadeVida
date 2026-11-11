@@ -15,7 +15,7 @@ histórico do Git diz quem fez o quê.
 | `especificacao/provas-t1/regras.rare` | Apache-2.0 (vem do Carcara) | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
 | Axiomas e teorias publicados neste repositório | CC BY 4.0 | [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt) |
 | `src/dados/cifrado/principia.json` | Nenhuma: todos os direitos reservados | — |
-| `autor/principia/` e os textos e imagens do autor em `autor/projeto-tubo/` (os `.md`, `Selo.pdf`, as pranchas e as imagens), publicados em 11/11/2026 para leitura e conferência | Nenhuma por ora: todos os direitos reservados ao autor | — |
+| `autor/principia/` e os textos e imagens do autor em `autor/projeto-tubo/` (os `.md`, `Selo.pdf`, as pranchas e as imagens), menos os elementos de terceiros apontados em `autor/README.md` | CC BY 4.0, por decisão do autor em 11/11/2026 | [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt) |
 | O código em `autor/projeto-tubo/` (`.js`, `.py`, `.html` e os testes em `cosmos/`) | AGPL-3.0-or-later (é código) | [LICENSE](LICENSE) |
 | Outros arquivos e dados de terceiros | A licença de cada um | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
 

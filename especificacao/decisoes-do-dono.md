@@ -40,3 +40,5 @@ original apagado.
   revelado (`avaliacao/fechado-v1/`; a terceira medição deixa de ser às cegas), e os dados de treino (`treino/dados/`).
 - **Os commits antigos ficam como estão.** Os novos saem com o endereço privado que o GitHub dá à conta, no lugar do
   e-mail pessoal.
+- **Licença dos textos e das imagens do autor (`autor/`): CC BY 4.0**, a mesma dos outros textos do repositório. O
+  código continua AGPL. Os elementos de terceiros apontados em `autor/README.md` ficam fora.
