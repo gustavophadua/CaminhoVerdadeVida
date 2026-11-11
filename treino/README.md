@@ -42,6 +42,19 @@ $env:TREINO_ARQUIVO='avaliacao/validacao-v1.jsonl'; $env:TREINO_SAIDA='privado/t
 `treino-chat.jsonl` é a junção embaralhada dos dois primeiros (semente 0). Antes de treinar: a leitura de amostra
 pelo dono (passo E4) e o carimbo do SHA-256 de `treino-chat.jsonl` no Bitcoin (passo E5).
 
+### Os dados publicados (11/11/2026)
+
+Os arquivos exportados em 30/10/2026 estão em `treino/dados/`, comprimidos com gzip. O SHA-256 é o do arquivo
+descomprimido:
+
+| Arquivo | Conversas | SHA-256 descomprimido |
+|---|---|---|
+| `treino-chat.jsonl.gz` | 7800 | `7ef86c70f82d2ed050edd5ede8b1b4784f5619c52d6bc5fe57e422b094254c20` |
+| `validacao-chat.jsonl.gz` | 300 | `90b3ce0cbd4d3214e82f31a0c6a40686f92bfdf55a1bf632caeda21631151912` |
+
+`amostra-para-ler.md` traz os 30 exemplos da leitura do passo E4. Para descomprimir: `gzip -dk treino/dados/*.gz`.
+Os passos E4 e E5 continuam pendentes.
+
 ## 2. Treino (Kaggle ou Colab, GPU T4)
 
 1. Notebook novo, acelerador **GPU T4**, internet ligada.

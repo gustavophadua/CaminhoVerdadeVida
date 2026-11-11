@@ -32,3 +32,11 @@ original apagado.
   base (115/120 = 95,8%, intervalo de 95% de 90,6 a 98,2%). Como a meta já foi batida, o plano segue direto para o
   fechamento: sem as melhorias sem treino, sem treino e sem rodadas com o verificador; ficam 2 das 3 medições
   permitidas. Ver `avaliacao-v1.md` §7.
+
+## 11/11/2026
+
+- **Publicar o que estava só na máquina do dono, menos as chaves de API e os dados pessoais:** o Projeto Tubo
+  (`autor/projeto-tubo/`), o Principia sem o nome pessoal (`autor/principia/`), o conjunto fechado de avaliação, que fica
+  revelado (`avaliacao/fechado-v1/`; a terceira medição deixa de ser às cegas), e os dados de treino (`treino/dados/`).
+- **Os commits antigos ficam como estão.** Os novos saem com o endereço privado que o GitHub dá à conta, no lugar do
+  e-mail pessoal.

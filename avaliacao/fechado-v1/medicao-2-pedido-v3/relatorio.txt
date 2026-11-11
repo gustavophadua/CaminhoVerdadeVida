@@ -1,0 +1,53 @@
+Itens: 120
+  Completa (classe dita certa + fórmulas fiéis): 97/120 = 80.8% (95%: 72.9–86.9%)
+  Classe certa pelo Z3 a partir das fórmulas do modelo: 117/120 = 97.5% (95%: 92.9–99.1%)
+  Fórmulas fiéis (premissas e conclusão): 117/120 = 97.5% (95%: 92.9–99.1%)
+  Classe dita certa: 97/120 = 80.8% (95%: 72.9–86.9%)
+  Lê em m2 com o vocabulário: 117/120 = 97.5% (95%: 92.9–99.1%)
+Por classe do gabarito (completas):
+  segue: 34/40 = 85.0% (95%: 70.9–92.9%)
+  contradiz: 35/40 = 87.5% (95%: 73.9–94.5%)
+  independente: 28/40 = 70.0% (95%: 54.6–81.9%)
+Matriz de confusão da classe dita (linha = gabarito, coluna = modelo):
+                       segue    contradiz independente   sem classe
+  segue                   34            0            6            0
+  contradiz                1           35            4            0
+  independente             2            7           28            3
+Por padrão (completas/itens), do pior para o melhor:
+  conversao-ilicita: 0/4
+  conversao-nenhum: 0/3
+  disjuntivo-negado: 0/4
+  escopo-forte: 0/3
+  termo-medio-nao-distribuido: 1/4
+  escopo-fraco: 2/4
+  so-se-invertido: 2/3
+  dois-algum: 3/4
+  ou-inclusivo: 3/4
+  cadeia-negada: 4/5
+  afirmar-consequente: 4/4
+  algum-nao-nem-todo: 3/3
+  algum-nao-todo: 4/4
+  algum-nenhum: 5/5
+  algum-todo: 3/3
+  barbara: 3/3
+  celarent: 3/3
+  condicional-negado: 5/5
+  contrapositiva: 3/3
+  conversao-algum: 3/3
+  dupla-negacao: 3/3
+  import-existencial: 3/3
+  instancia-existe: 3/3
+  modus-ponens: 3/3
+  modus-tollens: 3/3
+  negar-antecedente: 3/3
+  nenhum-algum: 4/4
+  nenhum-instancia: 4/4
+  relacao-nao-transitiva: 4/4
+  silogismo-disjuntivo: 3/3
+  so-se: 4/4
+  todo-instancia-negada: 5/5
+  todo-nem-todo: 4/4
+Motivos de erro:
+  20 × classe errada
+  3 × sem resposta lida
+Comparação em 120 itens em comum: antes 93, agora 97 completas; 8 só agora, 4 só antes; McNemar p = 0.3877 → diferença NÃO significativa

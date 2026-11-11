@@ -57,5 +57,8 @@ public/cosmos-iai-v1-resultado.txt.calendario.ots -text
 public/cosmos-iai-v1-medicao-2.txt -text
 public/cosmos-iai-v1-medicao-2.txt.ots -text
 public/cosmos-iai-v1-medicao-2.txt.calendario.ots -text
+# o conjunto fechado revelado: os itens refazem os compromissos carimbados, e as respostas e as notas têm os SHA-256
+# que os resumos carimbados declaram (testes/avaliacao-revelada.test.ts)
+avaliacao/fechado-v1/** -text
 # o lancador do Windows precisa de CRLF
 *.cmd text eol=crlf

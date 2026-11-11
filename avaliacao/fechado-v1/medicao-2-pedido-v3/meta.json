@@ -1,0 +1,17 @@
+{
+  "provedor": "ollama",
+  "modelo": "qwen3:4b",
+  "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "ollama": "0.40.12",
+  "prompt": "formalizacao-v3",
+  "saida": "esquema-json-v1",
+  "pensando": false,
+  "contexto": 4096,
+  "temperatura": 0,
+  "semente": 0,
+  "conjunto": "fechado",
+  "itens": 120,
+  "lidas": 117,
+  "respostas_sha256": "82f6e88fac14d400ef88f148172948ad334ef8c1527b55d8ba43c07608d1634c",
+  "data": "2026-10-29T10:25:20.682Z"
+}

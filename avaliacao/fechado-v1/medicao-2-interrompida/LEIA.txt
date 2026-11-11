@@ -1,0 +1,3 @@
+29/10/2026 01:49-01:55: medição 2 (pedido formalizacao-v2) interrompida pelo Claude antes de gravar qualquer resposta, sem nada lido do resultado.
+Motivo: a revisão pública (lote R-, leva 1) mostrou que a v2 deixa premissas de fora (22 dos 25 erros de fórmula).
+Não conta como medição: medicoes-no-fechado.jsonl continua com 1 linha. A próxima medição será a do pedido v3.

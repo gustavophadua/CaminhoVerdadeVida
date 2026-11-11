@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máquina do Tubo</title>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600&family=Chivo+Mono:wght@400;500&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* caderno espiral: esferográfica azul e vermelha, marcador preto e laranja, papel branco.
+     layout: uma coluna de folhas; em cada folha o desenho vivo vem antes do texto e dos números */
+  --paper:#F4F5FA; --sheet:#FFFFFF; --ink:#15151D; --pencil:#676B7E; --rule:#DADDEA;
+  --blue:#2333B5; --red:#D4352F; --orange:#E97F17; --gold:#F2B705;
+  --display:"Kalam","Segoe Print","Bradley Hand",cursive;
+  --body:"Chivo","Segoe UI",system-ui,sans-serif;
+  --mono:"Chivo Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 16px 56px;display:flex;flex-direction:column;gap:16px}
+h1,h2{font-family:var(--display);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,6vw,54px)}
+h2{font-size:27px}
+h3{font:600 15px/1.3 var(--body);margin:0}
+p{margin:0;max-width:66ch}
+.pg{font:500 12px/1 var(--mono);color:var(--pencil)}
+.lede{color:var(--pencil);margin-top:6px}
+.head{display:flex;flex-direction:column;gap:4px}
+.perf{height:12px;background:radial-gradient(circle,var(--rule) 3.2px,transparent 3.7px) 0 0/24px 12px repeat-x}
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:2px solid var(--ink);padding:10px 0;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.btn{font:600 14px/1 var(--body);padding:10px 14px;border:1.5px solid var(--ink);border-radius:6px;background:var(--sheet);color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--sheet)}
+.btn.primary{background:var(--ink);color:var(--sheet)}
+.btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+.btn:disabled{opacity:.45;cursor:default;background:var(--sheet);color:var(--ink)}
+.btn.sm{padding:6px 9px;font-size:12.5px;min-width:96px}
+.btn[aria-pressed="true"]{background:var(--gold);color:var(--ink)}
+.btn[aria-pressed="true"]:hover{background:var(--ink);color:var(--sheet)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.seg{display:flex;border:1.5px solid var(--ink);border-radius:6px;padding:0;margin:0;overflow:hidden;min-width:0}
+.seg label{cursor:pointer;position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:block;padding:10px 11px;font:500 13px/1 var(--mono)}
+.seg input:checked+span{background:var(--ink);color:var(--sheet)}
+.seg input:focus-visible+span{outline:3px solid var(--blue);outline-offset:-3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.read{display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 0 auto}
+.read div{display:flex;flex-direction:column}
+dt{font:400 11.5px/1.3 var(--mono);color:var(--pencil)}
+dd{margin:0;font:500 16px/1.25 var(--mono);font-variant-numeric:tabular-nums}
+.fim{background:var(--ink);color:var(--sheet);padding:10px 14px;border-radius:6px;max-width:none;font-weight:600}
+.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.two{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:18px;align-items:start}
+.two.rev{grid-template-columns:minmax(0,1fr) minmax(0,300px)}
+.col{display:flex;flex-direction:column;gap:12px;min-width:0}
+canvas{display:block;width:100%}
+.wide{height:240px}
+.tall{height:320px}
+.sq{aspect-ratio:1/1;max-width:340px;margin:0 auto}
+figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+figcaption,.note{font-size:13.5px;color:var(--pencil);max-width:66ch}
+figcaption b,.note b{color:var(--ink);font:500 13.5px var(--mono);font-variant-numeric:tabular-nums}
+.key{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13.5px;margin:0;padding:0;list-style:none}
+.key i{display:inline-block;width:20px;border-top:3px solid;vertical-align:middle;margin-right:7px}
+.views{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px}
+.views span{font:500 13px/1.6 var(--mono);color:var(--pencil)}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font:400 13px/1.3 var(--mono);font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+thead th{font-weight:400;color:var(--pencil);font-size:11.5px}
+tbody th{font-weight:500}
+.ebar{display:flex;height:22px;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden}
+.ebar span{display:block;height:100%}
+#eRes,.sw.res{background:var(--ink)}
+#eMov,.sw.mov{background:var(--gold)}
+#eGas,.sw.gas{background:repeating-linear-gradient(45deg,var(--rule) 0 4px,var(--sheet) 4px 8px)}
+.sw{display:inline-block;width:11px;height:11px;border:1px solid var(--ink);margin-right:6px;vertical-align:-1px}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px 14px;margin:0}
+.termo{display:flex;gap:12px;align-items:stretch}
+.vidro{position:relative;width:22px;height:132px;border:1.5px solid var(--ink);border-radius:11px;overflow:hidden;background:var(--sheet);flex:none}
+#tFill{position:absolute;left:0;right:0;top:0;height:0;background:var(--orange)}
+.tlab{display:flex;flex-direction:column;justify-content:space-between;font-size:13.5px}
+.params{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 24px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13.5px;display:flex;justify-content:space-between;gap:10px}
+.ctl output{font:500 13px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;flex:none}
+input[type=range]{width:100%;accent-color:var(--ink);margin:0}
+.chk{flex-direction:row;align-items:center;gap:8px;font-size:13.5px}
+.chk input{accent-color:var(--ink);width:16px;height:16px;margin:0}
+ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px;max-width:70ch}
+@media(max-width:760px){
+  .two,.two.rev{grid-template-columns:minmax(0,1fr)}
+  .bar{position:static}
+  .read{margin-left:0}
+  .sheet{padding:14px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <p class="pg">simulação das quatro páginas do caderno</p>
+    <h1>Máquina do Tubo</h1>
+    <p class="lede">Da explosão de matéria e antimatéria até a energia acabar. Tudo roda no mesmo relógio: o DNA, o tubo, as fatias e os observadores.</p>
+  </header>
+  <div class="perf" aria-hidden="true"></div>
+
+  <div class="bar" role="group" aria-label="Controles da máquina">
+    <button id="bRun" class="btn primary" type="button">Pausar</button>
+    <button id="bNew" class="btn" type="button">Nova explosão</button>
+    <fieldset class="seg">
+      <legend class="vh">Velocidade da simulação</legend>
+      <label><input type="radio" name="vel" value="1" id="vel1"><span>1×</span></label>
+      <label><input type="radio" name="vel" value="8" id="vel8" checked><span>8×</span></label>
+      <label><input type="radio" name="vel" value="30" id="vel30"><span>30×</span></label>
+      <label><input type="radio" name="vel" value="120" id="vel120"><span>120×</span></label>
+    </fieldset>
+    <dl class="read">
+      <div><dt>tempo</dt><dd id="rT">0 s</dd></div>
+      <div><dt>voltas do relógio</dt><dd id="rV">0</dd></div>
+      <div><dt>fatias</dt><dd id="rF">0</dd></div>
+      <div><dt>colisões</dt><dd id="rC">0</dd></div>
+      <div><dt>energia restante</dt><dd id="rE">100 %</dd></div>
+    </dl>
+  </div>
+  <p id="fim" class="fim" role="status" hidden></p>
+
+  <main class="col" style="gap:16px">
+    <section class="sheet" aria-labelledby="h-todo">
+      <p class="pg">página 1</p>
+      <h2 id="h-todo">O Todo: da explosão ao DNA</h2>
+      <p>No início, matéria e antimatéria têm o mesmo nível, o mais alto. Quando uma sobe, a outra desce. A soma das duas fica em zero o tempo todo: essa é a linha que Alpha vê.</p>
+      <canvas id="cTodo" class="wide" role="img" aria-label="Níveis de matéria e antimatéria ao longo do tempo, em oposição, com a amplitude caindo conforme a energia é gasta"></canvas>
+      <ul class="key">
+        <li><i style="border-color:var(--blue)"></i>matéria</li>
+        <li><i style="border-color:var(--red)"></i>antimatéria</li>
+        <li><i style="border-color:var(--ink)"></i>soma das duas: a linha de Alpha</li>
+        <li><i style="border-color:var(--orange)"></i>fatia</li>
+      </ul>
+      <div class="two">
+        <figure>
+          <canvas id="cRelogio" class="sq" role="img" aria-label="Relógio com um ponteiro de matéria e um de antimatéria em lados opostos, e os observadores no perímetro"></canvas>
+          <figcaption>De frente, o tubo é um relógio. Os ponteiros são matéria e antimatéria. Os pontos são os observadores na fatia atual: amarelo com força, branco em repouso. Raio da fatia <b id="nRaio"></b>, perímetro <b id="nPer"></b>.</figcaption>
+        </figure>
+        <figure>
+          <canvas id="cTubo" class="wide" role="img" aria-label="O tubo visto de lado: duas fitas enroladas em torno de um eixo, com anéis marcando as fatias"></canvas>
+          <figcaption>De lado, as últimas três voltas do relógio. Cada anel laranja é uma fatia, cortada quando matéria e antimatéria se cruzam. A linha preta no meio é o que Alpha vê do tubo inteiro.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="sheet" aria-labelledby="h-dentro">
+      <p class="pg">página 2</p>
+      <h2 id="h-dentro">De dentro do tubo</h2>
+      <div class="two">
+        <canvas id="cDentro" class="sq" role="img" aria-label="Vista de dentro do tubo: duas espirais opostas, uma azul e uma vermelha, convergindo para o centro"></canvas>
+        <div class="col">
+          <p>Quem está na fatia atual e olha para trás vê as duas fitas girando para lados opostos, até o ponto da explosão. Cada círculo é uma fatia já cortada.</p>
+          <h3>O mesmo objeto em quatro vistas</h3>
+          <ul class="views">
+            <li style="display:contents"><span>Alpha</span>uma linha</li>
+            <li style="display:contents"><span>de lado</span>o DNA</li>
+            <li style="display:contents"><span>de frente</span>o relógio</li>
+            <li style="display:contents"><span>de dentro</span>a espiral e as fatias</li>
+          </ul>
+          <p class="note">Fatias cortadas até agora: <b id="nFat">0</b>.</p>
+          <p class="note">A espiral desta vista é a hiperbólica: o tamanho na tela cai com a distância. A de Fibonacci cresce por multiplicação a cada volta e não sai desta geometria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet" aria-labelledby="h-forca">
+      <p class="pg">página 3</p>
+      <h2 id="h-forca">Repouso ou força</h2>
+      <p>Cada observador escolhe. Em repouso, segue devagar. Com força, acelera (F = m·a), fecha o perímetro mais rápido e encontra mais gente. Cada encontro é uma colisão, e cada colisão gasta energia.</p>
+      <div class="row">
+        <button id="pRep" class="btn" type="button">Todos em repouso</button>
+        <button id="pMet" class="btn" type="button">Metade com força</button>
+        <button id="pTod" class="btn" type="button">Todos com força</button>
+      </div>
+      <div class="two rev">
+        <div class="scroll">
+          <table id="tObs">
+            <thead><tr><th scope="col">observador</th><th scope="col">escolha</th><th scope="col">velocidade</th><th scope="col">voltas no perímetro</th><th scope="col">colisões</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="col">
+          <h3>Energia</h3>
+          <div class="ebar" role="img" aria-label="Divisão da energia entre reserva, movimento e gasta"><span id="eRes"></span><span id="eMov"></span><span id="eGas"></span></div>
+          <dl class="nums">
+            <div><dt><i class="sw res"></i>reserva do Todo</dt><dd id="nRes"></dd></div>
+            <div><dt><i class="sw mov"></i>em movimento</dt><dd id="nMov"></dd></div>
+            <div><dt><i class="sw gas"></i>gasta</dt><dd id="nGas"></dd></div>
+            <div><dt>soma das três</dt><dd id="nTot"></dd></div>
+          </dl>
+          <h3>Temperatura da fatia</h3>
+          <div class="termo">
+            <div class="vidro" aria-hidden="true"><div id="tFill"></div></div>
+            <div class="tlab">
+              <span>frio: repouso</span>
+              <span class="note">energia média por observador <b id="nTemp"></b></span>
+              <span>quente: colisões</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet" aria-labelledby="h-linhas">
+      <p class="pg">página 4</p>
+      <h2 id="h-linhas">A linha de cada observador</h2>
+      <figure>
+        <canvas id="cLinhas" class="tall" role="img" aria-label="Posição de cada observador no perímetro ao longo dos últimos 12 segundos, com as colisões marcadas"></canvas>
+        <figcaption>Os últimos 12 segundos. Posição no perímetro na horizontal, tempo para cima. Sem força e sem colisão, a linha é reta. Enquanto a força acelera o observador, ela entorta. Cada ponto vermelho é uma colisão.</figcaption>
+      </figure>
+      <h3>Teste: n = f(v)</h3>
+      <p>n é quantas vezes o observador fecha o perímetro durante uma volta do relógio: <span style="white-space:nowrap">n = v × T ÷ perímetro</span>.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th scope="col">escolha</th><th scope="col">velocidade</th><th scope="col">n no perímetro inicial</th><th scope="col">n no perímetro de agora</th><th scope="col">n medido</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">com força</th><td id="lFor"></td><td id="nForP0"></td><td id="nForNow"></td><td id="nForMed"></td></tr>
+            <tr><th scope="row">em repouso</th><td id="lRep"></td><td id="nRepP0"></td><td id="nRepNow"></td><td id="nRepMed"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Dois observadores em sentidos opostos se encontram n₁ + n₂ vezes por volta do relógio. No mesmo sentido, n₁ − n₂ vezes. O n medido de quem está em repouso sobe quando as colisões o arrastam.</p>
+    </section>
+
+    <section class="sheet" aria-labelledby="h-ajustes">
+      <h2 id="h-ajustes">Ajustes</h2>
+      <h3>Valem na hora</h3>
+      <div class="params">
+        <div class="ctl"><label for="sVfor">Velocidade com força <output id="oVfor" for="sVfor"></output></label><input type="range" id="sVfor" min="0.5" max="5" step="0.1"></div>
+        <div class="ctl"><label for="sF">Força de cada observador <output id="oF" for="sF"></output></label><input type="range" id="sF" min="0.2" max="5" step="0.2"></div>
+        <div class="ctl"><label for="sPerda">Energia do choque gasta por colisão <output id="oPerda" for="sPerda"></output></label><input type="range" id="sPerda" min="0" max="90" step="5"></div>
+        <div class="ctl"><label for="sFase">Ângulo entre matéria e antimatéria <output id="oFase" for="sFase"></output></label><input type="range" id="sFase" min="0" max="180" step="15"></div>
+      </div>
+      <h3>Reiniciam a explosão</h3>
+      <div class="params">
+        <div class="ctl"><label for="sE0">Energia da explosão <output id="oE0" for="sE0"></output></label><input type="range" id="sE0" min="100" max="3000" step="100"></div>
+        <div class="ctl"><label for="sN">Observadores <output id="oN" for="sN"></output></label><input type="range" id="sN" min="2" max="12" step="1"></div>
+        <div class="ctl"><label for="sP0">Perímetro inicial <output id="oP0" for="sP0"></output></label><input type="range" id="sP0" min="6" max="24" step="1"></div>
+        <div class="ctl"><label for="sT">Uma volta do relógio <output id="oT" for="sT"></output></label><input type="range" id="sT" min="20" max="120" step="5"></div>
+        <div class="ctl"><label for="sVrep">Velocidade em repouso <output id="oVrep" for="sVrep"></output></label><input type="range" id="sVrep" min="0" max="0.5" step="0.05"></div>
+        <label class="ctl chk" for="cAlt"><input type="checkbox" id="cAlt">Vizinhos em sentidos opostos</label>
+      </div>
+    </section>
+
+    <section class="sheet" aria-labelledby="h-regras">
+      <h2 id="h-regras">Regras desta máquina</h2>
+      <h3>Tiradas do caderno</h3>
+      <ol>
+        <li>No início, matéria e antimatéria têm o mesmo nível, o mais alto.</li>
+        <li>As duas ficam em oposição. A soma é zero: a linha de Alpha.</li>
+        <li>O DNA, o relógio e a espiral são o mesmo tubo visto de lado, de frente e de dentro.</li>
+        <li>Uma fatia é cortada cada vez que matéria e antimatéria se cruzam: duas por volta do relógio.</li>
+        <li>Os observadores andam no perímetro da fatia, em repouso ou com força.</li>
+        <li>Quando dois observadores se encontram, colidem. Cada colisão gasta energia.</li>
+        <li>Quanto mais energia gasta, menor o raio do tubo. Quando a energia acaba, o tubo fecha.</li>
+      </ol>
+      <h3>Suposições para a máquina poder calcular</h3>
+      <ol>
+        <li>A energia que um observador usa para acelerar sai da reserva do Todo.</li>
+        <li>Numa colisão a quantidade de movimento se conserva, uma parte da energia do choque é gasta e cada um segue seu caminho.</li>
+        <li>Raio = raio inicial × √(energia restante ÷ energia inicial). É a relação de um oscilador: a energia cresce com o quadrado da amplitude.</li>
+        <li>Cada observador tem 1 kg de massa. Vizinhos começam em sentidos opostos.</li>
+        <li>Uma volta do relógio dura 60 s e o perímetro inicial tem 12 m, até você mudar nos ajustes.</li>
+        <li>A energia gasta não some, vira calor. Por isso reserva + movimento + gasta dá sempre o mesmo total.</li>
+      </ol>
+    </section>
+  </main>
+</div>
+
+<script>
+/* MOTOR-INICIO */
+const TAU = Math.PI * 2, MASS = 1, DT = 1 / 240;
+
+function makeSim(p) {
+  const s = { p };
+
+  function kinetic() {
+    let k = 0;
+    for (const o of s.obs) k += 0.5 * MASS * o.v * o.v;
+    return k;
+  }
+  s.kinetic = kinetic;
+
+  function wrap(a) {
+    a = a % TAU;
+    if (a > Math.PI) a -= TAU; else if (a <= -Math.PI) a += TAU;
+    return a;
+  }
+
+  s.reset = function () {
+    s.t = 0; s.reserve = p.E0; s.spent = 0; s.collisions = 0;
+    s.ended = false; s.endReason = '';
+    s.obs = [];
+    for (let i = 0; i < p.N; i++) {
+      const dir = p.alternate ? (i % 2 === 0 ? 1 : -1) : 1;
+      s.obs.push({ id: i + 1, phi: (i + 0.5) / p.N * TAU, v: dir * p.vRep, dir,
+        force: !!p.modes[i], dist: 0, laps: 0, hits: 0, flash: 0 });
+    }
+    s.keInit = kinetic(); s.Etot = p.E0 + s.keInit;
+    s.frac = 1; s.P = p.P0; s.R = p.P0 / TAU;
+    s.hR = [1]; s.hStep = p.Tclock / 240; s.hNext = s.hStep;
+    s.wT = []; s.wl = s.obs.map(() => []); s.wNext = 0;
+    s.hitsLog = [];
+    s.rel = [];
+    for (let i = 0; i < p.N; i++) for (let j = i + 1; j < p.N; j++)
+      s.rel.push(wrap(s.obs[i].phi - s.obs[j].phi));
+  };
+
+  s.step = function () {
+    if (s.ended) return;
+    const dt = DT, n = s.obs.length, R = s.R, acc = p.force / MASS;
+
+    for (const o of s.obs) {
+      if (o.force && s.reserve > 0) {
+        const vd = o.v * o.dir;
+        if (vd < p.vFor) {
+          let nvd = Math.min(p.vFor, vd + acc * dt);
+          let dE = 0.5 * MASS * (nvd * nvd - vd * vd);
+          if (dE > 0) {
+            if (dE > s.reserve) { dE = s.reserve; nvd = Math.sqrt(vd * vd + 2 * dE / MASS) * (nvd < 0 ? -1 : 1); }
+            s.reserve -= dE;
+          } else {
+            s.spent -= dE;
+          }
+          o.v = nvd * o.dir;
+        }
+      }
+    }
+
+    for (const o of s.obs) {
+      const d = o.v * dt;
+      o.phi += d / R; o.dist += Math.abs(d); o.laps += Math.abs(d) / (R * TAU);
+      if (o.flash > 0) o.flash = Math.max(0, o.flash - dt * 2.5);
+    }
+
+    let k = 0;
+    const e = Math.sqrt(1 - p.loss);
+    for (let i = 0; i < n; i++) {
+      const a = s.obs[i];
+      for (let j = i + 1; j < n; j++, k++) {
+        const b = s.obs[j], now = wrap(a.phi - b.phi), was = s.rel[k];
+        s.rel[k] = now;
+        if (was * now < 0 && Math.abs(was) < 1.5 && Math.abs(now) < 1.5) {
+          const u1 = a.v, u2 = b.v, vr = u1 - u2;
+          if (Math.abs(vr) >= 0.02) {
+            a.v = ((1 + e) * u1 + (1 - e) * u2) / 2;
+            b.v = ((1 - e) * u1 + (1 + e) * u2) / 2;
+            s.spent += 0.25 * MASS * (1 - e * e) * vr * vr;
+            s.collisions++; a.hits++; b.hits++; a.flash = 1; b.flash = 1;
+            s.hitsLog.push({ t: s.t, phi: a.phi });
+            if (s.hitsLog.length > 900) s.hitsLog.shift();
+          }
+        }
+      }
+    }
+
+    s.t += dt;
+    s.frac = Math.max(0, (s.reserve + kinetic()) / s.Etot);
+    s.P = p.P0 * Math.sqrt(Math.max(s.frac, 1e-6)); s.R = s.P / TAU;
+
+    if (s.t >= s.hNext) {
+      s.hR.push(Math.sqrt(s.frac)); s.hNext += s.hStep;
+      if (s.hR.length > 24001) {
+        s.hR = s.hR.filter((_, q) => q % 2 === 0);
+        s.hStep *= 2; s.hNext = s.hR.length * s.hStep;
+      }
+    }
+    if (s.t >= s.wNext) {
+      s.wT.push(s.t);
+      for (let i = 0; i < n; i++) s.wl[i].push(((s.obs[i].phi % TAU) + TAU) % TAU);
+      s.wNext += 0.05;
+      if (s.wT.length > 760) { s.wT.splice(0, 120); for (const a of s.wl) a.splice(0, 120); }
+    }
+
+    if (s.frac <= 0.01) { s.ended = true; s.endReason = 'energia'; }
+    else if (s.reserve <= 0 && n > 0) {
+      let mn = Infinity, mx = -Infinity;
+      for (const o of s.obs) { if (o.v < mn) mn = o.v; if (o.v > mx) mx = o.v; }
+      if (mx - mn < 0.02) { s.ended = true; s.endReason = 'parado'; }
+    }
+  };
+
+  s.reset();
+  return s;
+}
+/* MOTOR-FIM */
+
+const $ = id => document.getElementById(id);
+const INK = '#15151D', BLUE = '#2333B5', RED = '#D4352F', ORANGE = '#E97F17', GOLD = '#F2B705',
+  PENCIL = '#676B7E', RULE = '#DADDEA', SHEET = '#FFFFFF';
+const HAND = '"Kalam", "Segoe Print", cursive', MONO = '"Chivo Mono", ui-monospace, monospace';
+const fmt = (x, d = 1) => x.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d });
+const rad = d => d * Math.PI / 180;
+const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const params = { E0: 800, P0: 12, Tclock: 60, phase: 180, N: 6, vRep: 0.1, vFor: 2, force: 1,
+  loss: 0.5, alternate: true, modes: [true, true, true, false, false, false] };
+let sim = null, running = !reduced, speed = 8, acc = 0, last = 0, dirty = true, lastRead = 0;
+
+function ln(g, x1, y1, x2, y2) { g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.stroke(); }
+function ctxOf(c) {
+  const r = c.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 2);
+  const w = Math.max(40, Math.round(r.width)), h = Math.max(40, Math.round(r.height));
+  if (c.width !== w * d || c.height !== h * d) { c.width = w * d; c.height = h * d; }
+  const g = c.getContext('2d');
+  g.setTransform(d, 0, 0, d, 0, 0); g.clearRect(0, 0, w, h);
+  g.globalAlpha = 1; g.setLineDash([]); g.lineCap = 'round'; g.lineJoin = 'round';
+  return { g, w, h };
+}
+function rAt(tt) {
+  const s = sim;
+  if (tt >= s.t) return Math.sqrt(s.frac);
+  const i = Math.max(0, tt) / s.hStep, i0 = Math.floor(i), m = s.hR.length - 1;
+  if (i0 >= m) { const a = s.hR[m], span = s.t - m * s.hStep; return span > 1e-9 ? a + (Math.sqrt(s.frac) - a) * Math.min(1, (tt - m * s.hStep) / span) : a; }
+  return s.hR[i0] + (s.hR[i0 + 1] - s.hR[i0]) * (i - i0);
+}
+function sliceOff() {
+  const p = sim.p, half = p.Tclock / 2;
+  let off = (-rad(p.phase) / 2) / TAU * p.Tclock % half;
+  if (off <= 1e-9) off += half;
+  return off;
+}
+function sliceTimes(ta, tb) {
+  const half = sim.p.Tclock / 2, off = sliceOff(), out = [];
+  const k = Math.max(0, Math.ceil((ta - off) / half - 1e-9));
+  for (let tt = off + k * half; tt <= tb; tt += half) out.push(tt);
+  return out;
+}
+function sliceCount() {
+  const half = sim.p.Tclock / 2, off = sliceOff();
+  return sim.t < off ? 0 : Math.floor((sim.t - off) / half) + 1;
+}
+
+function drawTodo() {
+  const { g, w, h } = ctxOf($('cTodo')), s = sim, p = s.p;
+  const L = 26, RM = 16, T = 26, B = 24, W = w - L - RM, H = h - T - B, cy = T + H / 2, A = H / 2 - 2;
+  const tmax = Math.max(s.t, 2 * p.Tclock), X = tt => L + tt / tmax * W, ph = rad(p.phase), rNow = Math.sqrt(s.frac);
+
+  g.font = '11px ' + MONO; g.fillStyle = PENCIL; g.textAlign = 'center'; g.textBaseline = 'top';
+  g.strokeStyle = RULE; g.lineWidth = 1;
+  const turns = Math.floor(tmax / p.Tclock + 1e-9), every = Math.max(1, Math.ceil(turns / (W / 40)));
+  for (let k = every; k <= turns; k += every) {
+    const x = X(k * p.Tclock); ln(g, x, T, x, T + H);
+    g.fillText(k === every ? k + (k === 1 ? ' volta' : ' voltas') : String(k), x, T + H + 6);
+  }
+  ln(g, L, T, L, T + H);
+
+  const sl = sliceTimes(0, s.t), st = Math.max(1, Math.ceil(sl.length / 150));
+  g.strokeStyle = ORANGE; g.globalAlpha = .6;
+  for (let i = 0; i < sl.length; i += st) { const x = X(sl[i]), a = A * rAt(sl[i]); ln(g, x, cy - a, x, cy + a); }
+  g.globalAlpha = 1;
+
+  const n = s.hR.length, perTurn = p.Tclock / s.hStep;
+  const stride = Math.max(1, Math.min(Math.ceil(n / 5000), Math.floor(perTurn / 16)));
+  const th1 = TAU * s.t / p.Tclock;
+  g.save(); g.beginPath(); g.rect(L, T - 3, W + 3, H + 6); g.clip();
+  const wave = (color, lw, f) => {
+    g.beginPath();
+    for (let i = 0; i < n; i += stride) {
+      const tt = i * s.hStep, y = cy - A * s.hR[i] * f(TAU * tt / p.Tclock);
+      i ? g.lineTo(X(tt), y) : g.moveTo(X(tt), y);
+    }
+    g.lineTo(X(s.t), cy - A * rNow * f(th1));
+    g.strokeStyle = color; g.lineWidth = lw; g.stroke();
+  };
+  wave(RED, 2, th => Math.cos(th + ph));
+  wave(BLUE, 2, th => Math.cos(th));
+  wave(INK, 2.6, th => Math.cos(th) + Math.cos(th + ph));
+  g.restore();
+
+  const xn = X(s.t);
+  g.fillStyle = RED; g.beginPath(); g.arc(xn, cy - A * rNow * Math.cos(th1 + ph), 4, 0, TAU); g.fill();
+  g.fillStyle = BLUE; g.beginPath(); g.arc(xn, cy - A * rNow * Math.cos(th1), 4, 0, TAU); g.fill();
+
+  g.fillStyle = INK; g.textBaseline = 'alphabetic';
+  g.font = '700 15px ' + HAND; g.textAlign = 'left'; g.fillText('explosão', L + 2, T - 9);
+  if (xn - L > 150) { g.textAlign = xn > w - 40 ? 'right' : 'center'; g.fillText('agora', xn > w - 40 ? w - 4 : xn, T - 9); }
+  g.font = '700 17px ' + HAND; g.textAlign = 'center';
+  g.fillText('+', L - 13, T + 13); g.fillText('−', L - 13, T + H - 3);
+}
+
+function drawRelogio() {
+  const { g, w, h } = ctxOf($('cRelogio')), s = sim, p = s.p;
+  const cx = w / 2, cy = h / 2, R0 = Math.min(w, h) / 2 - 30, R = Math.max(2, R0 * Math.sqrt(s.frac));
+  const th = TAU * s.t / p.Tclock, ph = rad(p.phase);
+  const pt = (a, r) => [cx + r * Math.sin(a), cy - r * Math.cos(a)];
+
+  g.setLineDash([3, 5]); g.strokeStyle = RULE; g.lineWidth = 1.5;
+  g.beginPath(); g.arc(cx, cy, R0, 0, TAU); g.stroke(); g.setLineDash([]);
+  g.font = '700 16px ' + HAND; g.fillStyle = INK; g.textAlign = 'center'; g.textBaseline = 'middle';
+  for (let k = 1; k <= 12; k++) { const q = pt(k * TAU / 12, R0 + 17); g.fillText(String(k), q[0], q[1] + 1); }
+
+  g.strokeStyle = ORANGE; g.lineWidth = 2; g.beginPath(); g.arc(cx, cy, R, 0, TAU); g.stroke();
+
+  const sw = Math.min(Math.PI, th), rt = Math.max(1, R - 6);
+  const trail = (a, color) => {
+    if (sw < 0.01) return;
+    g.strokeStyle = color; g.lineWidth = 4; g.globalAlpha = .8; g.lineCap = 'butt';
+    g.beginPath(); g.arc(cx, cy, rt, a - sw - Math.PI / 2, a - Math.PI / 2); g.stroke();
+    g.globalAlpha = 1; g.lineCap = 'round';
+  };
+  trail(th, BLUE); trail(th + ph, RED);
+  const hand = (a, color) => { const q = pt(a, R); g.strokeStyle = color; g.lineWidth = 4.5; ln(g, cx, cy, q[0], q[1]); };
+  hand(th + ph, RED); hand(th, BLUE);
+  g.fillStyle = INK; g.beginPath(); g.arc(cx, cy, 5, 0, TAU); g.fill();
+
+  g.font = '11px ' + MONO;
+  for (const o of s.obs) {
+    const q = pt(o.phi, R);
+    if (o.flash > 0) {
+      g.strokeStyle = RED; g.globalAlpha = o.flash; g.lineWidth = 2;
+      g.beginPath(); g.arc(q[0], q[1], 6 + 9 * (1 - o.flash), 0, TAU); g.stroke(); g.globalAlpha = 1;
+    }
+    g.fillStyle = o.force ? GOLD : SHEET; g.strokeStyle = INK; g.lineWidth = 1.6;
+    g.beginPath(); g.arc(q[0], q[1], 5.5, 0, TAU); g.fill(); g.stroke();
+    const near = s.obs.some(o2 => o2 !== o && Math.abs(Math.atan2(Math.sin(o2.phi - o.phi), Math.cos(o2.phi - o.phi))) < 0.3);
+    if (R > 70 && !near) { const t2 = pt(o.phi, R - 21); g.fillStyle = PENCIL; g.fillText('f' + o.id, t2[0], t2[1]); }
+  }
+}
+
+function drawTubo() {
+  const { g, w, h } = ctxOf($('cTubo')), s = sim, p = s.p;
+  const span = 3 * p.Tclock, tb = Math.max(s.t, span), ta = tb - span, t0 = Math.max(ta, 0);
+  const L = 30, RM = 46, cy = h / 2 + 6, ry0 = h / 2 - 28, k = .3, ph = rad(p.phase);
+  const X = tt => L + (tt - ta) / span * (w - L - RM), rNow = Math.sqrt(s.frac);
+
+  g.strokeStyle = RULE; g.lineWidth = 1.5;
+  for (const sg of [-1, 1]) {
+    g.beginPath(); g.moveTo(X(t0), cy + sg * ry0 * rAt(t0));
+    for (let tt = t0 + span / 120; tt < s.t; tt += span / 120) g.lineTo(X(tt), cy + sg * ry0 * rAt(tt));
+    g.lineTo(X(s.t), cy + sg * ry0 * rNow); g.stroke();
+  }
+  g.strokeStyle = ORANGE; g.lineWidth = 1.2; g.globalAlpha = .8;
+  for (const tt of sliceTimes(t0, s.t)) {
+    const ry = Math.max(.5, ry0 * rAt(tt));
+    g.beginPath(); g.ellipse(X(tt), cy, k * ry, ry, 0, 0, TAU); g.stroke();
+  }
+  g.globalAlpha = 1;
+  g.strokeStyle = INK; g.lineWidth = 2.2; ln(g, X(t0), cy, X(s.t), cy);
+
+  const strand = (off, color) => {
+    const dtt = p.Tclock / 120;
+    g.strokeStyle = color; g.lineWidth = 2.6;
+    let prev = null, open = false, done = false;
+    for (let tt = t0; !done; tt += dtt) {
+      if (tt >= s.t) { tt = s.t; done = true; }
+      const a = TAU * tt / p.Tclock + off, ry = ry0 * rAt(tt);
+      const x = X(tt) + k * ry * Math.sin(a), y = cy - ry * Math.cos(a), front = Math.sin(a) >= 0;
+      if (prev === null || front !== prev) {
+        if (open) { g.lineTo(x, y); g.globalAlpha = prev ? 1 : .28; g.stroke(); }
+        g.beginPath(); g.moveTo(x, y); open = true; prev = front;
+      } else g.lineTo(x, y);
+    }
+    if (open) { g.globalAlpha = prev ? 1 : .28; g.stroke(); }
+    g.globalAlpha = 1;
+  };
+  strand(ph, RED); strand(0, BLUE);
+
+  const ryN = Math.max(.5, ry0 * rNow), xn = X(s.t);
+  g.strokeStyle = ORANGE; g.lineWidth = 2.6; g.beginPath(); g.ellipse(xn, cy, k * ryN, ryN, 0, 0, TAU); g.stroke();
+  for (const o of s.obs) {
+    g.fillStyle = o.force ? GOLD : SHEET; g.strokeStyle = INK; g.lineWidth = 1.3;
+    g.beginPath(); g.arc(xn + k * ryN * Math.sin(o.phi), cy - ryN * Math.cos(o.phi), 3.6, 0, TAU); g.fill(); g.stroke();
+  }
+  g.fillStyle = INK; g.font = '700 15px ' + HAND; g.textBaseline = 'alphabetic';
+  if (ta <= 0) {
+    g.strokeStyle = INK; g.lineWidth = 2.2; g.beginPath(); g.ellipse(X(0), cy, k * ry0, ry0, 0, 0, TAU); g.stroke();
+    g.beginPath(); g.arc(X(0), cy, 3.5, 0, TAU); g.fill();
+    if (xn - X(0) > 110) { g.textAlign = 'left'; g.fillText('explosão', X(0) - 20, 14); }
+  }
+  g.textAlign = 'center'; g.fillText('agora', Math.min(xn, w - 24), 14);
+}
+
+function drawDentro() {
+  const { g, w, h } = ctxOf($('cDentro')), s = sim, p = s.p;
+  const cx = w / 2, cy = h / 2, Rm = Math.min(w, h) / 2 - 8, tau0 = p.Tclock * .22, ph = rad(p.phase);
+  const sc = tau => 1 / (1 + tau / tau0), depth = Math.min(s.t, 14 * p.Tclock);
+
+  for (const tt of sliceTimes(s.t - depth, s.t)) {
+    const kk = sc(s.t - tt), r = Rm * rAt(tt) * kk;
+    if (r < 1.5) continue;
+    g.strokeStyle = ORANGE; g.globalAlpha = Math.max(.18, kk); g.lineWidth = .8 + 1.4 * kk;
+    g.beginPath(); g.arc(cx, cy, r, 0, TAU); g.stroke();
+  }
+  g.globalAlpha = 1; g.strokeStyle = ORANGE; g.lineWidth = 2.6;
+  g.beginPath(); g.arc(cx, cy, Math.max(1.5, Rm * Math.sqrt(s.frac)), 0, TAU); g.stroke();
+
+  const strand = (off, color) => {
+    const dtt = p.Tclock / 160; g.strokeStyle = color;
+    let i = 0, px = 0, py = 0;
+    for (let tau = 0; tau <= depth + 1e-9; tau += dtt, i++) {
+      const tt = s.t - tau, a = TAU * tt / p.Tclock + off, kk = sc(tau), r = Rm * rAt(tt) * kk;
+      const x = cx + r * Math.sin(a), y = cy - r * Math.cos(a);
+      if (i % 5 === 0) {
+        if (i) { g.lineTo(x, y); g.stroke(); }
+        g.globalAlpha = Math.max(.25, Math.min(1, kk * 1.7)); g.lineWidth = .8 + 3.4 * kk;
+        g.beginPath(); g.moveTo(x, y);
+      } else g.lineTo(x, y);
+      px = x; py = y;
+    }
+    if (i % 5 !== 1) g.stroke();
+    g.globalAlpha = 1;
+  };
+  strand(ph, RED); strand(0, BLUE);
+  g.fillStyle = INK; g.beginPath(); g.arc(cx, cy, 3.5, 0, TAU); g.fill();
+}
+
+function drawLinhas() {
+  const { g, w, h } = ctxOf($('cLinhas')), s = sim;
+  const L = 52, RM = 14, T = 12, B = 28, W = w - L - RM, H = h - T - B, win = 12;
+  const t1 = Math.max(s.t, win), t0 = t1 - win;
+  const X = a => L + a / TAU * W, Y = tt => T + H - (tt - t0) / win * H;
+
+  g.strokeStyle = RULE; g.lineWidth = 1; g.font = '11px ' + MONO; g.fillStyle = PENCIL;
+  g.textAlign = 'center'; g.textBaseline = 'top';
+  ['12 h', '3 h', '6 h', '9 h', '12 h'].forEach((lb, i) => { const x = L + i / 4 * W; ln(g, x, T, x, T + H); g.fillText(lb, x, T + H + 7); });
+  g.textAlign = 'right'; g.textBaseline = 'middle';
+  for (let tt = Math.ceil(t0 / 4 - 1e-9) * 4; tt <= t1 + 1e-9; tt += 4) { const y = Y(tt); ln(g, L, y, L + W, y); g.fillText(tt + ' s', L - 7, y); }
+
+  const n = s.wT.length;
+  let j0 = 0; while (j0 < n && s.wT[j0] < t0) j0++;
+  s.wl.forEach((arr, i) => {
+    const o = s.obs[i];
+    g.strokeStyle = o.force ? INK : PENCIL; g.lineWidth = o.force ? 1.9 : 1.1; g.globalAlpha = o.force ? 1 : .8;
+    g.beginPath();
+    let pen = false, pa = 0;
+    for (let j = j0; j < n; j++) {
+      const a = arr[j], x = X(a), y = Y(s.wT[j]);
+      if (!pen || Math.abs(a - pa) > Math.PI) { g.moveTo(x, y); pen = true; } else g.lineTo(x, y);
+      pa = a;
+    }
+    g.stroke(); g.globalAlpha = 1;
+  });
+  g.fillStyle = RED;
+  for (const e of s.hitsLog) {
+    if (e.t < t0) continue;
+    g.beginPath(); g.arc(X(((e.phi % TAU) + TAU) % TAU), Y(e.t), 2.4, 0, TAU); g.fill();
+  }
+  for (const o of s.obs) {
+    g.fillStyle = o.force ? GOLD : SHEET; g.strokeStyle = INK; g.lineWidth = 1.5;
+    g.beginPath(); g.arc(X(((o.phi % TAU) + TAU) % TAU), Y(s.t), 4.5, 0, TAU); g.fill(); g.stroke();
+  }
+}
+
+function drawAll() { drawTodo(); drawRelogio(); drawTubo(); drawDentro(); drawLinhas(); }
+
+function readouts() {
+  const s = sim, p = s.p, ke = s.kinetic(), n = s.obs.length, turns = s.t / p.Tclock;
+  $('rT').textContent = fmt(s.t, 0) + ' s';
+  $('rV').textContent = fmt(turns, 2);
+  $('rF').textContent = $('nFat').textContent = String(sliceCount());
+  $('rC').textContent = String(s.collisions);
+  $('rE').textContent = fmt(s.frac * 100, 0) + ' %';
+  $('nRaio').textContent = fmt(s.R, 2) + ' m';
+  $('nPer').textContent = fmt(s.P, 2) + ' m';
+  $('eRes').style.width = (s.reserve / s.Etot * 100) + '%';
+  $('eMov').style.width = (ke / s.Etot * 100) + '%';
+  $('eGas').style.width = (s.spent / s.Etot * 100) + '%';
+  $('nRes').textContent = fmt(s.reserve, 1) + ' J';
+  $('nMov').textContent = fmt(ke, 1) + ' J';
+  $('nGas').textContent = fmt(s.spent, 1) + ' J';
+  $('nTot').textContent = fmt(s.reserve + ke + s.spent, 1) + ' J';
+  $('nTemp').textContent = fmt(ke / n, 2) + ' J';
+  $('tFill').style.height = Math.min(100, (ke / n) / (0.5 * MASS * p.vFor * p.vFor) * 100) + '%';
+  let lf = 0, nf = 0, lr = 0, nr = 0;
+  s.obs.forEach((o, i) => {
+    $('ov' + i).textContent = fmt(Math.abs(o.v), 2) + ' m/s ' + (o.v >= 0 ? '↻' : '↺');
+    $('ol' + i).textContent = fmt(o.laps, 1);
+    $('oh' + i).textContent = String(o.hits);
+    if (o.force) { lf += o.laps; nf++; } else { lr += o.laps; nr++; }
+  });
+  $('lFor').textContent = fmt(p.vFor, 2) + ' m/s';
+  $('lRep').textContent = fmt(p.vRep, 2) + ' m/s';
+  $('nForP0').textContent = fmt(p.vFor * p.Tclock / p.P0, 1);
+  $('nRepP0').textContent = fmt(p.vRep * p.Tclock / p.P0, 2);
+  $('nForNow').textContent = fmt(p.vFor * p.Tclock / s.P, 1);
+  $('nRepNow').textContent = fmt(p.vRep * p.Tclock / s.P, 2);
+  $('nForMed').textContent = nf && turns > 0.05 ? fmt(lf / nf / turns, 1) : 'sem dados';
+  $('nRepMed').textContent = nr && turns > 0.05 ? fmt(lr / nr / turns, 2) : 'sem dados';
+  const b = $('bRun');
+  b.disabled = s.ended; b.textContent = s.ended ? 'Fim' : running ? 'Pausar' : 'Rodar';
+  const f = $('fim');
+  if (s.ended && f.hidden) {
+    const base = fmt(s.t, 0) + ' s, ' + fmt(turns, 1) + ' voltas do relógio, ' + sliceCount() + ' fatias e ' + s.collisions + ' colisões.';
+    f.textContent = s.endReason === 'energia'
+      ? 'Fim: a energia acabou e o tubo fechou. Foram ' + base
+      : 'Fim: a reserva acabou e os observadores já não se encontram. Foram ' + base;
+    f.hidden = false;
+  } else if (!s.ended && !f.hidden) f.hidden = true;
+}
+
+function paintModes() {
+  sim.obs.forEach((o, i) => {
+    const b = $('om' + i);
+    b.setAttribute('aria-pressed', o.force ? 'true' : 'false');
+    b.textContent = o.force ? 'com força' : 'em repouso';
+    b.setAttribute('aria-label', 'Observador f' + o.id + ': ' + b.textContent + '. Trocar.');
+  });
+}
+function setMode(i, f) { sim.obs[i].force = f; params.modes[i] = f; }
+function buildTable() {
+  const tb = $('tObs').tBodies[0]; tb.textContent = '';
+  sim.obs.forEach((o, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<th scope="row">f' + o.id + '</th><td><button type="button" class="btn sm" id="om' + i +
+      '"></button></td><td id="ov' + i + '"></td><td id="ol' + i + '"></td><td id="oh' + i + '"></td>';
+    tb.appendChild(tr);
+    $('om' + i).addEventListener('click', () => { setMode(i, !sim.obs[i].force); paintModes(); dirty = true; });
+  });
+  paintModes();
+}
+function preset(fn) { sim.obs.forEach((o, i) => setMode(i, fn(i, sim.obs.length))); paintModes(); dirty = true; }
+
+function novaExplosao(presim) {
+  params.modes.length = params.N;
+  for (let i = 0; i < params.N; i++) params.modes[i] = !!params.modes[i];
+  if (!sim) sim = makeSim(params); else sim.reset();
+  if (presim) { const steps = Math.round(presim / DT); for (let i = 0; i < steps && !sim.ended; i++) sim.step(); }
+  acc = 0; buildTable(); dirty = true; lastRead = 0;
+}
+
+const LIVE = [
+  ['sVfor', 'oVfor', 'vFor', v => fmt(v, 1) + ' m/s'],
+  ['sF', 'oF', 'force', v => fmt(v, 1) + ' N'],
+  ['sPerda', 'oPerda', 'loss', v => fmt(v, 0) + ' %', v => v / 100, v => v * 100],
+  ['sFase', 'oFase', 'phase', v => fmt(v, 0) + '°']
+];
+const RESET = [
+  ['sE0', 'oE0', 'E0', v => fmt(v, 0) + ' J'],
+  ['sN', 'oN', 'N', v => fmt(v, 0)],
+  ['sP0', 'oP0', 'P0', v => fmt(v, 0) + ' m'],
+  ['sT', 'oT', 'Tclock', v => fmt(v, 0) + ' s'],
+  ['sVrep', 'oVrep', 'vRep', v => fmt(v, 2) + ' m/s']
+];
+function syncControls() {
+  for (const [id, out, key, show, , back] of LIVE.concat(RESET)) {
+    const v = back ? back(params[key]) : params[key];
+    $(id).value = v; $(out).textContent = show(+$(id).value);
+  }
+  $('cAlt').checked = params.alternate;
+  const r = document.querySelector('input[name="vel"][value="' + speed + '"]'); if (r) r.checked = true;
+}
+function wire() {
+  for (const [id, out, key, show, conv] of LIVE) {
+    $(id).addEventListener('input', () => { const v = +$(id).value; params[key] = conv ? conv(v) : v; $(out).textContent = show(v); dirty = true; });
+  }
+  for (const [id, out, key, show] of RESET) {
+    $(id).addEventListener('input', () => { $(out).textContent = show(+$(id).value); });
+    $(id).addEventListener('change', () => { params[key] = +$(id).value; novaExplosao(0); if (!reduced) running = true; });
+  }
+  $('cAlt').addEventListener('change', () => { params.alternate = $('cAlt').checked; novaExplosao(0); if (!reduced) running = true; });
+  $('bRun').addEventListener('click', () => { running = !running; lastRead = 0; });
+  $('bNew').addEventListener('click', () => { novaExplosao(0); running = true; });
+  document.querySelectorAll('input[name="vel"]').forEach(r => r.addEventListener('change', () => { if (r.checked) speed = +r.value; }));
+  $('pRep').addEventListener('click', () => preset(() => false));
+  $('pMet').addEventListener('click', () => preset((i, n) => i < n / 2));
+  $('pTod').addEventListener('click', () => preset(() => true));
+  window.addEventListener('resize', () => { dirty = true; });
+}
+
+function frame(now) {
+  const dtR = Math.min(0.05, (now - last) / 1000) || 0; last = now;
+  if (running && !sim.ended) {
+    acc += dtR * speed;
+    let n = Math.floor(acc / DT); acc -= n * DT; if (n > 2400) n = 2400;
+    for (let i = 0; i < n; i++) sim.step();
+    if (n > 0) dirty = true;
+  }
+  if (dirty) { drawAll(); dirty = false; }
+  if (now - lastRead > 120) { readouts(); lastRead = now; }
+  requestAnimationFrame(frame);
+}
+
+function start(data) {
+  if (data && data.params) Object.assign(params, data.params);
+  if (data && data.speed) speed = data.speed;
+  syncControls(); wire(); novaExplosao(75); readouts(); drawAll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { dirty = true; });
+  last = performance.now(); requestAnimationFrame(frame);
+}
+if (window.claude && window.claude.hot && window.claude.hot.snapshot) window.claude.hot.snapshot(() => ({ params, speed }));
+if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(start);
+else start((window.claude && window.claude.hot && window.claude.hot.data) || {});
+</script>
+</body>
+</html>

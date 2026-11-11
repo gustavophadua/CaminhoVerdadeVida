@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="hach" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#111" stroke-width="1.2"/></pattern>
+<pattern id="pont" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1" fill="#111"/></pattern></defs>
+<rect width="1200" height="900" fill="#fff"/>
+<text x="40" y="56" font-size="30" text-anchor="start" fill="#111" font-weight="bold">A visão do fragmento</text>
+<text x="40" y="88" font-size="18" text-anchor="start" fill="#333">Dentro de Alpha, o fragmento só enxerga a sua parte. O valor dele é limitado ao que vê.</text>
+<path d="M 380 360 L 686.2 788.2 A 320 320 0 0 1 472.8 773.7 Z" fill="url(#hach)" fill-opacity="0.55" stroke="#111" stroke-width="2"/><circle cx="600" cy="480" r="320" fill="none" stroke="#111" stroke-width="2.5"/><circle cx="380" cy="360" r="10" fill="#111" stroke="#111" stroke-width="0"/><text x="362" y="342" font-size="24" text-anchor="end" fill="#111" font-weight="bold" font-style="italic">f</text><text x="640" y="500" font-size="16" text-anchor="start" fill="#555">o resto de Alpha: fora da vista</text><text x="40" y="560" font-size="17" text-anchor="start" fill="#111" font-weight="bold">campo de visão:</text><text x="40" y="584" font-size="17" text-anchor="start" fill="#111" font-weight="bold">só a escala do fragmento</text><line x1="250" y1="566" x2="434.2" y2="566" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="4 4"/><text x="600" y="144" font-size="20" text-anchor="middle" fill="#111" font-weight="bold">Alpha: o Todo</text>
+<line x1="40" y1="844" x2="1160" y2="844" stroke="#d6d6d6" stroke-width="1"/>
+<text x="40" y="874" font-size="14" text-anchor="start" fill="#555">Do autor: imagem 4, texto A.1. D14 em aberto: o campo de visão ainda não entra na máquina.</text>
+</svg>

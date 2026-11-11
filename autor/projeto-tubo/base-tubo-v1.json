@@ -1,0 +1,39 @@
+{
+  "formato": "cosmos-base-v1",
+  "nome": "tubo-v1",
+  "descricao": "O Tubo como base de fatos do Cosmos: o que o autor afirmou, as suposições marcadas e as pontes com a base da realidade (realidade-v1). Privada: fica fora do Git.",
+  "juntarCom": ["realidade-v1"],
+  "vocabulario": [
+    { "simbolo": "Fragmento", "tipo": "predicado", "aridade": 1, "leitura": "x é um fragmento", "sinonimos": ["fragmento", "ponto observador", "observador"] },
+    { "simbolo": "DentroDoTubo", "tipo": "predicado", "aridade": 1, "leitura": "x está dentro do Tubo", "sinonimos": ["dentro do tubo", "esta dentro do tubo", "no tubo"] },
+    { "simbolo": "VeOTodo", "tipo": "predicado", "aridade": 1, "leitura": "x vê o Todo inteiro", "sinonimos": ["ve o todo", "ve o todo inteiro", "enxerga o todo", "enxerga o todo inteiro", "conhece o todo inteiro"] },
+    { "simbolo": "ValorTotal", "tipo": "predicado", "aridade": 1, "leitura": "x tem o valor total", "sinonimos": ["valor total", "tem o valor total", "tem todo o valor", "tem valor maximo", "valor maximo"] },
+    { "simbolo": "Descansa", "tipo": "predicado", "aridade": 1, "leitura": "x descansa", "sinonimos": ["descansa", "descansou", "descansar"] },
+    { "simbolo": "EmRepouso", "tipo": "predicado", "aridade": 1, "leitura": "x está em repouso", "sinonimos": ["em repouso", "repouso", "sem forca"] },
+    { "simbolo": "FechaSozinho", "tipo": "predicado", "aridade": 1, "leitura": "x fecha o Tubo sozinho", "sinonimos": ["fecha o tubo sozinho", "fecha sozinho", "completa o todo sozinho"] },
+    { "simbolo": "CurvaASiMesmo", "tipo": "predicado", "aridade": 1, "leitura": "x curva a si mesmo", "sinonimos": ["curva a si mesmo", "se curva sozinho", "domina a propria rota", "tem dominio sobre a propria curva"] },
+    { "simbolo": "Opostas", "tipo": "predicado", "aridade": 2, "leitura": "x e y estão em oposição (a 180°)", "sinonimos": ["em oposicao", "a 180 graus", "opostas", "opostos"] },
+    { "simbolo": "A90", "tipo": "predicado", "aridade": 2, "leitura": "x e y estão a 90° (eixos perpendiculares)", "sinonimos": ["a 90 graus", "perpendiculares", "em eixos perpendiculares"] },
+    { "simbolo": "SeAnulam", "tipo": "predicado", "aridade": 2, "leitura": "x e y se anulam", "sinonimos": ["se anulam", "anulam", "se cancelam"] },
+    { "simbolo": "Colidem", "tipo": "predicado", "aridade": 2, "leitura": "x colide com y", "sinonimos": ["colide com", "colidem", "bate em", "se encontra com"] },
+    { "simbolo": "VelocidadesDiferentes", "tipo": "predicado", "aridade": 2, "leitura": "x e y têm velocidades diferentes", "sinonimos": ["velocidades diferentes", "velocidade diferente"] },
+    { "simbolo": "GastaEnergia", "tipo": "predicado", "aridade": 2, "leitura": "o encontro de x com y gasta energia do estoque", "sinonimos": ["gasta energia", "gastam energia", "consome energia", "consomem energia"] },
+    { "simbolo": "Aniquilacao", "tipo": "predicado", "aridade": 1, "leitura": "x é uma aniquilação de matéria com antimatéria", "sinonimos": ["aniquilacao", "aniquilacao de materia com antimateria"], "especie": true },
+    { "simbolo": "ViraLuz", "tipo": "predicado", "aridade": 1, "leitura": "x vira luz", "sinonimos": ["vira luz", "viram luz", "libera luz", "gera luz"] }
+  ],
+  "fatos": [
+    { "id": "T01", "enunciado": "Todo fragmento está dentro do Tubo enquanto ele não fecha.", "formula": "∀x (Fragmento(x) ⟹ DentroDoTubo(x))", "fonte": { "nome": "autor: imagem 3 e A.6" } },
+    { "id": "T02", "enunciado": "De dentro do Tubo ninguém vê o Todo inteiro: vê o Todo incompleto (a distorção).", "formula": "∀x (DentroDoTubo(x) ⟹ ¬VeOTodo(x))", "fonte": { "nome": "autor: imagem 4, A.6 e A.13 (Gödel)" } },
+    { "id": "T03", "enunciado": "O valor é limitado ao que se vê: ter o valor total exige ver o Todo inteiro.", "formula": "∀x (ValorTotal(x) ⟹ VeOTodo(x))", "fonte": { "nome": "autor: A.1" } },
+    { "id": "T04", "enunciado": "Dentro do Tubo ninguém descansa: só se descansa após a finalização do Todo.", "formula": "∀x (DentroDoTubo(x) ⟹ ¬Descansa(x))", "fonte": { "nome": "autor: A.6" } },
+    { "id": "T05", "enunciado": "Nenhum fragmento fecha o Tubo sozinho: todos precisam testar as possibilidades.", "formula": "∀x (Fragmento(x) ⟹ ¬FechaSozinho(x))", "fonte": { "nome": "autor: A.6 e A.12" } },
+    { "id": "T06", "enunciado": "O fragmento não tem domínio sobre a própria curva: a rota muda pela resistência e o Tubo vai engolindo.", "formula": "∀x (Fragmento(x) ⟹ ¬CurvaASiMesmo(x))", "fonte": { "nome": "autor: A.8" } },
+    { "id": "T07", "enunciado": "Em oposição (180°), matéria e antimatéria se anulam.", "formula": "∀x ∀y (Opostas(x, y) ⟹ SeAnulam(x, y))", "fonte": { "nome": "autor: página 1 e D1; provado no Z3 (confere-z3.py, item 11)" } },
+    { "id": "T08", "enunciado": "A 90° (eixos perpendiculares), não se anulam.", "formula": "∀x ∀y (A90(x, y) ⟹ ¬SeAnulam(x, y))", "fonte": { "nome": "provado no Z3 (confere-z3.py, item 12; equacoes.md, E1)" } },
+    { "id": "T09", "enunciado": "Quando dois se encontram com velocidades diferentes, o encontro gasta energia do estoque.", "formula": "∀x ∀y (Colidem(x, y) ∧ VelocidadesDiferentes(x, y) ⟹ GastaEnergia(x, y))", "fonte": { "nome": "suposição S5 com S10 (perda > 0, D15); provado no Z3 (item 24)" } },
+    { "id": "T10", "enunciado": "Toda aniquilação de matéria com antimatéria vira luz.", "formula": "∀x (Aniquilacao(x) ⟹ ViraLuz(x))", "fonte": { "nome": "física: aniquilação elétron-pósitron (dois fótons); autor: A.5" } },
+    { "id": "T11", "enunciado": "Todo ser humano é um fragmento.", "formula": "∀x (Humano(x) ⟹ Fragmento(x))", "fonte": { "nome": "ponte do autor: imagens 2 e 5 (f = pessoas)" } },
+    { "id": "T12", "enunciado": "Ver o Todo inteiro é perceber todos os acontecimentos.", "formula": "∀x (VeOTodo(x) ⟹ PercebeTudo(x))", "fonte": { "nome": "ponte com a realidade-v1 (A.12: o Tubo liga o que está desconexo)" } },
+    { "id": "T13", "enunciado": "Existem fragmentos.", "formula": "∃x (Fragmento(x))", "fonte": { "nome": "autor: imagem 2" } }
+  ]
+}

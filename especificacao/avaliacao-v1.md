@@ -55,6 +55,10 @@ de um lote dá os acertos completos, os que só acertaram a classe e os acertos 
 - **Regras:** os itens nunca entram em treino nem em exemplo de prompt; a avaliação de um modelo roda na máquina do
   dono; o resultado publicado diz o modelo, a data e a versão do conjunto. Quando o conjunto for aposentado, os itens
   e os sais são revelados, e qualquer um confere que batem com os compromissos e com a raiz carimbada antes do treino.
+- **Revelado em 11/11/2026**, por decisão do dono, depois de duas das três medições: itens, sais, gerador e as duas
+  medições estão em `avaliacao/fechado-v1/`, e `testes/avaliacao-revelada.test.ts` refaz os compromissos e a raiz a cada
+  execução da CI. A terceira medição não pode mais ser às cegas neste conjunto: a do modelo treinado precisa de um
+  conjunto novo, gerado e carimbado antes do treino.
 - **Exemplos públicos:** `avaliacao/exemplos-publicos-v1.jsonl` traz 12 itens (4 por classe) do mesmo formato, com
   vocabulário de animais, só para mostrar o formato e testar a nota. Eles não fazem parte do conjunto fechado.
 

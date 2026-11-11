@@ -1,0 +1,117 @@
+{"id":"F-001","premissas":["∀x (Carteiro(x) ⟹ Engenheiro(x))"],"conclusao":"∃x (Carteiro(x) ∧ Engenheiro(x))","classe":"independente"}
+{"id":"F-002","premissas":["∀x (Vizinho(x) ⟹ Advogado(x))","∀x (Advogado(x) ⟹ Enfermeiro(x))","Vizinho(gabriela)"],"conclusao":"¬Enfermeiro(gabriela)","classe":"contradiz"}
+{"id":"F-003","premissas":["∀x (Medico(x) ⟹ Inteligente(x))","Medico(nina)"],"conclusao":"∃x (Medico(x) ∧ Inteligente(x))","classe":"segue"}
+{"id":"F-004","premissas":["¬¬Cozinheiro(paula)"],"conclusao":"Cozinheiro(paula)","classe":"segue"}
+{"id":"F-005","premissas":["Veloz(nina) ∨ Medico(nina)","¬Veloz(nina)"],"conclusao":"Medico(nina)","classe":"segue"}
+{"id":"F-006","premissas":["∀x (Advogado(x) ⟹ ¬Padeiro(x))"],"conclusao":"∀x (Padeiro(x) ⟹ ¬Advogado(x))","classe":"independente"}
+{"id":"F-007","premissas":["∀x (Medico(x) ⟹ Capaz(x))","Medico(lara)"],"conclusao":"¬Capaz(lara)","classe":"contradiz"}
+{"id":"F-008","premissas":["∀x (Professor(x) ⟹ Cozinheiro(x))","∀x (Cozinheiro(x) ⟹ Atleta(x))"],"conclusao":"∀x (Professor(x) ⟹ Atleta(x))","classe":"segue"}
+{"id":"F-009","premissas":["∀x (Engenheiro(x) ⟹ ¬Jardineiro(x))","Engenheiro(joao)"],"conclusao":"Jardineiro(joao)","classe":"contradiz"}
+{"id":"F-010","premissas":["Livre(otavio) ⟹ Juiz(joao)","Livre(otavio)"],"conclusao":"¬Juiz(joao)","classe":"contradiz"}
+{"id":"F-011","premissas":["∀x (Jardineiro(x) ⟹ Forte(x))","Jardineiro(rui)"],"conclusao":"¬Forte(rui)","classe":"contradiz"}
+{"id":"F-012","premissas":["∃x (Jardineiro(x) ∧ ¬Juiz(x))"],"conclusao":"¬∀x (Jardineiro(x) ⟹ Juiz(x))","classe":"segue"}
+{"id":"F-013","premissas":["∀x (Escritor(x) ⟹ Juiz(x))","∀x (Juiz(x) ⟹ Jardineiro(x))","Escritor(carla)"],"conclusao":"¬Jardineiro(carla)","classe":"segue"}
+{"id":"F-014","premissas":["Admira(joao, nina)","Admira(nina, rui)"],"conclusao":"Admira(joao, rui)","classe":"independente"}
+{"id":"F-015","premissas":["¬¬Ator(carla)"],"conclusao":"Ator(carla)","classe":"segue"}
+{"id":"F-016","premissas":["∃x (Bailarino(x) ∧ ∀y (Arquiteto(y) ⟹ Respeita(y, x)))"],"conclusao":"∀x (Arquiteto(x) ⟹ ∃y (Bailarino(y) ∧ Respeita(x, y)))","classe":"independente"}
+{"id":"F-017","premissas":["∀x (Medico(x) ⟹ Prudente(x))","Medico(joao)"],"conclusao":"¬Prudente(joao)","classe":"contradiz"}
+{"id":"F-018","premissas":["∀x (Pintor(x) ⟹ Arquiteto(x))"],"conclusao":"∀x (Arquiteto(x) ⟹ Pintor(x))","classe":"contradiz"}
+{"id":"F-019","premissas":["∃x (Medico(x) ∧ Advogado(x))"],"conclusao":"∃x (Advogado(x) ∧ Medico(x))","classe":"segue"}
+{"id":"F-020","premissas":["∀x (Carteiro(x) ⟹ Prudente(x))","Carteiro(gabriela)"],"conclusao":"¬Prudente(gabriela)","classe":"contradiz"}
+{"id":"F-021","premissas":["∀x (Carteiro(x) ⟹ ¬Nobre(x))"],"conclusao":"∃x (Carteiro(x) ∧ Nobre(x))","classe":"contradiz"}
+{"id":"F-022","premissas":["∀x (Marinheiro(x) ⟹ Jovem(x))","¬Marinheiro(hugo)"],"conclusao":"¬Jovem(hugo)","classe":"independente"}
+{"id":"F-023","premissas":["∀x (Carteiro(x) ⟹ Advogado(x))","Advogado(elisa)"],"conclusao":"Carteiro(elisa)","classe":"independente"}
+{"id":"F-024","premissas":["∀x (Escritor(x) ⟹ Competente(x))"],"conclusao":"∃x (Escritor(x) ∧ Competente(x))","classe":"independente"}
+{"id":"F-025","premissas":["∀x (Cientista(x) ⟹ ¬Paciente(x))","Cientista(joao)"],"conclusao":"Paciente(joao)","classe":"contradiz"}
+{"id":"F-026","premissas":["∀x (Bailarino(x) ⟹ Ator(x))","¬Ator(davi)"],"conclusao":"¬Bailarino(davi)","classe":"segue"}
+{"id":"F-027","premissas":["Competente(nina) ∨ Alegre(nina)","Competente(nina)"],"conclusao":"¬Alegre(nina)","classe":"independente"}
+{"id":"F-028","premissas":["∃x (Advogado(x) ∧ Enfermeiro(x))"],"conclusao":"∀x (Advogado(x) ⟹ Enfermeiro(x))","classe":"independente"}
+{"id":"F-029","premissas":["Inteligente(ana) ∨ Livre(ana)","Inteligente(ana)"],"conclusao":"¬Livre(ana)","classe":"segue"}
+{"id":"F-031","premissas":["∀x (Cientista(x) ⟹ Jovem(x))","¬Cientista(davi)"],"conclusao":"¬Jovem(davi)","classe":"independente"}
+{"id":"F-032","premissas":["Medico(gabriela) ⟹ Marinheiro(carla)","Medico(gabriela)"],"conclusao":"¬Marinheiro(carla)","classe":"contradiz"}
+{"id":"F-033","premissas":["∃x (Ator(x) ∧ Fotografo(x))"],"conclusao":"∀x (Ator(x) ⟹ ¬Fotografo(x))","classe":"contradiz"}
+{"id":"F-034","premissas":["∃x (Cozinheiro(x) ∧ Pintor(x))"],"conclusao":"∃x (Pintor(x) ∧ Cozinheiro(x))","classe":"segue"}
+{"id":"F-035","premissas":["∀x (Atleta(x) ⟹ ¬Fiel(x))"],"conclusao":"∃x (Atleta(x) ∧ Fiel(x))","classe":"contradiz"}
+{"id":"F-036","premissas":["∀x (Fotografo(x) ⟹ ¬Dentista(x))","∀x (Aluno(x) ⟹ Fotografo(x))"],"conclusao":"∀x (Aluno(x) ⟹ ¬Dentista(x))","classe":"segue"}
+{"id":"F-037","premissas":["∀x (Bailarino(x) ⟹ ¬Atleta(x))"],"conclusao":"∃x (Bailarino(x) ∧ Atleta(x))","classe":"contradiz"}
+{"id":"F-038","premissas":["¬¬Nobre(carla)"],"conclusao":"Nobre(carla)","classe":"segue"}
+{"id":"F-039","premissas":["∀x (Marinheiro(x) ⟹ Enfermeiro(x))","Enfermeiro(fabio)"],"conclusao":"Marinheiro(fabio)","classe":"independente"}
+{"id":"F-040","premissas":["∀x (Advogado(x) ⟹ Fotografo(x))","∀x (Fotografo(x) ⟹ Tenaz(x))"],"conclusao":"∀x (Advogado(x) ⟹ Tenaz(x))","classe":"segue"}
+{"id":"F-041","premissas":["∀x (Engenheiro(x) ⟹ Cozinheiro(x))","∀x (Cozinheiro(x) ⟹ Enfermeiro(x))","Engenheiro(fabio)"],"conclusao":"¬Enfermeiro(fabio)","classe":"contradiz"}
+{"id":"F-042","premissas":["∃y (Cientista(y) ∧ ∀x (Pintor(x) ⟹ Admira(x, y)))"],"conclusao":"∀x (Pintor(x) ⟹ ∃y (Cientista(y) ∧ Admira(x, y)))","classe":"independente"}
+{"id":"F-043","premissas":["Respeita(marcos, lara)","Respeita(lara, iris)"],"conclusao":"Respeita(marcos, iris)","classe":"independente"}
+{"id":"F-044","premissas":["∀x (Engenheiro(x) ⟹ Capaz(x))","Engenheiro(elisa)"],"conclusao":"∃x (Engenheiro(x) ∧ Capaz(x))","classe":"segue"}
+{"id":"F-045","premissas":["∀x (Advogado(x) ⟹ ∃y (Dentista(y) ∧ Ajuda(x, y)))"],"conclusao":"∃y (Dentista(y) ∧ ∀x (Advogado(x) ⟹ Ajuda(x, y)))","classe":"independente"}
+{"id":"F-046","premissas":["∀x (Jardineiro(x) ⟹ Prudente(x))"],"conclusao":"¬∀x (Jardineiro(x) ⟹ Prudente(x))","classe":"contradiz"}
+{"id":"F-047","premissas":["∀x (Medico(x) ⟹ ¬Padeiro(x))"],"conclusao":"∀x (Padeiro(x) ⟹ ¬Medico(x))","classe":"independente"}
+{"id":"F-048","premissas":["Dentista(nina) ⟹ Fotografo(nina)","Fotografo(nina)"],"conclusao":"Dentista(nina)","classe":"independente"}
+{"id":"F-049","premissas":["∀x (Musico(x) ⟹ Pintor(x))","∀x (Pintor(x) ⟹ ¬Fotografo(x))"],"conclusao":"∀x (Musico(x) ⟹ ¬Fotografo(x))","classe":"segue"}
+{"id":"F-050","premissas":["∀x (Vizinho(x) ⟹ Humilde(x))","Vizinho(paula)"],"conclusao":"Humilde(paula)","classe":"segue"}
+{"id":"F-051","premissas":["∀x (Juiz(x) ⟹ Cozinheiro(x))","Juiz(fabio)"],"conclusao":"¬Cozinheiro(fabio)","classe":"contradiz"}
+{"id":"F-052","premissas":["∀x (Cozinheiro(x) ⟹ Elegante(x))","∀x (Enfermeiro(x) ⟹ Elegante(x))"],"conclusao":"∀x (Cozinheiro(x) ⟹ Enfermeiro(x))","classe":"contradiz"}
+{"id":"F-053","premissas":["Inteligente(nina) ∨ Alegre(nina)","Inteligente(nina)"],"conclusao":"¬Alegre(nina)","classe":"independente"}
+{"id":"F-054","premissas":["∃x (Cozinheiro(x) ∧ Padeiro(x))","∃y (Padeiro(y) ∧ Advogado(y))"],"conclusao":"∃z (Cozinheiro(z) ∧ Advogado(z))","classe":"independente"}
+{"id":"F-055","premissas":["∃x (Jardineiro(x) ∧ ¬Enfermeiro(x))"],"conclusao":"∀x (Jardineiro(x) ⟹ Enfermeiro(x))","classe":"contradiz"}
+{"id":"F-056","premissas":["Tenaz(nina) ⟹ Valente(tiago)","Tenaz(nina)"],"conclusao":"¬Valente(tiago)","classe":"contradiz"}
+{"id":"F-058","premissas":["Competente(davi) ∨ Medico(davi)","¬Competente(davi)"],"conclusao":"¬Medico(davi)","classe":"independente"}
+{"id":"F-059","premissas":["∃x (Pintor(x) ∧ Fotografo(x))"],"conclusao":"∃x (Fotografo(x) ∧ Pintor(x))","classe":"segue"}
+{"id":"F-060","premissas":["Prudente(paula) ∨ Sociavel(paula)","Prudente(paula)"],"conclusao":"¬Sociavel(paula)","classe":"independente"}
+{"id":"F-061","premissas":["∀x (Medico(x) ⟹ Elegante(x))","∀x (Advogado(x) ⟹ Elegante(x))"],"conclusao":"∀x (Medico(x) ⟹ Advogado(x))","classe":"contradiz"}
+{"id":"F-062","premissas":["Jovem(caio) ⟹ Cientista(hugo)","Jovem(caio)"],"conclusao":"¬Cientista(hugo)","classe":"contradiz"}
+{"id":"F-063","premissas":["∃x (Padeiro(x) ∧ Tenaz(x))"],"conclusao":"∀x (Padeiro(x) ⟹ ¬Tenaz(x))","classe":"contradiz"}
+{"id":"F-064","premissas":["∀x (Pescador(x) ⟹ Escritor(x))"],"conclusao":"∀x (Escritor(x) ⟹ Pescador(x))","classe":"contradiz"}
+{"id":"F-065","premissas":["Marinheiro(davi) ⟹ Inteligente(vera)","¬Inteligente(vera)"],"conclusao":"¬Marinheiro(davi)","classe":"segue"}
+{"id":"F-066","premissas":["∀x (Jardineiro(x) ⟹ Marinheiro(x))"],"conclusao":"∃x (Jardineiro(x) ∧ Marinheiro(x))","classe":"independente"}
+{"id":"F-067","premissas":["∀x (Cientista(x) ⟹ ¬Engenheiro(x))","Cientista(paula)"],"conclusao":"Engenheiro(paula)","classe":"contradiz"}
+{"id":"F-068","premissas":["∀x (Dentista(x) ⟹ Arquiteto(x))","¬Arquiteto(gabriela)"],"conclusao":"¬Dentista(gabriela)","classe":"segue"}
+{"id":"F-069","premissas":["∃x (Advogado(x) ∧ ¬Cientista(x))"],"conclusao":"∀x (Advogado(x) ⟹ Cientista(x))","classe":"contradiz"}
+{"id":"F-070","premissas":["∀x (Arquiteto(x) ⟹ Enfermeiro(x))"],"conclusao":"¬∀x (Arquiteto(x) ⟹ Enfermeiro(x))","classe":"contradiz"}
+{"id":"F-071","premissas":["∀x (Padeiro(x) ⟹ Marinheiro(x))"],"conclusao":"∀x (Marinheiro(x) ⟹ Padeiro(x))","classe":"contradiz"}
+{"id":"F-072","premissas":["∃x (Pescador(x) ∧ Cientista(x))"],"conclusao":"∀x (Pescador(x) ⟹ Cientista(x))","classe":"independente"}
+{"id":"F-073","premissas":["∀x (Bailarino(x) ⟹ Professor(x))","∀x (Professor(x) ⟹ Escritor(x))","Bailarino(fabio)"],"conclusao":"¬Escritor(fabio)","classe":"contradiz"}
+{"id":"F-074","premissas":["∃x (Engenheiro(x) ∧ Carteiro(x))"],"conclusao":"∀x (Engenheiro(x) ⟹ ¬Carteiro(x))","classe":"contradiz"}
+{"id":"F-075","premissas":["∀x (Fotografo(x) ⟹ ¬Leal(x))"],"conclusao":"∃x (Fotografo(x) ∧ Leal(x))","classe":"contradiz"}
+{"id":"F-076","premissas":["∀x (Cozinheiro(x) ⟹ Marinheiro(x))","Marinheiro(marcos)"],"conclusao":"Cozinheiro(marcos)","classe":"independente"}
+{"id":"F-077","premissas":["∀x (Carteiro(x) ⟹ Jardineiro(x))"],"conclusao":"∀x (Jardineiro(x) ⟹ Carteiro(x))","classe":"contradiz"}
+{"id":"F-078","premissas":["∃x (Carteiro(x) ∧ ¬Fotografo(x))"],"conclusao":"¬∀x (Carteiro(x) ⟹ Fotografo(x))","classe":"segue"}
+{"id":"F-079","premissas":["∀x (Escritor(x) ⟹ Atleta(x))","∀x (Atleta(x) ⟹ Prudente(x))","Escritor(sara)"],"conclusao":"¬Prudente(sara)","classe":"contradiz"}
+{"id":"F-080","premissas":["Bailarino(ana) ⟹ Nobre(tiago)","¬Nobre(tiago)"],"conclusao":"¬Bailarino(ana)","classe":"segue"}
+{"id":"F-081","premissas":["Cordial(nina) ⟹ Atleta(otavio)","¬Atleta(otavio)"],"conclusao":"¬Cordial(nina)","classe":"segue"}
+{"id":"F-082","premissas":["∃x (Fotografo(x) ∧ Competente(x))"],"conclusao":"∀x (Fotografo(x) ⟹ Competente(x))","classe":"independente"}
+{"id":"F-083","premissas":["Eficiente(caio) ∨ Livre(caio)","¬Eficiente(caio)"],"conclusao":"¬Livre(caio)","classe":"independente"}
+{"id":"F-084","premissas":["∃x (Aluno(x) ∧ Gentil(x))"],"conclusao":"∀x (Aluno(x) ⟹ ¬Gentil(x))","classe":"contradiz"}
+{"id":"F-085","premissas":["∀x (Engenheiro(x) ⟹ Nobre(x))","¬Nobre(joao)"],"conclusao":"¬Engenheiro(joao)","classe":"segue"}
+{"id":"F-086","premissas":["Feliz(elisa) ∨ Sociavel(elisa)","¬Feliz(elisa)"],"conclusao":"Sociavel(elisa)","classe":"segue"}
+{"id":"F-087","premissas":["∃x (Cientista(x) ∧ ¬Cozinheiro(x))"],"conclusao":"∀x (Cientista(x) ⟹ Cozinheiro(x))","classe":"contradiz"}
+{"id":"F-088","premissas":["∀x (Medico(x) ⟹ ¬Enfermeiro(x))","Medico(rui)"],"conclusao":"Enfermeiro(rui)","classe":"contradiz"}
+{"id":"F-089","premissas":["∀x (Ator(x) ⟹ Enfermeiro(x))"],"conclusao":"¬∀x (Ator(x) ⟹ Enfermeiro(x))","classe":"contradiz"}
+{"id":"F-090","premissas":["Jovem(fabio) ⟹ Tenaz(fabio)","Jovem(fabio)"],"conclusao":"Tenaz(fabio)","classe":"segue"}
+{"id":"F-091","premissas":["∀x (Juiz(x) ⟹ Bailarino(x))","∀x (Bailarino(x) ⟹ Jardineiro(x))"],"conclusao":"∀x (Juiz(x) ⟹ Jardineiro(x))","classe":"segue"}
+{"id":"F-092","premissas":["∀x (Ator(x) ⟹ Professor(x))","¬Ator(bruno)"],"conclusao":"¬Professor(bruno)","classe":"independente"}
+{"id":"F-093","premissas":["∀x (Escritor(x) ⟹ ¬Pintor(x))"],"conclusao":"∀x (Pintor(x) ⟹ ¬Escritor(x))","classe":"independente"}
+{"id":"F-094","premissas":["∃x (Advogado(x) ∧ Vizinho(x))","∃y (Vizinho(y) ∧ Veloz(y))"],"conclusao":"∃z (Advogado(z) ∧ Veloz(z))","classe":"independente"}
+{"id":"F-095","premissas":["∀x (Engenheiro(x) ⟹ Escritor(x))"],"conclusao":"¬∀x (Engenheiro(x) ⟹ Escritor(x))","classe":"contradiz"}
+{"id":"F-096","premissas":["Eficiente(davi) ⟹ Sensivel(davi)","Sensivel(davi)"],"conclusao":"Eficiente(davi)","classe":"independente"}
+{"id":"F-097","premissas":["∀x (Cientista(x) ⟹ Aluno(x))","Aluno(hugo)"],"conclusao":"Cientista(hugo)","classe":"independente"}
+{"id":"F-098","premissas":["Pescador(elisa) ∨ Pintor(elisa)","¬Pescador(elisa)"],"conclusao":"¬Pintor(elisa)","classe":"independente"}
+{"id":"F-099","premissas":["Jardineiro(marcos) ⟹ Leal(joao)","Jardineiro(marcos)"],"conclusao":"¬Leal(joao)","classe":"contradiz"}
+{"id":"F-100","premissas":["∃x (Carteiro(x) ∧ Medico(x))","∃y (Medico(y) ∧ Sociavel(y))"],"conclusao":"∃z (Carteiro(z) ∧ Sociavel(z))","classe":"independente"}
+{"id":"F-101","premissas":["∃x (Vizinho(x) ∧ ¬Aluno(x))"],"conclusao":"¬∀x (Vizinho(x) ⟹ Aluno(x))","classe":"segue"}
+{"id":"F-102","premissas":["Engenheiro(sara) ⟹ Enfermeiro(sara)","Engenheiro(sara)"],"conclusao":"Enfermeiro(sara)","classe":"segue"}
+{"id":"F-103","premissas":["Respeita(caio, marcos)","Respeita(marcos, joao)"],"conclusao":"Respeita(caio, joao)","classe":"independente"}
+{"id":"F-104","premissas":["Cozinheiro(elisa) ∨ Dentista(elisa)","¬Cozinheiro(elisa)"],"conclusao":"Dentista(elisa)","classe":"segue"}
+{"id":"F-105","premissas":["Veloz(vera) ⟹ Bailarino(vera)","Veloz(vera)"],"conclusao":"Bailarino(vera)","classe":"segue"}
+{"id":"F-106","premissas":["Nobre(gabriela) ⟹ Inteligente(gabriela)","Inteligente(gabriela)"],"conclusao":"Nobre(gabriela)","classe":"segue"}
+{"id":"F-107","premissas":["∀x (Musico(x) ⟹ Sociavel(x))","∀x (Medico(x) ⟹ Sociavel(x))"],"conclusao":"∀x (Musico(x) ⟹ Medico(x))","classe":"independente"}
+{"id":"F-108","premissas":["∀x (Ator(x) ⟹ ¬Feliz(x))","∀x (Dentista(x) ⟹ Ator(x))"],"conclusao":"∀x (Dentista(x) ⟹ ¬Feliz(x))","classe":"segue"}
+{"id":"F-109","premissas":["∃y (Bailarino(y) ∧ ∀x (Aluno(x) ⟹ Respeita(x, y)))"],"conclusao":"∀x (Aluno(x) ⟹ ∃y (Bailarino(y) ∧ Respeita(x, y)))","classe":"independente"}
+{"id":"F-110","premissas":["∃x (Bailarino(x) ∧ ¬Fotografo(x))"],"conclusao":"∀x (Bailarino(x) ⟹ Fotografo(x))","classe":"contradiz"}
+{"id":"F-111","premissas":["∀x (Marinheiro(x) ⟹ Atleta(x))","Marinheiro(otavio)"],"conclusao":"Atleta(otavio)","classe":"segue"}
+{"id":"F-112","premissas":["∀x (Arquiteto(x) ⟹ Aluno(x))","Arquiteto(gabriela)"],"conclusao":"Aluno(gabriela)","classe":"segue"}
+{"id":"F-113","premissas":["Jovem(ana) ⟹ Livre(ana)","Jovem(ana)"],"conclusao":"Livre(ana)","classe":"segue"}
+{"id":"F-115","premissas":["Dentista(vera) ∨ Gentil(vera)","¬Dentista(vera)"],"conclusao":"¬Gentil(vera)","classe":"independente"}
+{"id":"F-116","premissas":["∀x (Arquiteto(x) ⟹ Pintor(x))","∀x (Fotografo(x) ⟹ Pintor(x))"],"conclusao":"∀x (Arquiteto(x) ⟹ Fotografo(x))","classe":"contradiz"}
+{"id":"F-117","premissas":["Ensina(davi, nina)","Ensina(nina, otavio)"],"conclusao":"Ensina(davi, otavio)","classe":"independente"}
+{"id":"F-118","premissas":["∀x (Fotografo(x) ⟹ ∃y (Cientista(y) ∧ Respeita(x, y)))"],"conclusao":"∃y (Cientista(y) ∧ ∀x (Fotografo(x) ⟹ Respeita(x, y)))","classe":"independente"}
+{"id":"F-119","premissas":["∃x (Medico(x) ∧ Marinheiro(x))"],"conclusao":"∀x (Medico(x) ⟹ ¬Marinheiro(x))","classe":"contradiz"}
+{"id":"F-120","premissas":["∀x (Medico(x) ⟹ Aluno(x))","Medico(carla)"],"conclusao":"∃x (Medico(x) ∧ Aluno(x))","classe":"segue"}

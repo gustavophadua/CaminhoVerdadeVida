@@ -17,7 +17,7 @@ Cada arquivo abaixo foi carimbado pelo OpenTimestamps e a confirmacao esta regis
 | 972669 | `public/cosmos-502426c-resumo.txt` | resumo da cadeia historica F0-F8 |
 | 973050 | `public/cosmos-checkpoint-raiz.txt` | raiz do checkpoint Merkle |
 | 973118 | `public/cosmos-fase3-resumo.txt` | resumo das quatro cadeias do teste da Fase 3 (A, B, C e a segunda historia de A) |
-| 973304 | `public/cosmos-avaliacao-v1-raiz.txt` | compromisso do conjunto fechado de avaliacao (os itens continuam fechados) |
+| 973304 | `public/cosmos-avaliacao-v1-raiz.txt` | compromisso do conjunto fechado de avaliacao (itens e sais revelados em 11/11/2026 em `avaliacao/fechado-v1/`) |
 | 973562 | `public/cosmos-iai-v1-resultado.txt` | resultado da medicao 1 da I-AI |
 | 973687 | `public/cosmos-iai-v1-medicao-2.txt` | resultado da medicao 2 da I-AI |
 
@@ -36,6 +36,17 @@ Baixe o repositorio (Code > Download ZIP), extraia e abra `Instalar-Cosmos.cmd`.
 ## Usar pelo telefone (modo remoto)
 
 Com o Cosmos instalado, instale o tunel uma vez (`winget install --id Cloudflare.cloudflared`) e abra `Abrir-Cosmos-Remoto.cmd`. Na primeira vez ele pede a senha da dona. Depois mostra um endereco https: abra no telefone e entre com a senha. O computador continua sendo o servidor (precisa ficar ligado): a traducao vai pelo Groq, com o Ollama de reserva, e o Z3 decide no computador. A conta cifrada, a carteira e a moeda de teste continuam so no modo local. Detalhes, seguranca e limites: `especificacao/remoto-v1.md`.
+
+## Do autor e dados abertos
+
+Desde 11/11/2026, por decisao do dono, ficam publicos:
+
+- `autor/projeto-tubo/`: o modelo Alpha e Omega (o Tubo), com a maquina, as conferencias pelo Z3, as pranchas e a base para o verificador;
+- `autor/principia/`: o Principia, sem o nome pessoal do autor;
+- `avaliacao/fechado-v1/`: o conjunto fechado de avaliacao, revelado e conferido contra a raiz carimbada (`testes/avaliacao-revelada.test.ts`);
+- `treino/dados/`: os dados de treino do modelo proprio.
+
+O que mudou na publicacao, como usar e os limites estao em `autor/README.md` e em `avaliacao/fechado-v1/LEIA-ME.md`.
 
 ## Desenvolvimento
 
