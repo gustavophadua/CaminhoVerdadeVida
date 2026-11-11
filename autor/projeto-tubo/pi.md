@@ -1,5 +1,7 @@
 # Pi é matéria e antimatéria ao mesmo tempo?
 
+**English:** [pi.en.md](pi.en.md)
+
 Conferido em 10 de novembro de 2026 (`pi-confere.py`). Para repetir:
 
 ```

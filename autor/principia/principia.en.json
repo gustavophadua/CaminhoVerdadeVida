@@ -1,0 +1,1636 @@
+{
+  "id": "principia-en",
+  "nome": "Principia (English)",
+  "descricao": "The complete document, in English: text, axioms of the Whole and of the parts, theorems, dynamics, Spinoza and vocabulary. Translation of principia.json; the Portuguese original prevails. Formulas and symbols are unchanged.",
+  "notas": [
+    {
+      "id": "principia-01-eu-en",
+      "titulo": "The I, the Self and information",
+      "texto": "Welcome, my commitment is to the truth, if you feel offended stay a slave and be trampled until you learn. I am [author's name], but I am not that, I am not my name, I am not my country, my school or my parents. what we call the I in neuroscience is a process of dilution of information, information is taken in by the ears and eyes, goes to the brain and inside the brain it is processed, but there is a catch, the brain is a processor, it is not a database, the database is in our unconscious, or the I, or what is called the Self. Inside the Self the information arrives diluted by the brain. The self processes the information but remember it is a database, that is, what we have about what we are is just information and information. the sharp difference is that the self does not know how to separate the element of the first person from the third person. so it receives information, for example an I love you, then it processes this \"I love you\" as if it were directed at it, but in truth the I love you was directed by another person whose experiences mentally shaped her to believe in a symbolic value in you, that is. these are the elements of the first person and of the third person. elements of the first person make a person err sharply, and take what I am going to say now, remember the brain brings information, so yes everything is information, and when you receive information about something that is not properly complete what happens? I am going to give you this process through an example. a soldier trained to kill for years received an order from the general. \"soldier go to the congressman he is causing trouble\" the soldier goes there and kills the congressman, if it were a doctor he would act one way. if it were a businessman another, if it were another congressman another, if it were a judge another and another and another. so we start from the principle, when our Self or I receives information and it is incomplete, it is because the brain completes that information with the imagination, but the imagination is trained by what one has had as experience and by what one wants to see.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-02-aristoteles-en",
+      "titulo": "Aristotle — Ergon, Areté, Agathon, Telos",
+      "texto": "so for this I am going to go to aristotle. aristotle looked at an apple tree and said, this damn thing gives apples, not figs. Aristotle looked at the apple tree and said, can I tell this apple tree to give golf balls? here comes a very fitting term, the \"idiot\", an idiot is the one who does not follow the proper functions of each thing. you have a soccer ball, you kick it, you don't eat the ball. so the point is that each thing has its \"good\", this is the best translation into portuguese unfortunately, but good is not good or evil, actually it gets there, but for now good is the proper function of each thing being done, or \"Agathon\" in greek, the good of the soccer player is to play soccer, that of the knife is to cut. can I take a knife and cut iron? look, its good is to cut, that is its function is to cut, and by cutting it fulfills its \"Good\". but damn, what is the good of the human being, look, the plant grows, the animal has instinct, and the only exclusive thing that can be said to be the function of the human being is to take and use what you call the brain to deliberate about things. the human being was born for this, because it is exclusive to him. so when you take a knife and cut iron, you are not fulfilling your Good as a human being, which is to deliberate correctly, in the right way, according to the proper objects of deliberation. so when you take a knife and cut iron, it is not the knife's fault that it is being used by an idiot, since an idiot is the one who does not deliberate about what he should. speaking quickly. the terms Ergon, Areté, Agathon, Telos. Ergon is the function, the knife cuts, Areté is excellence, the knife cuts and by cutting properly it fulfills its function, fulfilling its function with excellence it does its function and by doing its function it is in its proper place, in its proper place it will reach its purpose. for the human being, doing this leads to Eudaimonia. That is, everything has a function and the function of each thing is called logic, which in turn, the logic of everything has a destination called Logos, or where things go and where they came from. The man who follows the proper logic of each thing is called virtuous, among the virtues there is temperance, the right measure for each logic, continent is the one who follows what has to be done by logic.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "aristotle"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-03-virtude-en",
+      "titulo": "Virtue dwells in the middle",
+      "texto": "virtue dwells in the middle, in the center, without extremes. Courage is a virtue, recklessness is excess, cowardice is lack. Virtue is this. in the case where you are a son and your mother is being beaten by your father, your father is drunk and he has these recurrences but is not aggressive, but becomes altered and out of control with drink. virtue would be to hit him, it would not be to let your mother be beaten, nor simply to kill him. in the case where you are a son and your mother is being beaten by your father, your father is a drug dealer, has already killed other people, and beats your mother. the right action in virtue would be to take a knife and kill, if you only hit him, he can kill you, if you let it pass, you let your mother have the possibility of being killed. Being virtuous is an enormous price, it gives you no apparent fruits, the only fruit is inside the action of virtue, and you feel the taste but it is only for yourself. From Spinoza and Aristotle.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "aristotle",
+        "spinoza"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-04-relatividade-en",
+      "titulo": "Relativity and Newton's first law applied to people",
+      "texto": "Now we move on to another, each human being, if born with the experiences of another, would be that other, it is not about you being a different person, among other people, you are still a person, the only thing that differs is your chain of experience and the information you received. So realize, there are many like you, only you are different from them, by being different you exist, because it is not allowed within the whole that an object has the value of the whole, because to have the value you would have to have a privileged point of reference, or Omniscience, you don't have it, right? This is the point of relativity applied to sociology, a person has experience according to the point of reference where they are, that is, their own life, but that does not say they possess the truth, the truth does not depend on relativity, the truth itself is relativity and the primary things by which everything was made and created. newton's first law applied to people: \"Every body remains at rest or in uniform rectilinear motion, unless an external force acts\", Every body that remains at rest or in uniform rectilinear motion, this application to people, translating, takes place in the first-person view of each human being, the third-person view is portrayed according to what the person knows about the world, not about how the world works, this view is in the form of remaining at rest, through the non-application of forces external to one's will. imagine a middle-class person who received all their education from their parents and was taught in a certain way, they look at money and see what was passed on to them by their first-person experiences, if they had bad experiences they will dictate money as an enemy. where I want to get to is that from the first-person view nothing is understood, because you are trapped inside your own consciousness creating internal rules that are contrary to the reality of the third person. it is like saying that a man who dresses as a woman becomes a woman. this is a view of an internal rule created for the person to remain comfortable within the conditions of life they were generated in. so the body at rest or in rectilinear motion in a straight line declares that any action taken within one's own perception is an internally derived action and not an external one, it can grow just for itself, but before the world nothing changes.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "newton"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-05-cosmologia-en",
+      "titulo": "The beginning: homogeneity, gravity and entropy",
+      "texto": "let's go to a brief explanation directed afterwards to quantum mechanics In the beginning, matter was distributed homogeneously — the same density at every point, varying only 1 part in 100 thousand — and isotropic, with no privileged direction. But it was not constant: the temperature was falling, because the universe was expanding. And here is the point that inverts intuition: uniform is the most probable state for a gas in a box, and the least probable for matter with gravity. Gravity is attractive, so it gains entropy by clumping — clumping releases potential energy that turns into heat, and the heat opens up many more microstates than matter loses by becoming localized. The state of maximum entropy of a mass in a region is a black hole: for one solar mass, 10 ⁷⁷ against 10 ⁵⁸ for the current Sun. So the universe was born in the most improbable gravitational configuration there is. And no matter was created after that. The baryons were fixed in the first second; all the rest was assembly — nuclei at 3 minutes, atoms at 380 thousand years, stars afterwards. The same matter, different arrangements. Clumping did not start earlier because it could not : the photons were coupled to matter, and radiation pressure beat gravity. At 380 thousand years the atoms formed, the photons decoupled, the pressure got out of the way — and gravity started to win. The irregularities of 1 in 100 thousand started to grow. That is when entropy rises. Not because entropy does something: it is the accounting of the clumping, not the cause. Each star that forms is gravitational order being spent. And the end is the equality of everything through the exhaustion of that order. Beginning and end have the same uniform temperature. The difference is that at the beginning there was everything to do.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "physics"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-06-quantica-en",
+      "titulo": "Quantum mechanics applied to sociology",
+      "texto": "now quantum mechanics applied to sociology as an example Individuals are part of the whole, as part of the whole, each individual is formed by their experiences, their experiences make them diverge and what is understood as \"Social superiority\" is in truth the proper function of that being in light of what is understood from their experiences. just as poverty to the poor is sweet, just as poverty to the rich is bitter. what changes is the judgment according to one's own experiences. so realize that the relationship between two individuals crosses \"information (quantum field)\" which in turn generates shocks of external forces from one to the other, thus propelling their views according to their experiences, steering them toward their conception of the ideal. however realize that the conception of the ideal does not portray reality, and their measures according to their experiences make their measures of what is the proper good for them locked into their self-perception.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "physics"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-07-reguas-en",
+      "titulo": "The rich person's ruler and the poor person's; uniform and accelerated motion",
+      "texto": "take a rich person who has a ruler of the world of 50cm and a poor person who has a ruler of the world of 10cm. this is an example, and it is not to measure value but to measure performance within society. the rich person with the 50cm ruler realized that money is not the fruit of work but the fruit of the proper importance in a solution, the poor person sees money for sustenance and life. realize the ruler changes, but both are directed to their perspective of the world. when they cross and exchange information, their points of reference enter into a shock of external forces. And so each one directs themself toward what they understand. now we go back to newton: \"Every body remains at rest or in uniform rectilinear motion, unless an external force acts\" I explained the situation of rest, or when the person portrays reality in the first person and corrupts their experiences for themselves and not according to what they truly are, doing this is MRU (uniform rectilinear motion), that is, in the first-person perspective, they are evolving, only it is not real, because it is an internal perspective of their own and not an external one, there is nothing that proves their evolution externally, if so their system is closed (another law of newton..) MRUV (uniformly varied rectilinear motion) is the application of the external force, that is, acceleration, acceleration is something external and independent of oneself, no one decides to accelerate because it is not a decision, acceleration is the consequence of an action of exposure to the primary facts. but look carefully, acceleration as an external force derives from you suffering a shock from your first person to the third person, in which that third-person object makes you look at someone else's perspective, that is, exposure, when you enter a state of exposure, your component is the learning derived from the perspective of other people, for practical application. Your eyes are opened to the mechanisms of the world. the portrait of MRUV is you entering into an external shock with someone, exchanging information, and you not letting yourself be carried in the first person, but looking from a third-person perspective, to analyze and obtain information without it being diluted, thus reusing it according to your intentions, that is, an external force acts, and applies itself within your velocity, propelling your position.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "newton"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-08-hipotese-en",
+      "titulo": "About this logic: a testable hypothesis, not absolute truth",
+      "texto": "Well, this was my translation, my testable hypothetical logic, if you want to use it in the social field, then it is part of you, as pseudo-science, never science, because to be science it would have to declare the social values of people, which requires in-depth, real and tested studies. and I am lazy, and I also have no government instrument in my favor to do this. one thing, never put this pseudo-science or testable hypothesis as if it were absolute truth, and its truth is its own practical application! never the thesis. and that makes it concrete, do not corrupt it.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-09-observacoes-en",
+      "titulo": "Observations — Spinoza's premise and the warning",
+      "texto": "Observations, the principle of the axioms was built with Spinoza's premise about Essence. F = Fragment ( Objects inside the Whole) A = Whole K = Essence i j = A specific fragment WARNING: To understand axioms, you must use the universal language of symbols, without it you are comparable to a primate trying to understand, and you can even destroy the axiomatic logic of the system itself by corrupting them for YOUR OWN INTERESTS. so do a favor, and learn, and contain yourself in virtues.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "spinoza"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-10-convite-en",
+      "titulo": "Try to refute",
+      "texto": "Try to refute, try to contradict, try to use, try to question. Question everything you can. I did this out of pure love and fun for philosophy, and through philosophy, I saw that physics bends to logic, logic is in everything, even though the axioms point to not everything being logic, given that the majority of the majority is, I have faith that logic is everything, my concept of logic is \"a why\" behind Everything. So you will help me, by contradicting me. A falsifier (mathematical concept) Good luck !",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-11-privacidade-en",
+      "titulo": "Privacy, bubbles and the State",
+      "texto": "[author's name]: The apparent false exposure of common sense and morals, such as the invasion of privacy and of the proper respect for one's neighbor, gradually increases into serious moral problems, which can lead to extreme acts of violence on the part of the culture established by the habit of \"feedback\" of improper content Just as it is for a feminist to support and go against machismo and leak her attack and direct it at all men So it is for men who through machismo make improper offenses against women, so are the invasion of others' privacy and the lack of respect as direct feedback through the habit of continuous consumption of immoral videos that disturb social rights. It is not about respect, at this point it is the mutual understanding that each person has their own experiences and must keep them to themself, without their view interfering with others, it is a moral act coming from virtue, which is acquired without aiming at any good. Every action aiming at a public good of \"status\" coming from the social will thus be corrupted, gradually depredating society. see, there is 1 bubble out of 100, this one bubble becomes corrupted, as a consequence it affects its opposite side, affecting the second, the second affecting the third, and so it goes. And the final risk of all this is violence becoming part of others' discourse as if aiming at a good. in this case the state must intervene, but not aiming at its own good, rather as a social limitation on the freedom that, after leaving the individual themself, unbalances the next Should the state intervene aiming at a good, it will place itself in a position of \"superiority\", through which it will increase the forces representing its opposite, which will lead to its fall. however, if good justice is done, through which people's privacy is preserved by means of sensible justice, without the need to hit the innocent, this in such a way that control is exercised from the specific moment at which an external damage directed at another individual in a way of social ignorance - not on purpose, that is, through their respective way of seeing life they let themself be carried away and pierce the privacy between themself and their fellow, must be controlled so that they do not have such authority, given their incapacity of social perspective. To apply this, it must be taken into account that an individual is limited to what they see, they are ignorant of what is not seen, and this by itself forms their person, their actions are taken according to what they understand. This is the explanation of social ignorance - not on purpose. \"Without the need to hit the innocent\" is the State itself, deliberately taking sides about its own social base, given that, in a way limited to its perspective, it will hit innocent people. \"Without the need.. to hit..\" portrays a fair perspective given that the way of doing it corresponds to a simple and logical natural order, through which an applied social force is not necessary, but rather the application of justice itself \"Person x left their bubble and collided with person y\" person x must be contained in their bubble perspective and the reach of their actions limited so that there is no social chain reaction causing a view of differentiation, thus increasing prejudice and its immoral derivations.",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "text",
+        "society"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-12-vocabulario-en",
+      "titulo": "Vocabulary of the symbols",
+      "texto": "VOCABULARY: 0. How to read any formula mark meaning example a letter (x, m, v) the name of a quantity, not the quantity m = \"the mass\", whether it is 2 or 70 subscript (x ᵢ, m_A) whose it is m_A = mass of A; x ᵢ = position of person i subscript 0 (v ₀, z ₀) the initial value , at the beginning v ₀ = 10 → started at 10 arrow on top (v ⃗) has direction , not only size v ⃗ = 5 m/s to the north bar on top (v ̄) the average v ̄ = average velocity prime (v') the value after the collision v_B' = velocity of B afterwards asterisk (t*) a special value, which has its own name t* = the instant of crossing 1. Logic — the connectives symbol read as meaning example ∀ \"for all\" holds for each one, without exception ∀ i: m ᵢ > 0 → every person has positive mass ∃ \"there exists\" there is at least one ∃ i: v ᵢ < 0 → someone walks backwards ¬ \"not\" negates what comes after ¬(x = 2) → x is not 2 ∧ \"and\" both things hold x > 0 ∧ x < 5 → x between 0 and 5 ∨ \"or\" at least one holds x = 1 ∨ x = 2 ⟹ \"implies\", \"then\" if the left side holds, the right holds x = 2 ⟹ x² = 4 ⟺ \"if and only if\" one holds exactly when the other holds x² = 4 ∧ x > 0 ⟺ x = 2 ⊢ \"proves\", \"deduces\" from the left the right is demonstrated axioms ⊢ theorem ∎ \"end of proof\" the demonstration is over — = \"equal\" same value — ≠ \"different\" distinct values 3 ≠ 4 ≈ \"approximately\" almost equal π ≈ 3.14 <, > less, greater — 2 < 5 ≤, ≥ less or equal, greater or equal — 0 ≤ e ≤ 1 ≫ \"much greater than\" so much greater than the other that it hardly counts m_A ≫ m_B → train and little car ∝ \"proportional to\" double one, the other doubles 𝒟 ∝ 1/σ → σ doubles, 𝒟 falls by half 2. Sets — the system of the parts and the whole A set is a collection of things. It is written between braces: {1, 2, 3}. symbol read as meaning example ∈ \"belongs to\" is an element of 2 ∈ {1, 2, 3} ∉ \"does not belong to\" is not an element of 5 ∉ {1, 2, 3} ⊆ \"is contained in\" all the elements of one are in the other {1, 2} ⊆ {1, 2, 3} ⋃ \"union\" joins everything, without repeating {1,2} ⋃ {2,3} = {1,2,3} ⋂ \"intersection\" only what is in both {1,2} ⋂ {2,3} = {2} ∅ \"empty set\" a collection with nothing {1} ⋂ {2} = ∅ × \"Cartesian product\" all possible pairs {a,b} × {1,2} = {(a,1),(a,2),(b,1),(b,2)} ℝ \"the reals\" all the numbers on the line, including √2 and π — ℝ ᴰ \"R D\" lists of D real numbers (3, 4) ∈ ℝ ² The names of your system: symbol meaning A the whole I the set of indices — the list of \"who exists\" i, j any element of I — a part, a person f ᵢ the fragment i — a part of the whole K ⋂ ᵢ f ᵢ — what is common to all fragments Example: f ₁ = {a,b,c}, f ₂ = {b,c,d} → K = {b,c}, A = {a,b,c,d}. 3. Operations with numbers symbol read as meaning example Δ \"delta\" variation : after minus before x ₁ = 3, x ₂ = 10 → Δ x = 7 Σ \"summation\" adds up a list Σ ᵢ ₌₁ ³ i = 1 + 2 + 3 = 6 x² \"x squared\" x times x 5² = 25 √ \"square root\" the number that squared gives the one inside √25 = 5 |x| \"absolute value of x\" size, without sign |−7| = 7 ln \"natural logarithm\" how many times to multiply by e ≈ 2.718 to reach the number ln 1 = 0, ln e = 1 → \"tends to\" gets closer and closer 1/t → 0 as t grows lim \"limit\" the value something approaches lim(t → ∞) 1/t = 0 ∞ \"infinity\" greater than any number — sin θ \"sine of theta\" on an arrow tilted by θ, the fraction of it that is perpendicular sin 0° = 0, sin 90° = 1 cos θ \"cosine of theta\" the fraction of it that is parallel cos 0° = 1, cos 90° = 0 4. Calculus — rate and accumulation symbol read as meaning example dx/dt \"derivative of x with respect to t\" how fast x changes at that instant walks 10 m in 2 s → on average 5 m/s; dx/dt is the same number, but at a single instant d²x/dt² \"second derivative\" the rate of change of the rate of change if the velocity rises 2 m/s every second → 2 m/s² ∫ F dt \"integral of F in t\" sum of little pieces F·dt over time a force of 2 N for 3 s → ∫F dt = 6 N·s One is the opposite of the other: the derivative takes the total and gives back the rate; the integral takes the rate and gives back the total. 5. Vectors — quantities with direction symbol read as meaning example v ⃗ \"vector v\" size and direction (3, 4) = 3 to the right, 4 up |v ⃗ | \"magnitude of v\" only the size |(3, 4)| = √(9+16) = 5 ⟨a⃗ , b ⃗⟩ \"dot product of a and b\" how much of a ⃗ points in the direction of b ⃗ ⟨ (3,4), (1,0) ⟩ = 3·1 + 4·0 = 3 e ⃗� \"basis vector k\" the pure direction of axis k e ⃗₁ = (1, 0), e ⃗₂ = (0, 1) F_ ∥ \"F parallel\" the part of the force in the direction of motion |F| cos θ F_ ⊥ \"F perpendicular\" the part of the force across the motion |F| sin θ 6. Measurement — before any number symbol meaning example O the origin : where the zero is put the front door of the house [u] the unit : the size of the step the meter n the value : how many steps 5 q = n·[u] every measurement is \"how many times the unit fits\" 5 m = 5 times the meter dim(q) the dimension : what kind of quantity it is length, time, mass G the group of changes of unit changing meter for centimeter λ ∈ G a specific change of unit ×100 Dimensionless = dim(q) = 1: the number does not change when the ruler changes. Example: the ratio between two distances. 7. State and motion symbol name meaning unit t time the clock s x ⃗ position where it is, measured from O m v ⃗ velocity dx ⃗ /dt — how fast the position changes m/s a ⃗ acceleration dv ⃗ /dt — how fast the velocity changes m/s² m mass resistance to changing motion kg p ⃗ momentum m·v ⃗ — mass times velocity kg·m/s F ⃗ force dp ⃗ /dt — what changes momentum N F ⃗ ᵢ� force of j on i — N F ⃗ ᵢᵃᵐᵇ force of the environment on i what comes from outside the system N J ⃗ impulse ∫F ⃗ dt — force accumulated over time N·s θ theta angle between the force and the direction of motion degrees φ phi the direction of motion degrees z state the complete record: (x, v, m, σ) — z ₀ initial state the record at the beginning — t* instant of crossing 2v ₀ /a s Collision symbol meaning example e restitution : how much the bodies move apart afterwards, compared to how much they were approaching before e = 1 bounces; e = 0 stick r mass ratio m_B / m_A car 10 t, train 100 t → r = 0.1 V_cm velocity of the center of mass average velocity of the pair, weighted by the masses μ reduced mass m_A·m_B/(m_A+m_B) two bodies of 1 kg → μ = 0.5 E energy J E_def energy that turns into deformation in the collision — 8. Encounters and density symbol name meaning example n density how many per unit of area or volume 18,000 people/km² n ₀ density of origin where one was born — inherited — n(x ⃗ ) density field the density at each place — σ sigma — cross section exposure : the size of the target you offer — λ lambda — mean free path average distance between one encounter and the next: 1/(n σ) — R encounter rate how many per unit of time: n σ| v ⃗ | — τ tau mean time between encounters: λ/ v ̄ — 𝒟 diffusion coefficient how fast something spreads by walking at random — ds element of distance the size of a small step, counting the density: n σ |dx ⃗ | — 9. Reading symbol meaning example P ⃗ a person's attributes, as a list (income, reach, authority) b ⃗ an observer's basis: what they weigh (1, 0, 0) = only looks at income L_b the reading : ⟨P⃗ , b ⃗⟩ ⟨ (5, 8, 2), (1,0,0) ⟩ = 5 D how many dimensions P ⃗ has 3, in the example above 10. Labels mark meaning Ax1 … Ax7 axioms of the whole and the parts D1 … D7 axioms of the dynamics T1 … T17 theorems [F] holds in physics or was measured [M] the form fits; the human quantity was not measured [D] declared decision 11. Symbols with two meanings — read before showing to someone symbol meaning 1 meaning 2 suggestion D dimensions of P ⃗ axioms D1–D7 and note [D] and 𝒟 diffusion dimension → d; axioms → Din1–Din7; note → [Dec]; diffusion → Dif λ mean free path change of unit λ ∈ G change of unit → g ∈ G e restitution e ⃗� basis vector, and the number 2.718 inside ln basis vector → û� ' \"after the collision\" in calculus, ' means derivative after → v_B ⁺ ⟨ ⟩ dot product ⟨a⃗ , b ⃗⟩ average ⟨ Δ x² ⟩ average → bar: Δ x² with a line on top n density the value in q = n·[u] value → N P / p attributes (upper case) momentum (lower case) attributes → 𝐀 or Q ⃗ [ ] unit [u] notes [F] [M] [D] notes → (F) (M) (Dec)",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "vocabulary"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "[author's name]"
+    },
+    {
+      "id": "principia-20-Ax1-en",
+      "titulo": "Ax1 — Every fragment is inside the Whole",
+      "texto": "Every fragment is inside the Whole. Nothing is left out. ⊆ and not ∈ because A is prior and is cut out — it is not assembled from the fragments.",
+      "formulas": [
+        "∀i∈I (f(i) ⊆ A)"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax2-en",
+      "titulo": "Ax2 — No fragment is the Whole",
+      "texto": "No fragment is the Whole. It is the axiom that makes it impossible for any part to take the place of the whole.",
+      "formulas": [
+        "∀i∈I (f(i) ≠ A)"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax3-en",
+      "titulo": "Ax3 — There are at least two distinct fragments",
+      "texto": "There are at least two distinct fragments. Why both clauses: i ≠ j does not guarantee fᵢ ≠ fⱼ — two names can point to the same object. A difference of label is not a difference of thing.",
+      "formulas": [
+        "∃i∈I ∃j∈I (i ≠ j ∧ f(i) ≠ f(j))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax4-en",
+      "titulo": "Ax4 — The Whole is not one of its own items",
+      "texto": "The Whole is not one of its own items. It blocks infinite regress and the neighborhood of Russell. In ZF this is a theorem (Regularity) — if you declare ZF, it comes off the list. [D/F]",
+      "formulas": [
+        "A ∉ A"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax5-en",
+      "titulo": "Ax5 — Written in the text as ⋃ᵢ∈I fᵢ = A: the fragments cover the Whole",
+      "texto": "Written in the text as ⋃ᵢ∈I fᵢ = A: the fragments cover the Whole. Nothing of A is left uncovered. (Here written element by element: x is in A exactly when it is in some fragment.)",
+      "formulas": [
+        "∀x (x ∈ A ⟺ ∃i∈I (x ∈ f(i)))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax6-en",
+      "titulo": "Ax6 — Written in the text as ⋂ᵢ∈I fᵢ ≠ ∅: there is something common to ALL",
+      "texto": "Written in the text as ⋂ᵢ∈I fᵢ ≠ ∅: there is something common to ALL. It is what keeps K from being empty. ⚠ It has to be the total intersection, not pairwise. Three sets can intersect in pairs without any point common to all three.",
+      "formulas": [
+        "∃x ∀i∈I (x ∈ f(i))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-20-Ax7-en",
+      "titulo": "Ax7 — No fragment belongs to another fragment",
+      "texto": "No fragment belongs to another fragment. It does not follow from the other six. Aristotle, Politics 1255b: \"the slave is a part of the master\" = f_slave ∈ f_master. Ax7 forbids exactly that.",
+      "formulas": [
+        "∀i∈I ∀j∈I (f(i) ∉ f(j))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-21-defK-en",
+      "titulo": "Definition — K, the Essence",
+      "texto": "K = ⋂ᵢ fᵢ: what is common to all the fragments. Example from the text: f₁ = {a,b,c}, f₂ = {b,c,d} → K = {b,c}, A = {a,b,c,d}. The principle of the axioms was built with Spinoza's premise about Essence.",
+      "formulas": [
+        "∀x (x ∈ K ⟺ ∀i∈I (x ∈ f(i)))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "definition"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-22-Ext-en",
+      "titulo": "Extensionality (suggestion from the check — turned off)",
+      "texto": "It is NOT in the document. The check showed that the proof of T1 (Part III), at step 5 (\"f_k = A, from 3 and 4\"), uses that two sets with the same elements are the same — extensionality. Without it, T1 does not follow from Ax1–Ax7. Turn this note on if you want to assume it (it is an axiom of ZF); with it, T1 follows from Ax2, Ax5 and Ext.",
+      "formulas": [
+        "∀s ∀t ((∀z (z ∈ s ⟺ z ∈ t)) ⟹ s = t)"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "suggestion"
+      ],
+      "ativa": false,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T1-en",
+      "titulo": "Part III · T1 — No fragment contains all",
+      "texto": "Proof from the text: 1. ∀j: fⱼ ⊆ f_k (hypothesis) · 2. ⋃ fⱼ ⊆ f_k (from 1) · 3. A ⊆ f_k (from 2 and Ax5) · 4. f_k ⊆ A (Ax1) · 5. f_k = A (from 3 and 4) · 6. f_k ≠ A (Ax2) · 7. ⊥ ∎\n\nCheck: step 5 only holds with extensionality (see the note \"Extensionality\"). Without it, the app shows a scenario in which Ax1–Ax7 hold and T1 fails.",
+      "formulas": [
+        "¬∃k∈I ∀j∈I (f(j) ⊆ f(k))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T2-en",
+      "titulo": "Part III · T2 — The essence is whole in each fragment",
+      "texto": "Directly from the definition of ⋂. It is E2p38 — \"equally in the part and in the whole.\"",
+      "formulas": [
+        "∀i∈I (K ⊆ f(i))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T3-en",
+      "titulo": "Part III · T3 — The Whole is in no fragment",
+      "texto": "Proof from the text: 1. A ∈ fᵢ (supposition) · 2. fᵢ ⊆ A (Ax1) · 3. A ∈ A (from 1 and 2) · 4. ⊥ (Ax4) ∎ You only find fragments. The Whole, never — neither in yourself, nor in any part.",
+      "formulas": [
+        "∀i∈I (A ∉ f(i))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T4-en",
+      "titulo": "Part III · T4 — K ⊆ A",
+      "texto": "From T2 and Ax1, by transitivity.\n\nCheck: the transitivity needs at least one fragment — if I were empty, K would be \"everything\" and would not fit in A. What guarantees this is Ax3; the proof uses Ax3 without saying so.",
+      "formulas": [
+        "K ⊆ A"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T5-en",
+      "titulo": "Part III · T5 — The order of size: K ⊆ fᵢ ⊆ A",
+      "texto": "K is the SMALLEST object of the system. The essence is residue, not breadth.",
+      "formulas": [
+        "∀i∈I (K ⊆ f(i) ∧ f(i) ⊆ A)"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-30-T6-en",
+      "titulo": "Part III · T6 — The shape of A is recoverable from the overlaps",
+      "texto": "Construction of the nerve (Čech): a vertex per fragment · an edge when two touch · a triangle when three touch · and so on. Nerve Theorem: if the cover is good (contractible intersections), the nerve has the shape of the whole — the shape of the whole is encoded in who touches whom. This makes T3 livable: you do not reach A, but you compute its shape from the pattern of the encounters.\n\nFormulas (FORMALIZATION PROPOSED by the app, review it — finite version): every pair and every triple of fragments touch. It follows from Ax6 (K not empty): the nerve is a full simplex, and by the Nerve Theorem the shape of the Whole is that of a point. The topological part (good cover, contractible intersections) stays only in the text.\n\nChecked by the app (2026-10-12): both follow from Ax6 (all worlds up to 5 objects); without Ax6, they do not follow.",
+      "formulas": [
+        "∀i∈I ∀j∈I ∃x (x ∈ f(i) ∧ x ∈ f(j))",
+        "∀i∈I ∀j∈I ∀k∈I ∃x (x ∈ f(i) ∧ x ∈ f(j) ∧ x ∈ f(k))"
+      ],
+      "tags": [
+        "principia-en",
+        "whole-and-parts",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-40-Spinoza-A1-en",
+      "titulo": "Spinoza A1 — Everything that exists, exists either in itself or in another thing",
+      "texto": "Everything that exists, exists either in itself or in another thing.\nOmnia quae sunt vel in se vel in alio sunt.\n\nEthics, Part I — Axiom 1.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x (Em(x, x) ∨ ∃y (y ≠ x ∧ Em(x, y)))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A2-en",
+      "titulo": "Spinoza A2 — That which cannot be conceived through another thing must be conceived through itself",
+      "texto": "That which cannot be conceived through another thing must be conceived through itself.\nId quod per aliud non potest concipi, per se concipi debet.\n\nEthics, Part I — Axiom 2.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x ((¬∃y (y ≠ x ∧ Concebido(x, y))) ⟹ Concebido(x, x))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A3-en",
+      "titulo": "Spinoza A3 — From a given determinate cause an effect necessarily follows",
+      "texto": "From a given determinate cause an effect necessarily follows; and, conversely, if there is no determinate cause, it is impossible for an effect to follow.\nEx data causa determinata necessario sequitur effectus…\n\nEthics, Part I — Axiom 3.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "□(∀x ∀y (Causa(x, y) ∧ Existe(x) ⟹ Existe(y)))",
+        "□(∀y (Efeito(y) ⟹ ∃x Causa(x, y)))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A4-en",
+      "titulo": "Spinoza A4 — The knowledge of the effect depends on the knowledge of the cause and involves it",
+      "texto": "The knowledge of the effect depends on the knowledge of the cause and involves it.\nEffectus cognitio a cognitione causae dependet et eandem involvit.\n\nEthics, Part I — Axiom 4.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x ∀y (Causa(x, y) ⟹ Concebido(y, x))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A5-en",
+      "titulo": "Spinoza A5 — Things that have nothing in common with one another cannot be understood through one another",
+      "texto": "Things that have nothing in common with one another cannot be understood through one another; the concept of one does not involve the concept of the other.\n\nEthics, Part I — Axiom 5.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x ∀y (¬Comum(x, y) ⟹ ¬Concebido(x, y) ∧ ¬Concebido(y, x))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A6-en",
+      "titulo": "Spinoza A6 — A true idea must agree with that of which it is the idea",
+      "texto": "A true idea must agree with that of which it is the idea.\nIdea vera debet cum suo ideato convenire.\n\nEthics, Part I — Axiom 6.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x ∀y (Ideia(x, y) ∧ Verdadeira(x) ⟹ Concorda(x, y))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-40-Spinoza-A7-en",
+      "titulo": "Spinoza A7 — Whatever can be conceived as not existing has an essence that does not involve existence",
+      "texto": "Whatever can be conceived as not existing has an essence that does not involve existence.\n\nEthics, Part I — Axiom 7.\n\nThe formula is a PROPOSED FORMALIZATION (an interpretation of the text): review it if it is not what Spinoza meant.",
+      "formulas": [
+        "∀x (◇¬Existe(x) ⟹ ¬EnvolveExistencia(x))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "ethics-part-I"
+      ],
+      "ativa": true,
+      "compartimento": "visao",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-41-Spinoza-P3-en",
+      "titulo": "Spinoza P3 — things with nothing in common cannot be the cause of one another",
+      "texto": "Ethics, Part I, Proposition 3, as a consequence of A4 and A5. Checked against the view of Spinoza (field \"Conferir contra a visão de\", Check against the view of: Spinoza).",
+      "formulas": [
+        "∀x ∀y (Causa(x, y) ⟹ Comum(x, y))"
+      ],
+      "tags": [
+        "principia-en",
+        "spinoza",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": "Spinoza"
+    },
+    {
+      "id": "principia-50-D1-en",
+      "titulo": "Dynamics · D1 — State",
+      "texto": "zᵢ(t) = (x⃗ᵢ, v⃗ᵢ, mᵢ, σᵢ), with v⃗ᵢ = dx⃗ᵢ/dt and mᵢ > 0. [D]\nPrimitive terms: agents i ∈ I, time t, forces F⃗ᵢⱼ, basis b⃗ᵢ, vector of attributes P⃗ᵢ ∈ ℝᴰ.\n\nFormulas: the masses are positive, before and after the encounter. As in the text, they do NOT say that the mass is constant (see D1′ and T17).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "mi > 0",
+        "mj > 0",
+        "mi2 > 0",
+        "mj2 > 0"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D2-en",
+      "titulo": "Dynamics · D2 — Law of motion",
+      "texto": "dp⃗ᵢ/dt = Σⱼ≠ᵢ F⃗ᵢⱼ + F⃗ᵢᵃᵐᵇ, with p⃗ᵢ = mᵢ v⃗ᵢ. [F] in physics, [D] for people.\n\nFormulas: D2 integrated over the encounter — the change in the momentum p = m·v of each agent is the impulse it receives.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "mi2 · vi2 − mi · vi = Ji",
+        "mj2 · vj2 − mj · vj = Jj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D3-en",
+      "titulo": "Dynamics · D3 — Action and reaction",
+      "texto": "F⃗ᵢⱼ = −F⃗ⱼᵢ. [F] in physics, [D] for people.\n\nFormula: the impulses are opposite (action and reaction integrated over the encounter).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "Ji = −Jj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D4-en",
+      "titulo": "Dynamics · D4 — Encounter rate",
+      "texto": "Rᵢ = n(x⃗ᵢ) σᵢ |v⃗ᵢ|. [D]\n\nFormulas: R = n·σ·|v| for one agent (rate, density n, cross section σ, speed |v|), all positive.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "taxa = densidade · secao · rapidez",
+        "densidade > 0",
+        "secao > 0",
+        "rapidez > 0"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D5-en",
+      "titulo": "Dynamics · D5 — Reading",
+      "texto": "Every reading that i makes of j is a projection of P⃗ⱼ onto i's basis: L = ⟨P⃗ⱼ, b⃗ᵢ⟩. [D]\n\nFormula: the reading in 2 dimensions, L = ⟨P, b⟩.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "leitura = P1 · base1 + P2 · base2"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D6-en",
+      "titulo": "Dynamics · D6 — No privileged basis",
+      "texto": "For every i: each reading by i gives ONE number. No agent accesses the whole P⃗ⱼ in a single reading. [D] — dynamic version of Ax2.\n\nFormula: a reading gives ONE number — there is another pair of attributes (p, q), different from (P1, P2), with the same reading; no one accesses the whole P in a single reading. The \"for every i\" stays in the text.\nChecked by the app (2026-10-12): together with D1–D8 it produces no contradiction (Z3 finds none).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∃p∈ℝ ∃q∈ℝ ((p ≠ P1 ∨ q ≠ P2) ∧ p · base1 + q · base2 = leitura)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D7-en",
+      "titulo": "Dynamics · D7 — Initial condition",
+      "texto": "zᵢ(0) = zᵢ,₀ is given — it is not deduced from D1–D6. The laws do not choose the starting point. Just as in physics: the low initial entropy is not deduced either. [D]\n\nFormulas: the starting state is a datum from outside — vi0 and vj0 do not come from any law. To check that it is not deduced from D1–D6, ask \"vi = 0\": the engine should answer that it does not follow.\nChecked by the app (2026-10-12): \"vi = 0\" does not follow from D1–D6 (Z3 finds a scenario with another initial velocity) — which is what D7 states.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "vi = vi0",
+        "vj = vj0"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D8-en",
+      "titulo": "Dynamics · D8 — Habituation",
+      "texto": "The response to a stimulus of type k, with intensity s, after H previous exposures: R(s, H) = s · h(H), with h decreasing, h(0) = 1. Example: h(H) = e^(−βH), β > 0 (how fast the person gets used to it). Recovery: away from the stimulus, H decreases over time and the response partially comes back. [D] in the model, with a basis measured in neuroscience.\n\nFormulas: h(0) = 1 and h decreasing (h is a numeric function). The text does not say that h > 0 (see D8′).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "h(0) = 1",
+        "∀x∈ℝ ∀y∈ℝ (x < y ⟹ h(y) < h(x))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D1b-en",
+      "titulo": "Dynamics · D1′ — constant mass (missing from the text; see T17)",
+      "texto": "A law the text uses but does not write: the mass does not change (dmᵢ/dt = 0). The proof of T17 says \"D1 defines m as constant\", but D1 only says m > 0. Without this law, T2, T4, T12 and T13 do not follow (Z3 shows this); with it, they follow.\n\nTurned off on purpose: turn it on if you agree.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "mi2 = mi",
+        "mj2 = mj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom",
+        "check"
+      ],
+      "ativa": false,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-D8b-en",
+      "titulo": "Dynamics · D8′ — h is positive (implicit in the example)",
+      "texto": "The example h(H) = e^(−βH) is always positive, but D8 does not say that h > 0. Escalation (T18) needs this: if h could become negative, s = r*/h would stop growing.\n\nTurned off on purpose: turn it on if you agree.",
+      "formulas": [
+        "∀x∈ℝ h(x) > 0"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "axiom",
+        "check"
+      ],
+      "ativa": false,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-50-H-restituicao-en",
+      "titulo": "Dynamics · H — restitution e (hypothesis of T12)",
+      "texto": "Definition of the coefficient of restitution used in T12: v_B′ − v_A′ = e (v_A − v_B). Here i = A (behind) and j = B (ahead).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "vj2 − vi2 = e · (vi − vj)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "definition"
+      ],
+      "ativa": true,
+      "compartimento": "lei",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T1-en",
+      "titulo": "Dynamics · T1 — Conservation in the closed system",
+      "texto": "If F⃗ᵢᵃᵐᵇ = 0 for every i ∈ S, then Σᵢ∈S p⃗ᵢ is constant.\nProof. Sum D2 over S. The internal terms appear in pairs F⃗ᵢⱼ + F⃗ⱼᵢ, which cancel by D3. What is left is d(Σ p⃗ᵢ)/dt = 0. ∎\nCorollary T1.1 — a closed group does not accelerate its own center of mass, with any internal force.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: the total momentum after the encounter is the one before.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "mi2 · vi2 + mj2 · vj2 = mi · vi + mj · vj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T2-en",
+      "titulo": "Dynamics · T2 — The collision does not choose who changes more — the mass chooses",
+      "texto": "In an isolated encounter between i and j: |Δv⃗ᵢ| / |Δv⃗ⱼ| = mⱼ / mᵢ.\nProof. By D3, J⃗ᵢⱼ = −J⃗ⱼᵢ. By D2, Δv⃗ᵢ = J⃗ᵢⱼ/mᵢ and Δv⃗ⱼ = −J⃗ᵢⱼ/mⱼ. Divide the magnitudes. ∎\nThe interaction is symmetric. The asymmetry of the result comes entirely from the prior state (m), not from the collision. \"A collision does not generate hierarchy.\"\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: the ratio of the changes in velocity is the inverse ratio of the masses.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "vj2 ≠ vj ⟹ (vi − vi2) / (vj2 − vj) = mj / mi"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T3-en",
+      "titulo": "Dynamics · T3 — Theorem of the angle",
+      "texto": "The change of direction depends only on the perpendicular component: the direction turns with angular velocity F⊥/(m|v⃗|).\nProof. Decompose dv⃗/dt = F⃗/m in the direction of v⃗ and in the perpendicular. The parallel one changes the magnitude; the perpendicular one turns the vector. ∎\nCorollary T3.1 — entrenchment: if θ = 0 and F ≠ 0, the direction is constant and the magnitude grows.\nCorollary T3.2 — inertia of direction: for the same F⊥, the larger m|v⃗|, the smaller the turn.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: in 2 dimensions: the turn (v × a)/|v|² is F⊥/(m|v|), with F⊥ = (v × F)/|v|.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀vx∈ℝ ∀vy∈ℝ ∀Fx∈ℝ ∀Fy∈ℝ ∀m∈ℝ ∀s∈ℝ ((m > 0 ∧ s > 0 ∧ s^2 = vx^2 + vy^2) ⟹ (vx · Fy / m − vy · Fx / m) / s^2 = ((vx · Fy − vy · Fx) / s) / (m · s))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T4-en",
+      "titulo": "Dynamics · T4 — Impulse",
+      "texto": "Δv⃗ = (1/m) ∫ₜ₁ᵗ² F⃗ dt.\nProof. Integrate D2 with constant m. ∎\nCorollary T4.1 — two force profiles with the same integral produce the same Δv⃗: the peak does not matter, the integral matters.\nCorollary T4.2 — a collision does not move you, it gives you velocity.\n\nCheck: ✓ checked by hand (algebra and numerical examples match). Attention: it uses \"constant m\", which no axiom states (see T17).\n\nFormula: Δv = J/m (the impulse divided by the mass).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "vj2 − vj = Jj / mj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T5-en",
+      "titulo": "Dynamics · T5 — Crossing",
+      "texto": "Inheritance with constant velocity v₀; one's own force starting from rest with constant acceleration a. One's own force catches up with the inheritance at t* = 2v₀/a.\nProof. Set v₀t = ½at² and solve for t > 0. ∎\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: v₀t = ½at² with t > 0 gives t = 2v₀/a.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀v0∈ℝ ∀a∈ℝ ∀t∈ℝ ((a > 0 ∧ t > 0 ∧ v0 · t = 0.5 · a · t^2) ⟹ t = 2 · v0 / a)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T6-en",
+      "titulo": "Dynamics · T6 — Free path",
+      "texto": "λᵢ = 1/(n(x⃗ᵢ) σᵢ).\nProof. By D4, the mean time between encounters is 1/Rᵢ; the distance in that time is |v⃗ᵢ|/Rᵢ = 1/(nσ). ∎\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: λ = |v|/R = 1/(nσ), from D4.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "rapidez / taxa = 1 / (densidade · secao)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T7-en",
+      "titulo": "Dynamics · T7 — Exposure is not enough",
+      "texto": "The number of encounters grows with σ; the total change of direction grows with Σ F⊥. If all encounters have θ ≈ 0, the change of direction is ≈ 0 for any σ.\nProof. T6: encounters ∝ nσ. T3: turn ∝ |F| sin θ. With sin θ ≈ 0, the sum is ≈ 0 regardless of the quantity. ∎\n\nCheck: ⚠ exact only with θ = 0. With θ small but not zero, each encounter turns a little (≈ ε) and N encounters turn ≈ N·ε — it grows with σ. Suggestion: \"the change is proportional to N·sin θ; it is only zero for θ = 0\", or limit N.\n\nFormulas: the total turn is n·|F|·sin θ (s = sin θ, n = number of encounters): with θ = 0 it is zero for any n; with θ ≠ 0 it grows with n — the correction from the check. Checked by the app (2026-10-12): both follow (Z3, for any size).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀n∈ℝ ∀F∈ℝ ∀s∈ℝ (s = 0 ⟹ n · F · s = 0)",
+        "∀n1∈ℝ ∀n2∈ℝ ∀F∈ℝ ∀s∈ℝ ((0 ≤ n1 ∧ n1 < n2 ∧ F > 0 ∧ s > 0) ⟹ n1 · F · s < n2 · F · s)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T8-en",
+      "titulo": "Dynamics · T8 — Reconstruction",
+      "texto": "To determine P⃗ⱼ ∈ ℝᴰ, D readings with linearly independent bases are needed. With k < D, P⃗ⱼ stays undetermined in a subspace of dimension D − k.\nProof. By D5, each reading is a linear equation ⟨P⃗ⱼ, b⃗⟩ = L: k equations in D unknowns. ∎\nCorollary T8.1 — by D6, a person alone has one basis: no one reconstructs themself alone in D > 1 dimensions.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormulas: in 2 dimensions: one reading does not determine P (two different P give the same reading); two readings with independent bases determine it.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀b1∈ℝ ∀b2∈ℝ ∀L∈ℝ ((b1 ≠ 0 ∨ b2 ≠ 0) ⟹ ∃p∈ℝ ∃q∈ℝ ∃r∈ℝ ∃s∈ℝ (p · b1 + q · b2 = L ∧ r · b1 + s · b2 = L ∧ (p ≠ r ∨ q ≠ s)))",
+        "∀p∈ℝ ∀q∈ℝ ∀r∈ℝ ∀s∈ℝ ∀b1∈ℝ ∀b2∈ℝ ∀c1∈ℝ ∀c2∈ℝ ((b1 · c2 − b2 · c1 ≠ 0 ∧ p · b1 + q · b2 = r · b1 + s · b2 ∧ p · c1 + q · c2 = r · c1 + s · c2) ⟹ (p = r ∧ q = s))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T9-en",
+      "titulo": "Dynamics · T9 — Order depends on the basis",
+      "texto": "If neither P⃗_X ≥ P⃗_Y nor P⃗_Y ≥ P⃗_X (component by component), there exist bases b⃗, b⃗′ with opposite orders. If one dominates the other in all components, every non-negative basis agrees.\nProof. Without dominance, P⃗_X − P⃗_Y has a positive component k and a negative one l; take b⃗ = e⃗ₖ (X > Y) and b⃗′ = e⃗ₗ (Y > X). With dominance, ⟨P⃗_X − P⃗_Y, b⃗⟩ ≥ 0 for every b⃗ ≥ 0. ∎\n\"Superior\" is only independent of the observer when there is dominance in all dimensions (Treiman).\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormulas: in 2 dimensions: without dominance there are bases with opposite orders; with dominance every non-negative basis agrees.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀x1∈ℝ ∀x2∈ℝ ∀y1∈ℝ ∀y2∈ℝ ((x1 > y1 ∧ x2 < y2) ⟹ ∃b1∈ℝ ∃b2∈ℝ ∃c1∈ℝ ∃c2∈ℝ (b1 ≥ 0 ∧ b2 ≥ 0 ∧ c1 ≥ 0 ∧ c2 ≥ 0 ∧ x1 · b1 + x2 · b2 > y1 · b1 + y2 · b2 ∧ x1 · c1 + x2 · c2 < y1 · c1 + y2 · c2))",
+        "∀x1∈ℝ ∀x2∈ℝ ∀y1∈ℝ ∀y2∈ℝ ∀b1∈ℝ ∀b2∈ℝ ((x1 ≥ y1 ∧ x2 ≥ y2 ∧ b1 ≥ 0 ∧ b2 ≥ 0) ⟹ x1 · b1 + x2 · b2 ≥ y1 · b1 + y2 · b2)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T10-en",
+      "titulo": "Dynamics · T10 — Invariance of ratio",
+      "texto": "Two observers who measure the same scalar attribute q with units u₁ and u₂ get the same ratio between X and Y: (q_X/u₁)/(q_Y/u₁) = (q_X/u₂)/(q_Y/u₂).\nProof. The unit cancels. ∎ It requires the same attribute and a ratio scale.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: the unit cancels.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀qx∈ℝ ∀qy∈ℝ ∀u∈ℝ ∀w∈ℝ ((qy ≠ 0 ∧ u ≠ 0 ∧ w ≠ 0) ⟹ (qx / u) / (qy / u) = (qx / w) / (qy / w))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T11-en",
+      "titulo": "Dynamics · T11 — The prohibition",
+      "texto": "The same interaction applied to agents with different states produces different changes. Proof: directly from T4. ∎\nThis is the theorem that can fail: if the same intervention produces the same change in people in very different states, D2 is wrong for people.\n\nCheck: ⚠ T4 gives Δv⃗ = J⃗/m: the change depends only on the MASS, not on the rest of the state (x⃗, v⃗, σ). Two agents with different states but the same mass change in the same way. For it to follow from T4, the statement should say \"different masses\" (or include in the interaction something that depends on v⃗ or σ).\n\nFormulas: formula 1 = the statement as it is (\"different states\": different mass or velocity) — Z3 should say it does NOT follow; formula 2 = the corrected version (\"different masses\"), which follows.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀J∈ℝ ∀m1∈ℝ ∀m2∈ℝ ∀v1∈ℝ ∀v2∈ℝ ((J ≠ 0 ∧ m1 > 0 ∧ m2 > 0 ∧ (m1 ≠ m2 ∨ v1 ≠ v2)) ⟹ J / m1 ≠ J / m2)",
+        "∀J∈ℝ ∀m1∈ℝ ∀m2∈ℝ ((J ≠ 0 ∧ m1 > 0 ∧ m2 > 0 ∧ m1 ≠ m2) ⟹ J / m1 ≠ J / m2)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T12-en",
+      "titulo": "Dynamics · T12 — Absorption Theorem",
+      "texto": "Hypotheses: H1 D2 and D3; H2 motion on a straight line; H3 A (m_A, v_A) and B (m_B, v_B); H4 B ahead of A and v_B < v_A (there is contact). r = m_B/m_A.\n(a) e = 0: v_B′ = (v_A + r v_B)/(1 + r).\n(b) r → 0 ⟹ v_B′ → v_A.\n(c) Δv_B = (v_A − v_B)/(1 + r) grows when v_B decreases; v_B′ decreases when v_B decreases.\n(d) E_def = ½ μ (v_A − v_B)² (1 − e²), μ = m_A m_B/(m_A + m_B).\n(e) any e: v_B′ = (v_A + r v_B)/(1 + r) + e (v_A − v_B)/(1 + r). With e = 1 and r → 0: v_B′ → 2v_A − v_B.\nProof: conservation of momentum (D3) and restitution v_B′ − v_A′ = e (v_A − v_B). ∎\nCorollaries C1 weighted average · C2 adoption · C3 trade-off · C4 launch or absorption · C5 no contact, no theorem.\nExample 1 (a 100 t train at 10 m/s, a 10 t car, e ≈ 0): car at +5 → 9.55 m/s (changes 4.55; the train loses 0.45; 114 kJ) · stopped → 9.09 (9.09; 0.91; 455 kJ) · at −2 → 8.91 (10.91; 1.09; 655 kJ). Example 2: a ball at −10 m/s against a truck at +20 m/s, e ≈ 1 → 50 m/s. Example 3: gravity assist (Voyager).\nSocial examples [M]: S1 the apprentice · S2 the one who goes to argue · S3 the one who arrives dismantling what they thought · S4 the one who admires from afar. Limit: between people, H4 depends on a decision by the other, which no axiom represents.\n\nCheck: ✓ checked by hand (algebra and numerical examples match). I checked (a)–(e), the derivatives in (c) and the three rows of the table in Example 1 (velocities, the train's losses and energies 114/455/655 kJ).\n\nFormulas: (a), (c), (d), (e) and the train example (car at +5 m/s → 9.55 m/s), with r = mj/mi.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "e = 0 ⟹ vj2 = (vi + (mj / mi) · vj) / (1 + mj / mi)",
+        "e = 0 ⟹ vj2 − vj = (vi − vj) / (1 + mj / mi)",
+        "0.5 · mi · vi^2 + 0.5 · mj · vj^2 − (0.5 · mi · vi2^2 + 0.5 · mj · vj2^2) = 0.5 · (mi · mj / (mi + mj)) · (vi − vj)^2 · (1 − e^2)",
+        "vj2 = (vi + (mj / mi) · vj) / (1 + mj / mi) + e · (vi − vj) / (1 + mj / mi)",
+        "(mi = 100000 ∧ mj = 10000 ∧ vi = 10 ∧ vj = 5 ∧ e = 0) ⟹ (9.54 < vj2 ∧ vj2 < 9.55)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T13-en",
+      "titulo": "Dynamics · T13 — Coalescence: total absorption traps",
+      "texto": "Joins T12 + T8. (a) With e = 0 and no external force, the two stay together forever. (b) The response to an impulse J falls from J/m_B to Δv = J/(m_A + m_B) = (J/m_B)·r/(1 + r). (c) If r is small, you come to see only what they see; by T8, you do not gather D independent bases. ∎\nThe way out: to separate, e > 0 is needed; absorbing everything and staying free is impossible in the same encounter. Valuing both equally [D], e(1 − e²) is maximum at e = 1/√3 ≈ 0.58.\n\nCheck: ✓ checked by hand (algebra and numerical examples match). (maximum of e(1 − e²): derivative 1 − 3e² = 0 → e = 1/√3.)\n\nFormulas: (b) the response to an impulse after joining; e(1 − e²) is maximum at e = 1/√3 ≈ 0.58.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀J∈ℝ (J / (mi + mj) = (J / mj) · ((mj / mi) / (1 + mj / mi)))",
+        "∀s∈ℝ ∀c∈ℝ ((s > 0 ∧ 3 · s^2 = 1 ∧ 0 ≤ c ∧ c ≤ 1) ⟹ c · (1 − c^2) ≤ s · (1 − s^2))",
+        "∀s∈ℝ ((s > 0 ∧ 3 · s^2 = 1) ⟹ (0.577 < s ∧ s < 0.578))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T14-en",
+      "titulo": "Dynamics · T14 — Diffusion: random exposure stalls displacement",
+      "texto": "Joins T6 + T7 + kinetic theory. In a medium without a gradient, with encounters in random directions: (a) the displacement grows like √t; (b) the larger σ, the smaller 𝒟; (c) with a directed force F, the collisions work as friction: v_drift = Fλ/(m v̄) ∝ 1/(nσ).\nProof: N random steps of size λ, with N = v̄t/λ, give a mean square displacement Nλ²; between collisions the force accelerates for τ = λ/v̄. ∎ [F] (Drude, 1900). Social [M]: the crowded beach acts as friction.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormulas: (a) N steps of size λ = l, with N = v̄t/λ: the mean square displacement Nλ² = v̄λt grows with t (displacement ∝ √t); (b) the diffusion v̄λ = v̄/(nσ) falls when σ grows; (c) the drift Fλ/(m v̄) = F/(m v̄ n σ). Checked by the app (2026-10-12): all three follow (Z3, for any size).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀v∈ℝ ∀t∈ℝ ∀l∈ℝ ∀N∈ℝ ((v > 0 ∧ t > 0 ∧ l > 0 ∧ N = v · t / l) ⟹ N · l^2 = v · l · t)",
+        "∀v∈ℝ ∀n∈ℝ ∀s1∈ℝ ∀s2∈ℝ ((v > 0 ∧ n > 0 ∧ 0 < s1 ∧ s1 < s2) ⟹ v / (n · s2) < v / (n · s1))",
+        "∀F∈ℝ ∀m∈ℝ ∀v∈ℝ ∀n∈ℝ ∀s∈ℝ ((F > 0 ∧ m > 0 ∧ v > 0 ∧ n > 0 ∧ s > 0) ⟹ F · (1 / (n · s)) / (m · v) = F / (m · v · n · s))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T15-en",
+      "titulo": "Dynamics · T15 — Dominance of acceleration",
+      "texto": "For any initial advantages Δx₀ and Δv₀, if Δa ≠ 0, then for large t Δx(t) = Δx₀ + Δv₀ t + ½ Δa t² is dominated by the term in t². ∎ T5 is the case Δx₀ = 0. Social [M]: in the long run, the rate of improvement beats the current level.\n\nCheck: ✓ checked by hand (algebra and numerical examples match).\n\nFormula: for large t, |Δx₀ + Δv₀t| stays below |½Δa t²|.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀x0∈ℝ ∀v0∈ℝ ∀a∈ℝ (a ≠ 0 ⟹ ∃T∈ℝ ∀t∈ℝ (t > T ⟹ (x0 + v0 · t)^2 < (0.5 · a · t^2)^2))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T16-en",
+      "titulo": "Dynamics · T16 — Hierarchy of regimes",
+      "texto": "Random encounters ∝ √t; constant velocity ∝ t; constant acceleration ∝ t². The one above is always overtaken by the one below: √t/t → 0 and t/t² → 0. ∎\nExample (𝒟 = 1, v = 0.1, a = 0.002): t = 1 → 1.4 / 0.1 / 0.001 · t = 100 → 14 / 10 / 10 · t = 10,000 → 141 / 1,000 / 100,000. Short-term noise looks like progress.\n\nCheck: ✓ checked by hand (algebra and numerical examples match). (table checked: √(2t), 0.1t and ½·0.002·t².)\n\nFormulas: √(2t) < t for t > 2; t < ½at² for t > 2/a; and numbers from the table (t = 10,000).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀t∈ℝ ∀s∈ℝ ((t > 2 ∧ s > 0 ∧ s^2 = 2 · t) ⟹ s < t)",
+        "∀a∈ℝ ∀t∈ℝ ((a > 0 ∧ t > 2 / a) ⟹ t < 0.5 · a · t^2)",
+        "∀s∈ℝ ((s > 0 ∧ s^2 = 2 · 10000) ⟹ (141 < s ∧ s < 142))",
+        "0.5 · 0.002 · 10000^2 = 100000"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T17-en",
+      "titulo": "Dynamics · T17 — Mass: the only variable that nothing rewrites",
+      "texto": "In the state z = (x, v, m, σ): x changes through interaction (via v); v changes through interaction (Δv = J/m); σ changes through choice; m changes neither through interaction nor through choice — and it is m that decides how much interactions rewrite v (T2) and turn the direction (T3.2).\nProof from the text: D1 defines m as constant. D2 alters only p, hence only v. No axiom has dm/dt. ∎\nThe hole: a law dm/dt = g(…) is missing.\n\nCheck: ⚠ D1, as written, only says mᵢ > 0 — it does not say that m is constant. And if m varied, D2 (dp/dt = ΣF) would also change v because of dm/dt. For the proof to hold, D1 needs to say \"dmᵢ/dt = 0\" (or \"mᵢ constant\"); T4 also depends on this.\n\nFormula: the mass does not change in the encounter — Z3 should say that it does NOT follow from D1–D8 (it is the hole that T17 itself points out).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "mi2 = mi ∧ mj2 = mj"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T18-en",
+      "titulo": "Dynamics · T18 — Escalation",
+      "texto": "Hypotheses: H0 the stimulus gives reward from the beginning; H1 D8; H2 the person seeks to keep the same response r*. To get r* at exposure k: s_k = r*/h(k), increasing.\nProof: s_k · h(k) = r*; h decreasing ⟹ 1/h increasing. ∎ It holds for any habituation, not only the exponential.\nExample (β = 0.2, r* = 1): k = 0 → 1.0 · 5 → 2.7 · 10 → 7.4 · 20 → 54.6. Corollary: with s_max = 10, impossible to keep after exposure 11; ways out: accept less, stop or switch stimulus (search for novelty). [F] in pharmacology (tolerance).\n\nCheck: ✓ checked by hand (algebra and numerical examples match). (e^(0.2k): 1; 2.72; 7.39; 54.6; limit 10 → k ≤ 11.5.)\n\nFormula: s_k = r*/h(k) grows with k.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀r∈ℝ (r > 0 ⟹ ∀k1∈ℝ ∀k2∈ℝ (k1 < k2 ⟹ r / h(k1) < r / h(k2)))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T19-en",
+      "titulo": "Dynamics · T19 — Collapse of the alarm",
+      "texto": "The moral alarm also habituates: A(s, Hₐ) = s · hₐ(Hₐ). Advancing in small steps δ, the alarm at each step is ΔA ≈ δ · hₐ(Hₐ): small and smaller each time. Each new step is compared with the previous one, not with zero. ∎ With T18: the intensity sought rises, the alarm felt falls; no isolated step looks big. Milgram's scale, 15 volts at a time. [F] mechanism; [M] applied to values.\n\nCheck: ✓ consistent with D8 (qualitative argument).\n\nFormulas: the alarm of a step δ = d is d·h(H): it falls with each repetition and never exceeds the step itself — it follows from D8. Checked by the app (2026-10-12): both follow from D8 (Z3, for any size).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀d∈ℝ ∀x∈ℝ ∀y∈ℝ ((d > 0 ∧ x < y) ⟹ d · h(y) < d · h(x))",
+        "∀d∈ℝ ∀x∈ℝ ((d > 0 ∧ x ≥ 0) ⟹ d · h(x) ≤ d)"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T20-en",
+      "titulo": "Dynamics · T20 — From pleasure to lack",
+      "texto": "When the stimulus ends, the state falls below normal, and this fall grows with the repetitions. Basis: Solomon and Corbit (1974), opponent process; Koob and Le Moal (2001). At the beginning one repeats for the reward; later, to flee the lack. [F] in chemical dependence; [M] for other habits.\n\nCheck: it does not follow from D8 (it is a new empirical law cited from the literature); it stands as a hypothesis supported by studies.\n\nFormulas: lack(H) = how much the state falls below normal when the stimulus ends, after H repetitions: zero at the beginning and increasing. As the check says, it does not follow from D8 — the engine should answer that it does not follow (it is a new empirical law). Checked by the app (2026-10-12): Z3 does not prove it from D1–D8, as the check said.\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "falta(0) = 0",
+        "∀x∈ℝ ∀y∈ℝ ((0 ≤ x ∧ x < y) ⟹ falta(x) < falta(y))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-60-T21-en",
+      "titulo": "Dynamics · T21 — Symmetry: the same mechanism builds virtue",
+      "texto": "D8 does not know whether the act is good or bad: the cost of any repeated act also falls with repetition. Habit consolidates whatever is repeated (Aristotle, Nicomachean Ethics II.1). Reversal: spontaneous recovery and dishabituation. Limit (H0): T18 only holds if the act gives reward from the first time; for almost everyone, causing suffering is aversive — habit lowers the brake without creating the desire.\n\nCheck: ✓ consistent with D8 and with the limit H0 of T18.\n\nFormulas: the cost c·h(H) of any repeated act falls, whether the act is good or bad (the formula has no place for that); and the limit H0: if the act gives no reward (r ≤ 0), the intensity sought r/h does not grow — it needs h > 0 (D8′), like T18. Checked by the app (2026-10-12): the first follows from D8; the second follows with D8′ turned on (without it, Z3 does not prove it).\nFORMALIZATION PROPOSED by the app (review it): an isolated encounter between two agents i and j on a straight line, without environmental force; mi, vi = mass and velocity of i before; mi2, vi2 = after; Ji = impulse that i receives (the same for j). Real numbers checked by Z3.",
+      "formulas": [
+        "∀c∈ℝ ∀x∈ℝ ∀y∈ℝ ((c > 0 ∧ x < y) ⟹ c · h(y) < c · h(x))",
+        "∀r∈ℝ (r ≤ 0 ⟹ ∀k1∈ℝ ∀k2∈ℝ (k1 < k2 ⟹ r / h(k2) ≤ r / h(k1)))"
+      ],
+      "tags": [
+        "principia-en",
+        "dynamics",
+        "theorem"
+      ],
+      "ativa": true,
+      "compartimento": "teorema",
+      "grau": "D",
+      "fonte": "",
+      "data": "",
+      "titular": ""
+    },
+    {
+      "id": "principia-70-numeracao-en",
+      "titulo": "Check — repeated numbering of the theorems",
+      "texto": "The document uses T1–T6 for the theorems of the Whole and the parts (Part III) and T1–T21 for those of the dynamics: T1 to T6 appear twice with different contents. Here they are as \"Part III · T…\" and \"Dynamics · T…\". The vocabulary itself (section 11) already suggests renaming ambiguous symbols; the same idea holds for the theorems (e.g.: Tc1–Tc6 and Td1–Td21).",
+      "formulas": [],
+      "tags": [
+        "principia-en",
+        "check"
+      ],
+      "ativa": true,
+      "compartimento": "fato",
+      "grau": "D",
+      "fonte": "Check by the app, 2026-10-10",
+      "data": "",
+      "titular": ""
+    }
+  ],
+  "dicionario": [
+    {
+      "id": "principia-dic-A-en",
+      "simbolo": "A",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "the Whole",
+      "definicao": "The whole. Prior to the fragments: it is cut out, not assembled from them."
+    },
+    {
+      "id": "principia-dic-I-en",
+      "simbolo": "I",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "set of indices",
+      "definicao": "The list of \"who exists\"; i, j are elements of I — a part, a person."
+    },
+    {
+      "id": "principia-dic-f-en",
+      "simbolo": "f",
+      "tipo": "funcao",
+      "aridade": 1,
+      "termo": "fragment",
+      "definicao": "fᵢ = f(i): the fragment i, a part of the whole (an object inside the Whole)."
+    },
+    {
+      "id": "principia-dic-K-en",
+      "simbolo": "K",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "Essence",
+      "definicao": "K = ⋂ᵢ fᵢ: what is common to all the fragments."
+    },
+    {
+      "id": "principia-dic-Em-en",
+      "simbolo": "Em",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "exists in",
+      "definicao": "Em(x, y): x exists in y. Em(x, x): x exists in itself."
+    },
+    {
+      "id": "principia-dic-Concebido-en",
+      "simbolo": "Concebido",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "is conceived through",
+      "definicao": "Concebido(x, y): x is conceived through y."
+    },
+    {
+      "id": "principia-dic-Causa-en",
+      "simbolo": "Causa",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "is the determinate cause of",
+      "definicao": "Causa(x, y): x is the determinate cause of y."
+    },
+    {
+      "id": "principia-dic-Efeito-en",
+      "simbolo": "Efeito",
+      "tipo": "predicado",
+      "aridade": 1,
+      "termo": "is an effect",
+      "definicao": "Efeito(y): y follows as an effect."
+    },
+    {
+      "id": "principia-dic-Existe-en",
+      "simbolo": "Existe",
+      "tipo": "predicado",
+      "aridade": 1,
+      "termo": "exists",
+      "definicao": "Existe(x): x exists."
+    },
+    {
+      "id": "principia-dic-Comum-en",
+      "simbolo": "Comum",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "have something in common",
+      "definicao": "Comum(x, y): x and y have something in common."
+    },
+    {
+      "id": "principia-dic-Ideia-en",
+      "simbolo": "Ideia",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "is the idea of",
+      "definicao": "Ideia(x, y): x is the idea of y (y is what the idea is of)."
+    },
+    {
+      "id": "principia-dic-Verdadeira-en",
+      "simbolo": "Verdadeira",
+      "tipo": "predicado",
+      "aridade": 1,
+      "termo": "is true",
+      "definicao": "Verdadeira(x): the idea x is true."
+    },
+    {
+      "id": "principia-dic-Concorda-en",
+      "simbolo": "Concorda",
+      "tipo": "predicado",
+      "aridade": 2,
+      "termo": "agrees with",
+      "definicao": "Concorda(x, y): x agrees with y."
+    },
+    {
+      "id": "principia-dic-EnvolveExistencia-en",
+      "simbolo": "EnvolveExistencia",
+      "tipo": "predicado",
+      "aridade": 1,
+      "termo": "essence involves existence",
+      "definicao": "EnvolveExistencia(x): the essence of x involves existence."
+    },
+    {
+      "id": "principia-dic-mi-en",
+      "simbolo": "mi",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "mass of i (before)",
+      "definicao": "Mass of agent i before the encounter (D1).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-mj-en",
+      "simbolo": "mj",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "mass of j (before)",
+      "definicao": "Mass of agent j before the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-mi2-en",
+      "simbolo": "mi2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "mass of i (after)",
+      "definicao": "Mass of i after the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-mj2-en",
+      "simbolo": "mj2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "mass of j (after)",
+      "definicao": "Mass of j after the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vi-en",
+      "simbolo": "vi",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "velocity of i (before)",
+      "definicao": "Velocity of i before the encounter (on the line).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vj-en",
+      "simbolo": "vj",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "velocity of j (before)",
+      "definicao": "Velocity of j before the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vi2-en",
+      "simbolo": "vi2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "velocity of i (after)",
+      "definicao": "Velocity of i after the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vj2-en",
+      "simbolo": "vj2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "velocity of j (after)",
+      "definicao": "Velocity of j after the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-Ji-en",
+      "simbolo": "Ji",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "impulse received by i",
+      "definicao": "J = ∫F dt that i receives in the encounter (D2, D3).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-Jj-en",
+      "simbolo": "Jj",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "impulse received by j",
+      "definicao": "J = ∫F dt that j receives in the encounter.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-e-en",
+      "simbolo": "e",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "coefficient of restitution",
+      "definicao": "e = 0: total absorption; e = 1: elastic collision (T12).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-taxa-en",
+      "simbolo": "taxa",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "encounter rate R",
+      "definicao": "R = n σ |v| (D4).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-densidade-en",
+      "simbolo": "densidade",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "density n",
+      "definicao": "n(x): density of agents at the place (D4).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-secao-en",
+      "simbolo": "secao",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "cross section σ",
+      "definicao": "σ: exposure, collision cross section (D4).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-rapidez-en",
+      "simbolo": "rapidez",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "speed |v|",
+      "definicao": "|v|: the size of the velocity (D4, T6).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-leitura-en",
+      "simbolo": "leitura",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "reading L",
+      "definicao": "L = ⟨P, b⟩ (D5).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-P1-en",
+      "simbolo": "P1",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "attribute 1 of P",
+      "definicao": "First component of the vector of attributes P (D5).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-P2-en",
+      "simbolo": "P2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "attribute 2 of P",
+      "definicao": "Second component of P.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-base1-en",
+      "simbolo": "base1",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "component 1 of the basis b",
+      "definicao": "First component of the reader's basis (D5).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-base2-en",
+      "simbolo": "base2",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "component 2 of the basis b",
+      "definicao": "Second component of the basis.",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-h-en",
+      "simbolo": "h",
+      "tipo": "funcao",
+      "aridade": 1,
+      "termo": "habituation h(H)",
+      "definicao": "h(H): how much of the response is left after H exposures (D8).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vi0-en",
+      "simbolo": "vi0",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "initial velocity of i (given)",
+      "definicao": "The starting state of i: a datum, not a consequence of the laws (D7).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-vj0-en",
+      "simbolo": "vj0",
+      "tipo": "constante",
+      "aridade": 0,
+      "termo": "initial velocity of j (given)",
+      "definicao": "The starting state of j (D7).",
+      "numerico": true
+    },
+    {
+      "id": "principia-dic-falta-en",
+      "simbolo": "falta",
+      "tipo": "funcao",
+      "aridade": 1,
+      "termo": "lack f(H)",
+      "definicao": "falta(H): how much the state falls below normal when the stimulus ends, after H repetitions (T20).",
+      "numerico": true
+    }
+  ],
+  "conjuntos": [],
+  "bibliotecas": [
+    "biblioteca-tptp",
+    "problemas-tptp"
+  ]
+}

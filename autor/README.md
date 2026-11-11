@@ -10,6 +10,14 @@ pensa. O que o verificador já conferiu está marcado como conferido, e o resto 
 | `projeto-tubo/` | O modelo Alpha e Omega, o Tubo. O `PROMPT.md` reúne o que o autor disse (Apêndice A, como foi escrito), o que é suposição (S1 a S16), as decisões em aberto (D1 a D35) e o que foi conferido. Junto vêm a máquina (`maquina-do-tubo.html`), as conferências pelo Z3, as 22 pranchas (`ilustracoes/`) e a base `base-tubo-v1.json` para o verificador. |
 | `principia/` | O Principia: o texto (`principia-texto.txt`, extraído do PDF original página por página) e as notas organizadas para o app (`principia.json`: 68 notas e 38 termos de dicionário, com as conferências feitas pelo app de 10 a 12/10/2026). |
 
+## Em inglês
+
+As traduções ficam ao lado dos originais, com `.en` no nome: `projeto-tubo/PROMPT.en.md`, `equacoes.en.md`,
+`solucoes.en.md`, `multiverso.en.md` e `pi.en.md`; `principia/principia-texto.en.txt` e `principia/principia.en.json`
+(a pasta `principia-en` no app, com as mesmas fórmulas e símbolos). O original em português prevalece. Continuam só em
+português a máquina (`maquina-do-tubo.html`), as pranchas (`ilustracoes/`), os comentários do código e a base
+`base-tubo-v1.json`, cujas frases o verificador lê em português.
+
 ## O que mudou na publicação
 
 - O nome próprio do autor foi trocado por "[nome do autor]", no texto e no campo "titular" das notas. Nada mais foi

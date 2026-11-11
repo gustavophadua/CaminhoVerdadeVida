@@ -1,5 +1,7 @@
 # O multiverso: a lógica, e se é possível
 
+**English:** [multiverso.en.md](multiverso.en.md)
+
 Conferido em 10 de novembro de 2026 com o Z3 (`multiverso-z3.py`) e com a máquina (`multiverso-confere.js`). Para repetir:
 
 ```

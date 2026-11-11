@@ -1,5 +1,7 @@
 # As soluções que a matemática e a física dão
 
+**English:** [solucoes.en.md](solucoes.en.md)
+
 Para cada equação sem solução de `equacoes.md`, a própria fórmula diz onde está o nó. Aqui vai o que a matemática e a física estabelecidas fazem nesse nó, conferido no Z3 (`solucoes-z3.py`) e, quando é lei que a máquina pode obedecer, medido na máquina (`fisica-confere.js`). Montado em 10 de novembro de 2026.
 
 Nada daqui é regra do modelo até o autor decidir. A síntese das decisões está no fim (motor B, D32).

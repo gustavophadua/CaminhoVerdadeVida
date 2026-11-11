@@ -1,5 +1,7 @@
 # Projeto Tubo: prompt do projeto
 
+**English:** [PROMPT.en.md](PROMPT.en.md)
+
 Este arquivo reúne tudo o que o autor disse sobre o modelo, o que já foi explicado e construído, as decisões em aberto e o que falta fazer. Leia inteiro antes de responder ou de mexer em qualquer arquivo.
 
 Resumo fechado em 10 de novembro de 2026.

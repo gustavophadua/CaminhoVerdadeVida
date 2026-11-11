@@ -11,8 +11,12 @@ hypothesis.
 | `projeto-tubo/` | The Alpha and Omega model, the Tube. `PROMPT.md` gathers what the author said (Appendix A, as it was written), what is supposition (S1 to S16), the open decisions (D1 to D35) and what has been checked. With it come the machine (`maquina-do-tubo.html`), the checks through Z3, the 22 plates (`ilustracoes/`) and the base `base-tubo-v1.json` for the verifier. |
 | `principia/` | The Principia: the text (`principia-texto.txt`, extracted from the original PDF page by page) and the notes organized for the app (`principia.json`: 68 notes and 38 dictionary terms, with the checks made by the app from 2026-10-10 to 2026-10-12). |
 
-The English translations sit next to the originals, with `.en` in the name. In every case the Portuguese original
-prevails.
+The English translations sit next to the originals, with `.en` in the name: `projeto-tubo/PROMPT.en.md`,
+`equacoes.en.md`, `solucoes.en.md`, `multiverso.en.md` and `pi.en.md`; `principia/principia-texto.en.txt` and
+`principia/principia.en.json` (the folder `principia-en` in the app, with the same formulas and symbols). In every case
+the Portuguese original prevails. Still in Portuguese only: the machine (`maquina-do-tubo.html`), the plates
+(`ilustracoes/`), the code comments and the base `base-tubo-v1.json`, whose sentences are read by the verifier in
+Portuguese.
 
 ## What changed on publication
 

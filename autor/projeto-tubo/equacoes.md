@@ -1,5 +1,7 @@
 # As equações do Tubo
 
+**English:** [equacoes.en.md](equacoes.en.md)
+
 Montado em 10 de novembro de 2026 a partir da Máquina do Tubo (`maquina-do-tubo.html`) e conferido no Z3 (`equacoes-sem-solucao.py`, que chama `medidas.js` para tirar os números da própria máquina). Para repetir:
 
 ```
