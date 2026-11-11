@@ -37,6 +37,11 @@ Download the repository (Code > Download ZIP), extract it and open `Instalar-Cos
 
 Note for English readers: the AI was set up and measured on sentences in Portuguese; other languages have not been tested.
 
+The app has an English interface: the EN/PT button in the top bar switches it, and the choice stays on the device
+(without a choice, the app follows the browser's language). The interface is translated on screen from a dictionary
+(`src/ui/idioma-en.ts`); what the AI reads and answers, the reading back of the formulas, the downloaded reports and
+the normative examples stay in Portuguese.
+
 ## Using it from a phone (remote mode)
 
 With Cosmos installed, install the tunnel once (`winget install --id Cloudflare.cloudflared`) and open `Abrir-Cosmos-Remoto.cmd`. The first time, it asks for the owner's password. Then it shows an https address: open it on the phone and sign in with the password. The computer is still the server (it has to stay on): translation goes through Groq, with Ollama as a fallback, and Z3 decides on the computer. The encrypted account, the wallet and the test coin stay in local mode only. Details, security and limits: `especificacao/remoto-v1.md`.

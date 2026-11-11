@@ -8,6 +8,7 @@ import { CAMINHO_LOGO } from './logo'
 import carimbo from '../dados/carimbo-bitcoin.json'
 import ancora from '../dados/ancora-checkpoint.json'
 import { LaboratorioV4 } from './v4/Laboratorio'
+import { idiomaEscolhido, trocarIdioma } from './idioma'
 
 /** Entrada v3 isolada: dados públicos, sem carregar motor ou banco privado legado. */
 export function CosmosApp() {
@@ -15,6 +16,7 @@ export function CosmosApp() {
   const [menu, setMenu] = useState(false)
   const modulo = MODULOS_V3.find(m => m.tela === rota.tela)
   const hub = rota.tela === 'hub'
+  const ingles = idiomaEscolhido() === 'en'
   return <div class={`v3-app${hub ? ' terminal-theme' : ''}`}>
     <aside class={`v3-sidebar ${menu ? 'v3-menu-open' : ''}`}>
       <a class="v3-brand" href="#/lab" aria-label="Cosmos início"><svg class="v3-brand-logo" viewBox="0 0 100 100" aria-hidden="true"><path d={CAMINHO_LOGO} fill="currentColor" stroke="currentColor" stroke-width=".7" stroke-linejoin="round" /></svg><span>COSMOS WORKSPACE</span></a>
@@ -35,7 +37,7 @@ export function CosmosApp() {
       <div class="v3-sidebar-bottom"><span class="v3-led" /> Ambiente local <code>502426c</code><p>Integridade · autoria · evidência</p></div>
     </aside>
     <div class="v3-workspace">
-      <header class="v3-topbar"><div>COSMOS <span>/</span> {hub ? 'HUB' : rota.tela === 'laboratorio' ? 'LABORATÓRIO V4' : modulo?.nome ?? 'Índice'}</div><div class="v3-top-actions"><span class="v3-demo-tag">PRÉVIA LOCAL</span><span class="v3-network"><i /> rede não conectada</span><a href="#/backup">↗ Exportar</a></div></header>
+      <header class="v3-topbar"><div>COSMOS <span>/</span> {hub ? 'HUB' : rota.tela === 'laboratorio' ? 'LABORATÓRIO V4' : modulo?.nome ?? 'Índice'}</div><div class="v3-top-actions"><span class="v3-demo-tag">PRÉVIA LOCAL</span><span class="v3-network"><i /> rede não conectada</span><a href="#/backup">↗ Exportar</a><button type="button" class="v3-idioma" data-sem-traducao lang={ingles ? 'pt' : 'en'} title={ingles ? 'Ver em português' : 'View in English'} onClick={() => trocarIdioma(ingles ? 'pt' : 'en')}>{ingles ? 'PT' : 'EN'}</button></div></header>
       <main class="v3-main">
         {rota.tela === 'laboratorio' ? <LaboratorioV4 /> : hub ? <Hub /> : rota.tela === 'indice' ? <Indice /> : rota.tela === 'cadeia' || rota.tela === 'outras' ? <>
           <div class="v3-heading"><div><p class="v3-eyebrow">REGISTROS HISTÓRICOS · V1</p><h1>Cadeia histórica<span>.</span></h1><p>Os nove marcos F0–F8 do projeto, assinados pelo selo 502426c, sem migração ou alteração de hashes. Não são as fases do plano nem uma cadeia pessoal: a sua fica em Labs → Minha cadeia.</p></div><a class="v3-button" href="#/certificados">Conferência de certificados ↗</a></div>

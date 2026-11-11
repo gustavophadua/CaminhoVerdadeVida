@@ -25,6 +25,10 @@
   .cosmos-baixar-botao { display:flex; align-items:center; gap:7px; height:32px; padding:0 10px; border:0; border-radius:7px; background:transparent; color:var(--muted); font:inherit; white-space:nowrap; cursor:pointer; transition:color .15s,background-color .15s; }
   .cosmos-baixar-botao:hover,.cosmos-baixar-botao[aria-expanded=true] { background:var(--hover); color:var(--text); }
   .cosmos-baixar-botao:focus-visible { outline:2px solid var(--p-accent,currentColor); outline-offset:2px; }
+  /* Idioma: EN/PT, ao lado de Baixar o app. */
+  .cosmos-bar-idioma { display:flex; align-items:center; justify-content:center; min-width:36px; height:32px; padding:0 8px; border:0; border-radius:7px; background:transparent; color:var(--muted); font:inherit; font-size:12px; font-weight:650; letter-spacing:.04em; cursor:pointer; }
+  .cosmos-bar-idioma:hover { background:var(--hover); color:var(--text); }
+  .cosmos-bar-idioma:focus-visible { outline:2px solid var(--p-accent,currentColor); outline-offset:2px; }
   .cosmos-baixar-painel { position:absolute; right:0; top:calc(100% + 8px); z-index:80; width:min(340px,calc(100vw - 24px)); padding:16px; border:1px solid var(--p-line); border-radius:12px; background:var(--p-bg,#fff); color:var(--text); box-shadow:0 12px 32px #0000001f; font:400 14px/1.5 Inter,'Segoe UI',Arial,sans-serif; white-space:normal; }
   .cosmos-baixar-painel h2 { margin:0 0 6px; font-size:16px; font-weight:650; }
   .cosmos-baixar-painel p { margin:0 0 10px; color:var(--muted); }

@@ -5,6 +5,7 @@ import { createRoot, type Root } from 'react-dom/client'
 import { ProdutosApp } from './interfaces/Produtos'
 import { iniciarSessaoLocal } from './local/conta'
 import { rotaProduto } from './interfaces/config'
+import { iniciarIdioma } from './ui/idioma'
 import './ui/estilo.css'
 import './ui/telas.css'
 import './ui/cosmos.css'
@@ -28,6 +29,7 @@ function montarInterface() {
   produtoAtivo = !!produto
 }
 const encerrarSessaoLocal = iniciarSessaoLocal()
+void iniciarIdioma()
 montarInterface()
 window.addEventListener('hashchange', montarInterface)
 if (import.meta.hot) import.meta.hot.dispose(() => {

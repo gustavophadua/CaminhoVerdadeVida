@@ -322,3 +322,5 @@ main.pagina-registros { padding-top:120px; padding-bottom:120px; }
 }
 .cosmos-escopos { color:#71717a; font-size:10px; line-height:1.8; margin:0 0 20px; }
 .cosmos-quatro-selos dd { text-transform:none; }
+/* Idioma: EN/PT no topo da v3, no mesmo estilo de Exportar. */
+.v3-top-actions>.v3-idioma{padding:7px 11px;border:1px solid var(--line);border-radius:4px;background:transparent;color:inherit;font:inherit;letter-spacing:.04em;cursor:pointer}

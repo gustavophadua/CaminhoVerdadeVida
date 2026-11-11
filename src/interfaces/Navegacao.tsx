@@ -4,6 +4,7 @@ import { useContaLocal } from './Conta'
 import { Icone, type NomeIcone } from './Janela'
 import { CAMINHO_LOGO } from '../ui/logo'
 import { BaixarApp } from './BaixarApp'
+import { idiomaEscolhido, trocarIdioma } from '../ui/idioma'
 
 export type Destino = InterfaceProduto | 'integracoes'
 // a Conversa é o produto (a IA com o Z3); o resto (Labs, cadeia, moeda, Terminal de demonstração) fica no Avançado
@@ -20,12 +21,14 @@ export function LogoCosmos({ tamanho = 26 }: { tamanho?: number }) {
  */
 export function BarraCosmos({ atual }: { atual: Destino }) {
   const conta = useContaLocal()
+  const ingles = idiomaEscolhido() === 'en'
   return <header className="cosmos-bar">
     <a className="cosmos-bar-marca" href="#/hub" aria-label="Cosmos, ir para o hub"><LogoCosmos /><span>Cosmos</span></a>
     <nav className="cosmos-bar-destinos" aria-label="Destinos do Cosmos">
       {PRINCIPAIS.map(([rota, nome, icone]) => <a key={rota} href={`#/${rota}`} aria-current={rota === atual ? 'page' : undefined}><Icone nome={icone} /><span>{nome}</span></a>)}
     </nav>
     <div className="cosmos-bar-extra">
+      <button type="button" className="cosmos-bar-idioma" data-sem-traducao="" lang={ingles ? 'pt' : 'en'} title={ingles ? 'Ver em português' : 'View in English'} onClick={() => trocarIdioma(ingles ? 'pt' : 'en')}>{ingles ? 'PT' : 'EN'}</button>
       <BaixarApp />
       <a href="#/integracoes" aria-current={atual === 'integracoes' ? 'page' : undefined} aria-label="Integrações" title="Integrações"><Icone nome="plug" /><span>Integrações</span></a>
       <a className="cosmos-bar-conta" href="#/conta" aria-current={atual === 'conta' ? 'page' : undefined} aria-label={conta.perfil ? 'Conta local desbloqueada' : 'Entrar na conta local'}>
