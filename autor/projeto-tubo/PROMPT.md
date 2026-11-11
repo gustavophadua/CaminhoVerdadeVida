@@ -99,6 +99,19 @@ O original está no Apêndice A.2. Ele propõe juntar Einstein e Tesla ao modelo
 - Isto substitui a frase do início ("essa é definitivamente lógica universal").
 - Gödel é o que as pessoas veem dentro do Tubo: limitadas a ele, veem o Todo incompleto. Completo, só após o fim. É a distorção (A.13).
 
+### 3.6 O sono, a energia que se preserva e o ponto Omega (A.14, 11/11/2026)
+
+- O fragmento (por exemplo, o humano) sustenta o ponto observador.
+- Durante o sono, o fragmento fecha o ponto observador e volta ao que já colidiu no passado, só que sem presença de
+  observação. Por isso é tudo embaçado.
+- A operação de energia do Todo bate com a lei da física: a energia não some, ela se preserva.
+- No cone, no começo há muita matéria; depois matéria engole matéria, até o ponto Omega, onde o Todo está totalmente
+  concentrado.
+- Isso não anula que o Todo tem energia para gastar: só acrescenta.
+
+O que isso encontra na física, o que foi conferido no Cosmos e as decisões que pede estão na seção 5, em D36 a D41
+(seção 7) e em `leis-da-fisica.md`.
+
 ## 4. A física já explicada (referência)
 
 ### 4.1 Newton
@@ -140,8 +153,11 @@ Engenharia de campos oscilantes: campo magnético girante (motor de indução), 
 - Na mecânica quântica, uma medição entrega um valor e ψ não pode ser lida numa única medição. No emaranhamento, o todo tem informação completa e a parte, incompleta.
 - A soma de duas ondas em oposição é zero o tempo todo. Essa é a linha de Alpha no gráfico do DNA.
 - Uma hélice vista de lado é uma onda, vista de frente é um círculo e vista de dentro é uma espiral. O DNA, o relógio e a espiral são o mesmo Tubo.
+- "A energia do Todo se preserva" (A.14) é a primeira lei, e a máquina já a obedece: reserva + movimento + gasta = total (provado, `confere-z3.py`, itens 7 a 9). "Ter energia para gastar" é a energia livre, que só desce (segunda lei). As duas valem juntas, e a conservação sozinha não decide o gasto: o gasto é uma lei a mais, "só acrescenta" (no Cosmos, tubo-6, D3 e D4).
+- No sono profundo, a comunicação de longo alcance do córtex se quebra (Massimini e outros, 2005) e o hipocampo repete, comprimidas no tempo, sequências do que foi vivido (em ratos: Wilson e McNaughton, 1994; Nádasdy e outros, 1999). Os sonhos trazem pedaços isolados, quase nunca um episódio inteiro (Fosse e outros, 2003). É o "fecha o ponto observador e volta ao que já colidiu, embaçado" de A.14, no sono profundo. No sono REM o ponto não fecha de todo (há sonho), mas o córtex pré-frontal dorsolateral, que confere, fica entre as áreas menos ativas (Maquet e outros, 1996). Detalhes e fontes em `leis-da-fisica.md`, seção 6.
+- "Matéria engole matéria" (A.14): a gravidade junta matéria. Numa fusão, massa e momento se conservam, e o calor ½·μ·(Δv)² nunca é negativo (tubo-6, A2 a A4).
 
-**É analogia quando aplicado a pessoas:** curvatura do espaço-tempo, emaranhamento e qualquer efeito quântico. Em corpos grandes e quentes, a interação com o ambiente destrói o emaranhamento quase de imediato.
+**É analogia quando aplicado a pessoas:** curvatura do espaço-tempo, emaranhamento e qualquer efeito quântico. Em corpos grandes e quentes, a interação com o ambiente destrói o emaranhamento quase de imediato. Também o ponto observador: na máquina é um ponto que anda no perímetro; a correspondência com o sono de uma pessoa é estrutural, não uma medida da máquina.
 
 **Contradiz ou precisa de decisão:**
 
@@ -152,6 +168,9 @@ Engenharia de campos oscilantes: campo magnético girante (motor de indução), 
 - Energia gasta não some: vira calor.
 - Na imagem 2, os pares de números se repetem em pontos diferentes, então não são "localizações distintas".
 - Na imagem 3, "S₁ × time" é um cilindro. Para ser cone, o raio precisa ser uma função do tempo. A máquina passou a dar essa função (seção 6.1).
+- O fim concentrado (ponto Omega, A.14) só acontece num universo que volta a se contrair. Com a energia escura constante, não há colapso: o fim é frio e uniforme, como diz o Principia (página 5). Os dados do DESI de 2025 preferem uma energia escura que muda com o tempo (2,8 a 4,2σ, conforme as supernovas usadas), e um ajuste de 2025 dá colapso em cerca de 20 bilhões de anos; nada disso está confirmado (D39).
+- Na relatividade geral, a energia total de um universo em expansão não tem conservação global definida, só local: a luz perde energia ao se esticar com o espaço. "A energia do Todo se preserva" vale sem ressalva em Newton, na relatividade restrita e na quântica, e só localmente na escala do universo.
+- O sono não é descanso no sentido da T04 (A.6): no Cosmos, "algum humano dorme e descansa" contradiz a base (tubo-5, S4). O cérebro dormindo continua gastando: no sono profundo, de 12% a 44% menos glicose que acordado, conforme o estudo; no REM, quase o mesmo (D36).
 
 ## 6. O que já existe
 
@@ -185,6 +204,7 @@ Simulação interativa numa página só. Publicada em https://claude.ai/artifact
 - S10. (proposta em 10/11/2026, a partir da resposta do autor) A perda por colisão nunca é zero. Com isso, "toda colisão gasta energia" vira regra provada (itens 24 e 25). Com perda zero a máquina faz 1.797 colisões em 600 s e gasta 0 J.
 - S12 a S14. (protótipo `atracao.js`, 10/11/2026) Fatia como plano; fanático num círculo de raio 6 a 2 m/s, sem ser desviado; atração do tipo gravidade, massa 20 para o fanático e 1 para os outros; em repouso começam a 0,1 m/s em linha reta.
 - S16. (não listada até 10/11/2026) O fragmento mantém a velocidade enquanto o raio encolhe. Não é regra do autor: ficou assim por omissão. Ver D31.
+- S17 a S20. (propostas em 11/11/2026, a partir da A.14; nenhuma está na máquina) S17: dois fragmentos que se encontram com perda total viram um só, com a soma das massas e a velocidade do centro de massa (D41). S18: cada fragmento guarda as colisões que teve e, no sono, as repassa com ruído, sem colisão nova (D38). S19: cada fragmento tem o ponto observador aberto ou fechado; fechado, não procura colisão nova (D37). S20: concentrar o Todo é ter o valor total (D40; usada só no teste tubo-5 do Cosmos).
 
 | Parâmetro | Valor |
 |---|---|
@@ -285,6 +305,12 @@ Cada uma muda a máquina, os gráficos ou os dois. Pergunte ao autor antes de as
 - **D33.** O Tubo é uma história só ou ramifica (`multiverso.md`, 10/11/2026)? Como está, o motor não tem acaso nem ramo: um estado inicial dá uma história (Laplace, A.10), e "testar todas as possibilidades" (A.6) acontece em série, numa história só; na máquina, uma história só alcança o estoque inteiro apenas com força e perda juntas (metade com força: 180 de 180; repouso ou todos iguais: 18 de 180). A alternativa é a de Everett (estado relativo, 1957): Alpha é o estado do Todo e cada fragmento é um ramo; ela resolve Bell sem valores prévios por fragmento (conferido no Z3), mas então o estoque não se esgota, ele se realiza todo de uma vez, e o fechamento do cone precisa de outra regra. O autor escolhe.
 - **D34.** O Tubo como ponte (3.5): para englobar tudo sem contradição, ele só pode afirmar as pontes e o domínio de cada teoria, nunca o conteúdo de todas ao mesmo tempo (Newton e Einstein como verdades absolutas dão contradição; cada um no seu domínio, convivem; `ponte.py`). Falta, e é do autor: (a) a lista dos pontos desconexos que ele liga; (b) o domínio de cada um (o "cone" de cada fragmento); (c) a ponte de cada par (já conhecidas: Newton ↔ Einstein por v ≪ c, clássica ↔ quântica por ħ → 0, mecânica ↔ termodinâmica por S = k log W); (d) o que o Tubo diz onde não há ponte (gravidade ↔ quântica), que é onde ele poderia dar uma previsão que pode falhar. "Não há contradições" se prova para um conjunto finito de regras (há modelo), não para "tudo" de dentro (Gödel); só de fora (Alpha).
 - **D35.** Gödel no Tubo (A.13): o estoque de possibilidades é finito ou infinito? Finito: no fim, tudo se decide por inspeção completa, e o "completo só após o fim" vale ao pé da letra (Gödel não se aplica a mundos finitos; `godel.py`, parte B). Infinito (com a aritmética dentro): de dentro sempre falta alguma verdade, e subir um nível não fecha, porque cada sistema mais forte tem a sua própria lacuna; aí "completo" só existe como Alpha sendo a verdade (o modelo), não como um sistema de regras. Isso toca A.10 ("Alpha sabe os mecanismos, as regras de si mesmo"): se Alpha for um conjunto de regras com a aritmética dentro, Alpha também é incompleto. A distorção do Tubo tem três camadas que não são a mesma coisa: geométrica (a espiral vista da parede, D30), causal (o cone de luz) e lógica (Gödel).
+- **D36. O sono é descanso?** Pela T04 (A.6: "só descansa após a finalização do Todo"), dentro do Tubo ninguém descansa. No Cosmos (tubo-5), com a base, "algum humano dorme e descansa" contradiz (T11, T01, T04), e "algum humano dorme" cabe. Então o sono de A.14 é fechar o ponto observador sem descansar: o fragmento continua no Tubo e continua gastando. Confirmar, ou mudar a T04.
+- **D37. O ponto observador é outra coisa que o fragmento?** A base v1 trata "ponto observador" como sinônimo de "fragmento". A.14 separa: o fragmento sustenta o ponto, e no sono o ponto fecha com o fragmento ainda lá. Proposta: base v2 com o estado do ponto (aberto ou fechado) separado do fragmento, com as frases N1 a N4 do tubo-5. Na máquina, o ponto observador é o próprio fragmento andando no perímetro. Suposição S19 (minha): cada fragmento tem o ponto aberto ou fechado; fechado, ele não procura colisão nova.
+- **D38. O que o sono revisita, e como embaça?** "Voltar ao que já colidiu" pede memória, e hoje o fragmento da máquina não guarda nada das colisões. Suposição S18 (minha): cada fragmento guarda as colisões que teve (com quem, quando, quanto mudou); no sono, repassa essas colisões com ruído, sem colisão nova. O embaçado tem versão exata, a desigualdade do processamento de dados: sem observação nova, repassar só mantém ou perde distinção, nunca ganha. No Cosmos (tubo-5, E1 e E2): o que o sono juntou, nada separa depois; uma observação nova pode separar.
+- **D39. O fim: concentrado ou igual?** A.14: o fim é o ponto Omega, com o Todo concentrado. O Principia (página 5): "o fim é a igualdade de tudo pelo esgotamento dessa ordem. Começo e fim têm a mesma temperatura uniforme". As duas só cabem juntas com uma regra a mais (com gravidade, o estado de maior entropia é concentrado, o buraco negro, como a mesma página do Principia diz). Na física, depende da energia escura: constante, não há colapso; os dados de 2025 deixam a porta aberta (`leis-da-fisica.md`, §6.3). Qual é o fim do Tubo?
+- **D40. No ponto Omega ainda há fragmento?** No Cosmos (tubo-5): se o Todo concentrado for um fragmento com o valor total, contradiz a base (O1: T01, T02, T03); se for o Todo depois do fim, cabe (O2: o ponto Omega fica fora do Tubo). A leitura "concentrar o Todo é ter o valor total" é suposição minha (S20); sem ela, a base não decide (O3). Contra o Principia: "sobrou um só fragmento" contradiz Ax3 (P1); sem Ax3, contradiz Ax2 com a extensionalidade (P4), que o Principia já precisou para o T1 (nota "Extensionalidade"); sem as duas, não se decide (P2). Ou os axiomas valem só enquanto o Tubo está aberto, como a T01 diz em palavras ("enquanto ele não fecha").
+- **D41. "Matéria engole matéria" entra na máquina?** Hoje as colisões trocam velocidade e ninguém se junta. Suposição S17 (minha): quando dois fragmentos se encontram com perda total (e = 0), viram um só, com a soma das massas e a velocidade do centro de massa, e o calor ½·μ·(Δv)² vai para o gasto (no Cosmos: nunca negativo, e "a fusão cria energia" contradiz; tubo-6, A2 a A4). O número de fragmentos cai até um. Isso muda o motor e o estoque de possibilidades (D16, D20: com menos fragmentos, menos pares) e entraria como cópia separada da máquina, como o motor B (D32).
 
 ## 8. Tudo para fazer
 
@@ -299,6 +325,9 @@ Cada uma muda a máquina, os gráficos ou os dois. Pergunte ao autor antes de as
 - [ ] Rodar na máquina os testes da página 4 (n = f(2 m/s) e n = f(0,10 m/s) em 60 s) com os valores definitivos e registrar os resultados.
 - [ ] Responder ao colaborador com os quatro pontos da seção 3.4.
 - [ ] Receber as próximas páginas do caderno (a página 2 termina com "next") e repetir o processo: organizar, apontar o que falta, desenhar e pôr na máquina.
+- [ ] Responder D36 a D41 (A.14): sono e descanso, o ponto observador separado do fragmento, a memória das colisões, o fim (concentrado ou igual), fragmento no ponto Omega e a fusão na máquina.
+- [ ] Se o autor confirmar D37 e D38: base v2 do Tubo com N1 a N4 (`leis-da-fisica.md`, seção 6) e, numa cópia da máquina, o ponto aberto ou fechado (S19) e a memória das colisões (S18).
+- [ ] Se o autor confirmar D41: cópia da máquina com fusão (S17), como o motor B (D32), medindo o número de fragmentos e o estoque de possibilidades ao longo do tempo.
 
 ### 8.1 Plano do verificador (11/11/2026)
 
@@ -323,6 +352,15 @@ base como parâmetro. O que falta:
 4. Certificado: para fato e contrária, a prova do Z3 conferida pelos verificadores independentes que o Cosmos já usa.
 5. Entrada pela IA: a tradução do Cosmos (português -> fórmula) rodando no Ollama local, para o Tubo não sair do computador.
 6. Regressão: as afirmações já conferidas (C1 a C7 do comprovador, E1 a E12) viram testes da base.
+7. Números na Conversa: passar `numerico` e `argumentos` em `fichasDe` (`src/motor/avaliacao.ts`). Hoje a função da
+   Conversa (`classificar`) recusa "m1 > 0" ("'m1' é objeto, mas aqui precisa ser número"), e a física com números só passa pelo motor direto
+   (`leis-da-fisica.md`, seção 2).
+8. Unidades como tipo: cada número com a sua dimensão, e a leitura recusando somar ou igualar dimensões diferentes. Hoje
+   "E = m·c" passa sem queixa (`leis-da-fisica.md`, F7).
+9. Conservação como módulo: um bloco pronto com as leis de conservação (momento, energia, carga), a ponte mais forte
+   entre a física e a lógica (`leis-da-fisica.md`, seção 5).
+10. Pedir a testemunha: quando o Z3 não decide, pedir a quem afirma a testemunha ou a instância e conferir (F2 e F3, F8 e
+    F9, P3 e P4 em `leis-da-fisica.md`).
 
 ## 9. Testes que a máquina tem de continuar passando
 
@@ -366,6 +404,7 @@ Rode `node teste-do-motor.js maquina-do-tubo.html` depois de qualquer mudança n
 | `ponte.py` | π em áreas sem círculo (6/π², π²/6, agulha de Buffon); Newton e Einstein: contradição como absolutos, consistentes por domínio, e a ponte provada (γ − 1 ≤ 10⁻⁶ abaixo de β = 1/1000) |
 | `godel.py` | uma verdade que existe (x³ + y³ + z³ = 33, Booker 2019) e o Z3 não alcança sozinho em 30 s, mas confere na hora quando recebe a resposta; e o caso finito, em que tudo se decide no fim |
 | `base-tubo-v1.json` | o Tubo como base do verificador do Cosmos (formato da camada de fatos): vocabulário, fatos T01 a T13 com origem e pontes com a realidade-v1 |
+| `leis-da-fisica.md` | as leis da física dentro da lógica do Cosmos: 29 casos (Newton, gravitação, relatividade, termodinâmica, quântica e os limites da lógica) e a A.14 conferida (sono, energia, ponto Omega), com as fontes; os testes estão no Cosmos, em `autor/projeto-tubo/cosmos/` (`tubo-6-leis-da-fisica.test.ts` e `tubo-5-sono-energia-omega.test.ts`) |
 | `Selo.pdf` | as cinco imagens iniciais e as quatro fotos do caderno |
 | `package.json` | só para o Node rodar os testes dentro desta pasta |
 
@@ -395,6 +434,7 @@ Faltam na pasta, e o autor tem: as cinco imagens iniciais e as quatro fotos do c
 4. "vai pra mecanica quantica"
 5. "Faça todos os gráficos pra mim"
 6. "da o prompt com de tudo para eu lançar na pasta do projeto, tudo que eu disse e tudo apra fazer"
+7. "Além disso Agora quero que você faça a pesquisa elaborada do funcionamento das leis da física dentro da lógica do Cosmos." (11/11/2026; a pesquisa está em `leis-da-fisica.md`)
 
 ### A.5 Resposta do autor aos quatro pontos que não batiam (10/11/2026, como foi escrita)
 
@@ -439,3 +479,7 @@ Faltam na pasta, e o autor tem: as cinco imagens iniciais e as quatro fotos do c
 ### A.13 Gödel dentro do Tubo (11/11/2026, como foi escrita)
 
 > então kkk godel também entra so pra falar, godel é literalmente o que as pessoas vê dentro do tubo, elas estão limitadas ao tubo, e elas veem o todo incompleto. só após o fim mesmo. é a distorção
+
+### A.14 O sono, a energia e o ponto Omega (11/11/2026, como foi escrita)
+
+> Olha surgiu novas atualizações, verifique se o Todo, o fragmento por exemplo humano, ele sustenta o ponto observador, e durante o sono ele fecha o ponto observador, retornando ao que já colidiu no passado só que sem presença de observação, por isso é tudo embaçado. e ai então se observa que a operação de energia do Todo, bate na lei da física que a energia não some, ela se preserva, ou seja ela vai se preservando, e ai entra o cone e o tubo, no cone, no começo, tem muita materia, mais depois matéria engole matéria até a ponto do Omega, onde ta totalmente concentrado o todo. Mas não anula que o Todo tem energia pra gastar, só acrescenta.

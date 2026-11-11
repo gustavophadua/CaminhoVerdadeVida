@@ -102,6 +102,19 @@ The original is in Appendix A.2. It proposes adding Einstein and Tesla to the mo
 - This replaces the sentence from the beginning ("this is definitely universal logic").
 - Gödel is what people see inside the Tube: limited to it, they see the Whole incomplete. Complete, only after the end. It is the distortion (A.13).
 
+### 3.6 Sleep, the energy that is preserved and the Omega point (A.14, 2026-11-11)
+
+- The fragment (for example, the human) sustains the observer point.
+- During sleep, the fragment closes the observer point and goes back to what it already collided with in the past,
+  only without the presence of observation. That is why everything is blurry.
+- The energy operation of the Whole matches the law of physics: energy does not disappear, it is preserved.
+- In the cone, at the beginning there is a lot of matter; then matter swallows matter, up to the Omega point, where the
+  Whole is totally concentrated.
+- This does not cancel that the Whole has energy to spend: it only adds.
+
+What this meets in physics, what was checked in Cosmos and the decisions it calls for are in section 5, in D36 to D41
+(section 7) and in `leis-da-fisica.en.md`.
+
 ## 4. The physics already explained (reference)
 
 ### 4.1 Newton
@@ -143,8 +156,11 @@ Engineering of oscillating fields: the rotating magnetic field (induction motor)
 - In quantum mechanics, a measurement delivers one value and ψ cannot be read in a single measurement. In entanglement, the whole has complete information and the part, incomplete.
 - The sum of two waves in opposition is zero all the time. That is Alpha's line in the DNA graph.
 - A helix seen from the side is a wave, seen from the front it is a circle and seen from inside it is a spiral. The DNA, the clock and the spiral are the same Tube.
+- "The Whole's energy is preserved" (A.14) is the first law, and the machine already obeys it: reserve + motion + spent = total (proved, `confere-z3.py`, items 7 to 9). "Having energy to spend" is free energy, which only goes down (second law). The two hold together, and conservation alone does not decide the spending: spending is one more law, it "only adds" (in Cosmos, tubo-6, D3 and D4).
+- In deep sleep, the cortex's long-range communication breaks down (Massimini and others, 2005) and the hippocampus replays, compressed in time, sequences of what was lived (in rats: Wilson and McNaughton, 1994; Nádasdy and others, 1999). Dreams bring isolated pieces, almost never a whole episode (Fosse and others, 2003). That is A.14's "closes the observer point and goes back to what already collided, blurry", in deep sleep. In REM sleep the point does not close completely (there is dreaming), but the dorsolateral prefrontal cortex, which checks, is among the least active areas (Maquet and others, 1996). Details and sources in `leis-da-fisica.en.md`, section 6.
+- "Matter swallows matter" (A.14): gravity gathers matter. In a merger, mass and momentum are conserved, and the heat ½·μ·(Δv)² is never negative (tubo-6, A2 to A4).
 
-**It is an analogy when applied to people:** curvature of spacetime, entanglement and any quantum effect. In large, hot bodies, interaction with the environment destroys entanglement almost immediately.
+**It is an analogy when applied to people:** curvature of spacetime, entanglement and any quantum effect. In large, hot bodies, interaction with the environment destroys entanglement almost immediately. So is the observer point: in the machine it is a point that walks on the perimeter; the correspondence with a person's sleep is structural, not a measurement of the machine.
 
 **Contradicts or needs a decision:**
 
@@ -155,6 +171,9 @@ Engineering of oscillating fields: the rotating magnetic field (induction motor)
 - Spent energy does not disappear: it becomes heat.
 - In image 2, the pairs of numbers repeat at different dots, so they are not "distinct locations".
 - In image 3, "S₁ × time" is a cylinder. For it to be a cone, the radius needs to be a function of time. The machine now gives that function (section 6.1).
+- The concentrated end (Omega point, A.14) only happens in a universe that contracts again. With constant dark energy there is no collapse: the end is cold and uniform, as the Principia says (page 5). DESI's 2025 data prefer a dark energy that changes with time (2.8 to 4.2σ, depending on the supernovae used), and a 2025 fit gives a collapse in about 20 billion years; none of this is confirmed (D39).
+- In general relativity, the total energy of an expanding universe has no defined global conservation, only local: light loses energy as it is stretched with space. "The Whole's energy is preserved" holds without caveat in Newton, in special relativity and in quantum mechanics, and only locally at the scale of the universe.
+- Sleep is not rest in the sense of T04 (A.6): in Cosmos, "some human sleeps and rests" contradicts the base (tubo-5, S4). The sleeping brain keeps spending: in deep sleep, 12% to 44% less glucose than awake, depending on the study; in REM, almost the same (D36).
 
 ## 6. What already exists
 
@@ -188,6 +207,7 @@ An interactive simulation on a single page. Published at https://claude.ai/artif
 - S10. (proposed on 2026-11-10, from the author's answer) The loss per collision is never zero. With this, "every collision spends energy" becomes a proved rule (items 24 and 25). With zero loss the machine makes 1,797 collisions in 600 s and spends 0 J.
 - S12 to S14. (prototype `atracao.js`, 2026-11-10) Slice as a plane; the fanatic on a circle of radius 6 at 2 m/s, without being deflected; attraction of the gravity type, mass 20 for the fanatic and 1 for the others; at rest they start at 0.1 m/s in a straight line.
 - S16. (not listed until 2026-11-10) The fragment keeps its speed while the radius shrinks. It is not the author's rule: it stayed like this by omission. See D31.
+- S17 to S20. (proposed on 2026-11-11, from A.14; none of them is in the machine) S17: two fragments that meet with total loss become one, with the sum of the masses and the velocity of the center of mass (D41). S18: each fragment keeps the collisions it had and, in sleep, replays them with noise, without new collisions (D38). S19: each fragment has its observer point open or closed; closed, it does not seek new collisions (D37). S20: concentrating the Whole is having the total value (D40; used only in Cosmos's tubo-5 test).
 
 | Parameter | Value |
 |---|---|
@@ -288,6 +308,12 @@ Each one changes the machine, the graphics or both. Ask the author before assumi
 - **D33.** Is the Tube a single history or does it branch (`multiverso.md`, 2026-11-10)? As it is, the engine has neither chance nor branching: an initial state gives one history (Laplace, A.10), and "testing all the possibilities" (A.6) happens in series, in a single history; in the machine, a single history only reaches the whole stock with force and loss together (half with force: 180 of 180; rest or all equal: 18 of 180). The alternative is Everett's (relative state, 1957): Alpha is the state of the Whole and each fragment is a branch; it resolves Bell without prior values per fragment (checked in Z3), but then the stock is not exhausted, it is realized all at once, and the closing of the cone needs another rule. The author chooses.
 - **D34.** The Tube as a bridge (3.5): to encompass everything without contradiction, it can only state the bridges and the domain of each theory, never the content of all of them at the same time (Newton and Einstein as absolute truths give a contradiction; each in its own domain, they coexist; `ponte.py`). Still missing, and it is up to the author: (a) the list of disconnected points it links; (b) the domain of each one (each fragment's "cone"); (c) the bridge of each pair (already known: Newton ↔ Einstein through v ≪ c, classical ↔ quantum through ħ → 0, mechanics ↔ thermodynamics through S = k log W); (d) what the Tube says where there is no bridge (gravity ↔ quantum), which is where it could give a prediction that can fail. "There are no contradictions" is proved for a finite set of rules (there is a model), not for "everything" from inside (Gödel); only from outside (Alpha).
 - **D35.** Gödel in the Tube (A.13): is the stock of possibilities finite or infinite? Finite: in the end, everything is decided by complete inspection, and "complete only after the end" holds literally (Gödel does not apply to finite worlds; `godel.py`, part B). Infinite (with arithmetic inside): from inside some truth is always missing, and going up a level does not close it, because each stronger system has its own gap; then "complete" only exists as Alpha being the truth (the model), not as a system of rules. This touches A.10 ("Alpha knows the mechanisms, the rules of itself"): if Alpha is a set of rules with arithmetic inside, Alpha is also incomplete. The distortion of the Tube has three layers that are not the same thing: geometric (the spiral seen from the wall, D30), causal (the light cone) and logical (Gödel).
+- **D36. Is sleep rest?** By T04 (A.6: "you only rest after the completion of the Whole"), no one rests inside the Tube. In Cosmos (tubo-5), with the base, "some human sleeps and rests" contradicts (T11, T01, T04), and "some human sleeps" fits. So A.14's sleep is closing the observer point without resting: the fragment stays in the Tube and keeps spending. Confirm, or change T04.
+- **D37. Is the observer point something other than the fragment?** Base v1 treats "observer point" as a synonym of "fragment". A.14 separates them: the fragment sustains the point, and in sleep the point closes with the fragment still there. Proposal: base v2 with the state of the point (open or closed) separate from the fragment, with sentences N1 to N4 of tubo-5. In the machine, the observer point is the fragment itself walking on the perimeter. Supposition S19 (mine): each fragment has its point open or closed; closed, it does not seek new collisions.
+- **D38. What does sleep revisit, and how does it blur?** "Going back to what already collided" requires memory, and today the machine's fragment keeps nothing of its collisions. Supposition S18 (mine): each fragment keeps the collisions it had (with whom, when, how much it changed); in sleep, it replays those collisions with noise, without new collisions. The blur has an exact version, the data processing inequality: without a new observation, replaying only keeps or loses distinction, never gains it. In Cosmos (tubo-5, E1 and E2): what sleep merged, nothing separates afterwards; a new observation can separate it.
+- **D39. The end: concentrated or equal?** A.14: the end is the Omega point, with the Whole concentrated. The Principia (page 5): "the end is the equality of everything through the exhaustion of that order. Beginning and end have the same uniform temperature". The two only fit together with one more rule (with gravity, the state of highest entropy is concentrated, the black hole, as the same page of the Principia says). In physics, it depends on dark energy: if it is constant, there is no collapse; the 2025 data leave the door open (`leis-da-fisica.en.md`, §6.3). What is the Tube's end?
+- **D40. Is there still a fragment at the Omega point?** In Cosmos (tubo-5): if the concentrated Whole is a fragment with the total value, it contradicts the base (O1: T01, T02, T03); if it is the Whole after the end, it fits (O2: the Omega point lies outside the Tube). The reading "concentrating the Whole is having the total value" is a supposition of mine (S20); without it, the base does not decide (O3). Against the Principia: "only one fragment is left" contradicts Ax3 (P1); without Ax3, it contradicts Ax2 with extensionality (P4), which the Principia already needed for T1 (note "Extensionality"); without both, it is not decided (P2). Or the axioms hold only while the Tube is open, as T01 says in words ("while it does not close").
+- **D41. Does "matter swallows matter" go into the machine?** Today collisions exchange speed and no one merges. Supposition S17 (mine): when two fragments meet with total loss (e = 0), they become one, with the sum of the masses and the velocity of the center of mass, and the heat ½·μ·(Δv)² goes to the spent energy (in Cosmos: never negative, and "the merger creates energy" contradicts; tubo-6, A2 to A4). The number of fragments falls to one. This changes the engine and the stock of possibilities (D16, D20: with fewer fragments, fewer pairs) and would go in as a separate copy of the machine, like engine B (D32).
 
 ## 8. Everything to do
 
@@ -302,6 +328,9 @@ Each one changes the machine, the graphics or both. Ask the author before assumi
 - [ ] Run in the machine the tests of page 4 (n = f(2 m/s) and n = f(0.10 m/s) in 60 s) with the definitive values and record the results.
 - [ ] Answer the collaborator with the four points of section 3.4.
 - [ ] Receive the next pages of the notebook (page 2 ends with "next") and repeat the process: organize, point out what is missing, draw and put it in the machine.
+- [ ] Answer D36 to D41 (A.14): sleep and rest, the observer point separate from the fragment, the memory of collisions, the end (concentrated or equal), a fragment at the Omega point and merging in the machine.
+- [ ] If the author confirms D37 and D38: base v2 of the Tube with N1 to N4 (`leis-da-fisica.en.md`, section 6) and, in a copy of the machine, the open or closed point (S19) and the memory of collisions (S18).
+- [ ] If the author confirms D41: a copy of the machine with merging (S17), like engine B (D32), measuring the number of fragments and the stock of possibilities over time.
 
 ### 8.1 Plan of the verifier (2026-11-11)
 
@@ -326,6 +355,16 @@ receives the base as a parameter. What is missing:
 4. Certificate: for fact and contrary, the Z3 proof checked by the independent verifiers Cosmos already uses.
 5. Input through the AI: Cosmos's translation (Portuguese -> formula) running on local Ollama, so that the Tube does not leave the computer.
 6. Regression: the claims already checked (C1 to C7 of the comprovador, E1 to E12) become tests of the base.
+7. Numbers in the Conversation: pass `numerico` and `argumentos` in `fichasDe` (`src/motor/avaliacao.ts`). Today the
+   Conversation's function (`classificar`) refuses "m1 > 0" ("'m1' é objeto, mas aqui precisa ser número": 'm1' is an
+   object, but here it has to be a number), and physics with numbers only goes through the engine directly
+   (`leis-da-fisica.en.md`, section 2).
+8. Units as a type: each number with its dimension, and the reader refusing to add or equate different dimensions.
+   Today "E = m·c" passes without complaint (`leis-da-fisica.en.md`, F7).
+9. Conservation as a module: a ready-made block with the conservation laws (momentum, energy, charge), the strongest
+   bridge between physics and logic (`leis-da-fisica.en.md`, section 5).
+10. Ask for the witness: when Z3 does not decide, ask whoever makes the claim for the witness or the instance, and check
+    it (F2 and F3, F8 and F9, P3 and P4 in `leis-da-fisica.en.md`).
 
 ## 9. Tests the machine must keep passing
 
@@ -369,6 +408,7 @@ Run `node teste-do-motor.js maquina-do-tubo.html` after any change to the engine
 | `ponte.py` | π in areas without a circle (6/π², π²/6, Buffon's needle); Newton and Einstein: a contradiction as absolutes, consistent by domain, and the bridge proved (γ − 1 ≤ 10⁻⁶ below β = 1/1000) |
 | `godel.py` | a truth that exists (x³ + y³ + z³ = 33, Booker 2019) and that Z3 does not reach on its own in 30 s, but checks immediately when given the answer; and the finite case, in which everything is decided at the end |
 | `base-tubo-v1.json` | the Tube as a base for Cosmos's verifier (the format of the layer of facts): vocabulary, facts T01 to T13 with origin and bridges with realidade-v1 |
+| `leis-da-fisica.md` | the laws of physics inside Cosmos's logic (in English: `leis-da-fisica.en.md`): 29 cases (Newton, gravitation, relativity, thermodynamics, quantum mechanics and the limits of logic) and A.14 checked (sleep, energy, Omega point), with sources; the tests are in Cosmos, at `autor/projeto-tubo/cosmos/` (`tubo-6-leis-da-fisica.test.ts` and `tubo-5-sono-energia-omega.test.ts`) |
 | `Selo.pdf` | the five initial images and the four photos of the notebook |
 | `package.json` | only so that Node runs the tests inside this folder |
 
@@ -405,6 +445,7 @@ Translation:
 4. "vai pra mecanica quantica" (go to quantum mechanics)
 5. "Faça todos os gráficos pra mim" (Make all the graphs for me)
 6. "da o prompt com de tudo para eu lançar na pasta do projeto, tudo que eu disse e tudo apra fazer" (give the prompt with everything for me to put in the project folder, everything I said and everything to do)
+7. "Além disso Agora quero que você faça a pesquisa elaborada do funcionamento das leis da física dentro da lógica do Cosmos." (Besides that, now I want you to do the elaborate research on how the laws of physics work inside the logic of Cosmos.) (2026-11-11; the research is in `leis-da-fisica.en.md`)
 
 ### A.5 The author's answer to the four points that did not match (2026-11-10, as it was written)
 
@@ -493,3 +534,11 @@ Translation:
 Translation:
 
 > so haha godel also comes in just to say, godel is literally what people see inside the tube, they are limited to the tube, and they see the whole incomplete. only after the end really. it is the distortion
+
+### A.14 Sleep, energy and the Omega point (2026-11-11, as it was written)
+
+> Olha surgiu novas atualizações, verifique se o Todo, o fragmento por exemplo humano, ele sustenta o ponto observador, e durante o sono ele fecha o ponto observador, retornando ao que já colidiu no passado só que sem presença de observação, por isso é tudo embaçado. e ai então se observa que a operação de energia do Todo, bate na lei da física que a energia não some, ela se preserva, ou seja ela vai se preservando, e ai entra o cone e o tubo, no cone, no começo, tem muita materia, mais depois matéria engole matéria até a ponto do Omega, onde ta totalmente concentrado o todo. Mas não anula que o Todo tem energia pra gastar, só acrescenta.
+
+Translation:
+
+> Look, new updates came up, check whether the Whole, the fragment, for example the human, sustains the observer point, and during sleep it closes the observer point, going back to what already collided in the past but without the presence of observation, that's why everything is blurry. and then one observes that the energy operation of the Whole matches the law of physics that energy does not disappear, it is preserved, that is, it keeps being preserved, and then come the cone and the tube, in the cone, at the beginning, there is a lot of matter, but then matter swallows matter up to the Omega point, where the whole is totally concentrated. But it does not cancel that the Whole has energy to spend, it only adds.
