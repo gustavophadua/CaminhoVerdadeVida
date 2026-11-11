@@ -1,8 +1,8 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import { Worker } from 'node:worker_threads'
 import { randomBytes, timingSafeEqual } from 'node:crypto'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { dirname } from 'node:path'
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
 import { verificarMensagemLocalTeste } from '../v4/carteira'
 import { criarAdaptadorOllama, descarregarModeloOllama, descreverModeloOllama } from './provedores/ollama'
 import { CEGO_FORMALIZACAO, ESQUEMA_CONCLUSAO, ESQUEMA_PREMISSAS, formalizarCego, PROMPT_FORMALIZACAO, REPARO_FORMALIZACAO, SAIDA_FORMALIZACAO } from '../motor/formalizacao'
@@ -10,7 +10,8 @@ import { CLASSES, type Classe, type Item, type Termo } from '../motor/avaliacao'
 import type { Conferencia } from '../motor/avaliacaoZ3'
 import { cenarioDoSalto, ESQUEMA_EXTRACAO, EXTRATOR, MAX_TEXTO_REVISOR, revisarPlano, type RelatorioRevisor } from '../motor/revisor'
 import { buscarPonte, ESQUEMA_PONTE, PONTE, type ArgumentoFormal } from '../motor/ponte'
-import { confrontarRealidade } from '../motor/realidade'
+import { confrontarRealidade, fatosCitados, type ClassificarComVocabulario } from '../motor/realidade'
+import { conferirConsistencia, lerBase, type BaseNomeada, type Consistencia } from '../motor/bases'
 import type { ModeloGroq } from './groq-contratos'
 import { ErroGroq, type PedidoGroq } from './provedores/groq'
 import exemplosTexto from '../../avaliacao/exemplos-publicos-v1.jsonl?raw'
@@ -66,11 +67,37 @@ export function validarPedidoPonte(x: unknown): ArgumentoFormal {
 /** O pedido da camada de fatos: as fórmulas do argumento e as frases dele (para mostrar ao lado de cada veredito). */
 export function validarPedidoRealidade(x: unknown) {
   const frase = (s: unknown) => typeof s === 'string' && s.length <= 1000
-  if (!objetoSimples(x, 'conclusao,premissas,texto,vocabulario') || !objetoSimples(x.texto, 'conclusao,premissas') || !Array.isArray(x.texto.premissas)
+  // `base` (opcional): o nome de uma base local; sem ela, a realidade-v1
+  const comBase = objetoSimples(x, 'base,conclusao,premissas,texto,vocabulario')
+  if (!(comBase || objetoSimples(x, 'conclusao,premissas,texto,vocabulario')) || !objetoSimples(x.texto, 'conclusao,premissas') || !Array.isArray(x.texto.premissas)
       || !x.texto.premissas.every(frase) || !frase(x.texto.conclusao)) throw new ErroOllama(400, 'invalido')
+  if (comBase && (typeof x.base !== 'string' || !/^[a-z0-9][a-z0-9-]{0,39}$/.test(x.base))) throw new ErroOllama(400, 'invalido')
   const { vocabulario, premissas, conclusao } = validarPropostaConferir({ vocabulario: x.vocabulario, premissas: x.premissas, conclusao: x.conclusao, classe: null })
   if ((x.texto.premissas as string[]).length !== premissas.length) throw new ErroOllama(400, 'invalido')
-  return { vocabulario, premissas, conclusao, texto: { premissas: x.texto.premissas as string[], conclusao: x.texto.conclusao as string } }
+  return { vocabulario, premissas, conclusao, texto: { premissas: x.texto.premissas as string[], conclusao: x.texto.conclusao as string }, ...(comBase ? { base: x.base as string } : {}) }
+}
+
+/** O que sai de carregar a pasta de bases locais: as bases lidas e os arquivos recusados, com o motivo. */
+export interface BasesLocais { bases: BaseNomeada[]; recusadas: { arquivo: string; motivo: string }[] }
+/**
+ * As bases locais da pasta (fora do Git): cada *.json passa por lerBase; o que não passa fica fora, com o motivo. Até 20
+ * arquivos de até 2 MB. Nome repetido: fica a primeira em ordem alfabética.
+ */
+export function carregarBasesLocais(pasta: string): BasesLocais {
+  const r: BasesLocais = { bases: [], recusadas: [] }
+  if (!existsSync(pasta)) return r
+  const arquivos = readdirSync(pasta).filter((a) => a.endsWith('.json')).sort()
+  for (const arquivo of arquivos.slice(0, 20)) {
+    try {
+      const caminho = join(pasta, arquivo)
+      if (statSync(caminho).size > 2 * 1024 * 1024) throw new Error('o arquivo passa de 2 MB')
+      const base = lerBase(JSON.parse(readFileSync(caminho, 'utf8')))
+      if (r.bases.some((b) => b.nome === base.nome)) throw new Error(`já existe uma base chamada ${base.nome}`)
+      r.bases.push(base)
+    } catch (e) { r.recusadas.push({ arquivo, motivo: (e as Error).message.slice(0, 300) }) }
+  }
+  for (const arquivo of arquivos.slice(20)) r.recusadas.push({ arquivo, motivo: 'passou do limite de 20 bases' })
+  return r
 }
 
 /**
@@ -178,8 +205,13 @@ export function validarTextoRevisor(x: unknown): string {
  * `reservaLocal` (o modo remoto): quando a nuvem falha, a mesma tradução vai ao modelo local, e a resposta diz `reserva`.
  */
 export function criarControleOllama(opcoes: { modelo?: string; buscar?: typeof fetch; prazoMs?: number; conferidor?: ConferidorZ3; sessao?: OpcoesSessaoIA; reservaLocal?: boolean
-  nuvem?:{ executar: (p: PedidoGroq) => Promise<{ conteudo: string; usage: { prompt_tokens: number; completion_tokens: number } }>; modelo: ModeloGroq } }) {
+  nuvem?:{ executar: (p: PedidoGroq) => Promise<{ conteudo: string; usage: { prompt_tokens: number; completion_tokens: number } }>; modelo: ModeloGroq }
+  /** a pasta das bases locais (bases.ts), fora do Git; sem ela, só a realidade-v1 */
+  pastaBases?: string }) {
   const modelo = opcoes.modelo ?? MODELO_OLLAMA_PADRAO
+  const locais = opcoes.pastaBases ? carregarBasesLocais(opcoes.pastaBases) : { bases: [], recusadas: [] }
+  // a consistência de cada base, conferida pelo Z3 no primeiro uso e guardada: base contraditória não confronta nada
+  const consistencia = new Map<string, Promise<Consistencia>>(), conferidas = new Map<string, Consistencia>()
   // a tradução cega: as premissas sem a conclusão, depois a conclusão só com o vocabulário (formalizacao-v1.md §8b)
   const premissas = criarAdaptadorOllama({ modelo, formato: ESQUEMA_PREMISSAS, temperatura: 0, semente: 0, contexto: 4096, buscar: opcoes.buscar, prazoMs: opcoes.prazoMs ?? 300_000 })
   const conclusao = criarAdaptadorOllama({ modelo, formato: ESQUEMA_CONCLUSAO, temperatura: 0, semente: 0, contexto: 4096, buscar: opcoes.buscar, prazoMs: opcoes.prazoMs ?? 300_000 })
@@ -244,7 +276,11 @@ export function criarControleOllama(opcoes: { modelo?: string; buscar?: typeof f
       if (encerrado) throw new ErroOllama(503, 'encerrado')
       if (rota === 'ollama/estado') {
         try {
-          enviar(res, 200, { formato: 'cosmos-ollama-v1', estado: 'pronto', ...(await descreverModeloOllama(modelo, opcoes.buscar)), prompt: PROMPT_FORMALIZACAO, cego: CEGO_FORMALIZACAO, saida: SAIDA_FORMALIZACAO, reparo: REPARO_FORMALIZACAO, extrator: EXTRATOR, nuvem: nuvem?.modelo ?? null, sessao: porteiro ? 'exigida' : 'livre' })
+          enviar(res, 200, { formato: 'cosmos-ollama-v1', estado: 'pronto', ...(await descreverModeloOllama(modelo, opcoes.buscar)), prompt: PROMPT_FORMALIZACAO, cego: CEGO_FORMALIZACAO, saida: SAIDA_FORMALIZACAO, reparo: REPARO_FORMALIZACAO, extrator: EXTRATOR, nuvem: nuvem?.modelo ?? null, sessao: porteiro ? 'exigida' : 'livre',
+            bases: locais.bases.map((b) => {
+              const c = conferidas.get(b.nome)
+              return { nome: b.nome, descricao: b.descricao, fatos: b.fatos.length, comRealidade: b.comRealidade, ...(c ? { consistente: c.consistente, ...(c.consistente === false ? { colidem: c.colidem } : {}) } : {}) }
+            }), basesRecusadas: locais.recusadas })
         } catch (e) {
           enviar(res, 200, { formato: 'cosmos-ollama-v1', estado: /não está instalado/.test((e as Error).message) ? 'sem-modelo' : 'indisponivel', modelo })
         }
@@ -295,14 +331,28 @@ export function criarControleOllama(opcoes: { modelo?: string; buscar?: typeof f
           const z3 = opcoes.conferidor
           if (!z3) throw new ErroOllama(503, 'indisponivel')
           const a = validarPedidoRealidade(await lerCorpo(req, 32768))
+          const base = a.base === undefined ? undefined : locais.bases.find((b) => b.nome === a.base)
+          if (a.base !== undefined && !base) throw new ErroOllama(404, 'invalido')
           await descarregarModeloOllama(modelo, opcoes.buscar).catch(() => undefined)
-          const r = await confrontarRealidade(async (vocabulario, ps, c) => {
+          const classificar: ClassificarComVocabulario = async (vocabulario, ps, c) => {
             const k = await z3.conferir({ vocabulario, premissas: ps, conclusao: c, classe: null })
             if (k.classeZ3) return k.classeZ3
             throw new Error(k.motivo || 'o Z3 não decidiu')
-          }, a, a.texto)
+          }
+          if (base) {
+            // a base inteira tem de ter modelo antes de servir de juiz: com uma contradição dentro, tudo seria "fato"
+            if (!consistencia.has(base.nome)) consistencia.set(base.nome, conferirConsistencia(classificar, base))
+            const c = await consistencia.get(base.nome)!
+            conferidas.set(base.nome, c)
+            if (c.consistente !== true) {
+              if (c.consistente === null) { consistencia.delete(base.nome); conferidas.delete(base.nome) } // o Z3 não decidiu: tenta de novo no próximo pedido
+              enviar(res, 409, { formato: 'cosmos-base-recusada-v1', base: base.nome, ...(c.consistente === false ? { colidem: c.colidem } : { motivo: c.motivo.slice(0, 300) }) })
+              return
+            }
+          }
+          const r = await confrontarRealidade(classificar, a, a.texto, base)
           if (encerrado) throw new ErroOllama(503, 'indisponivel')
-          enviar(res, 200, { formato: 'cosmos-realidade-v1', ...r })
+          enviar(res, 200, { formato: 'cosmos-realidade-v1', ...r, ...(base ? { base: { nome: base.nome, fatos: fatosCitados(r, base) } } : {}) })
           return
         }
         if (rota === 'ollama/conferir') {

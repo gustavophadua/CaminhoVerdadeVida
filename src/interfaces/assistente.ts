@@ -6,7 +6,7 @@ import type { Classe, Termo } from '../motor/avaliacao'
 import { objetoDaResposta, type Proposta } from '../motor/formalizacao'
 import { relatorioEmMarkdown, tituloDoVeredito, type RelatorioRevisor } from '../motor/revisor-relatorio'
 import type { Ligacao } from './ollama-cliente'
-import { fatoPorId, type ResultadoRealidade, type Situacao } from '../motor/realidade'
+import { fatoDoResultado, type ResultadoRealidade, type Situacao } from '../motor/realidade'
 import { modoRemoto } from './modo-remoto'
 
 export type Comando = 'verificar' | 'revisar' | 'desmistificar' | 'contrariar'
@@ -208,7 +208,7 @@ export interface ClienteIA {
   /** a ligação que falta num salto (ponte.ts); sem ela, o salto vem sem a proposta */
   ponte?(a: { vocabulario: Termo[]; premissas: string[]; conclusao: string; cenario: string[] }, signal?: AbortSignal): Promise<Ligacao>
   /** a camada de fatos (realidade.ts): cada frase diante da base de fatos físicos; sem ela, a resposta fica só na lógica */
-  realidade?(a: { vocabulario: Termo[]; premissas: string[]; conclusao: string; texto: { premissas: string[]; conclusao: string } }, signal?: AbortSignal): Promise<ResultadoRealidade>
+  realidade?(a: { vocabulario: Termo[]; premissas: string[]; conclusao: string; texto: { premissas: string[]; conclusao: string }; base?: string }, signal?: AbortSignal): Promise<ResultadoRealidade>
   estadoRevisao(signal?: AbortSignal): Promise<{ estado: string; fase?: string; feito?: number; total?: number; relatorio?: RelatorioRevisor; erro?: string }>
 }
 
@@ -224,11 +224,12 @@ function detalheDaFalha(e: unknown): string {
 /**
  * Executa um comando de IA. `ler` lê a proposta do modelo (lerProposta), `progresso` mostra a fase. Com `vocabulario`
  * (os termos corrigidos pela pessoa no cartão), a tradução usa só ele; com `nuvem`, quem traduz é o modelo grande no
- * Groq (a pessoa ligou; o texto sai do computador). Quem decide continua sendo o Z3, aqui.
+ * Groq (a pessoa ligou; o texto sai do computador). Quem decide continua sendo o Z3, aqui. Com `base`, a camada de fatos
+ * confere contra essa base local (bases.ts) em vez da realidade-v1.
  */
 export async function executar(cliente: ClienteIA, comando: Comando, texto: string, ler: (conteudo: string) => Proposta,
-  progresso: (msg: string) => void, esperar = (ms: number) => new Promise((r) => setTimeout(r, ms)), opcoes: { vocabulario?: Termo[]; nuvem?: boolean } = {}): Promise<ResultadoIA> {
-  const { vocabulario, nuvem } = opcoes
+  progresso: (msg: string) => void, esperar = (ms: number) => new Promise((r) => setTimeout(r, ms)), opcoes: { vocabulario?: Termo[]; nuvem?: boolean; base?: string } = {}): Promise<ResultadoIA> {
+  const { vocabulario, nuvem, base: baseDeFatos } = opcoes
   if (comando === 'revisar' || comando === 'desmistificar') {
     progresso('Separando afirmações e conclusões…')
     await cliente.revisar(texto)
@@ -276,7 +277,7 @@ export async function executar(cliente: ClienteIA, comando: Comando, texto: stri
   }
   if (comando === 'verificar' && c.classeZ3 && cliente.realidade) {
     progresso('Conferindo cada frase com os fatos registrados…')
-    try { base = { ...logica, realidade: await cliente.realidade({ vocabulario: proposta.vocabulario, premissas: proposta.premissas, conclusao: proposta.conclusao, texto: { premissas: t.premissas, conclusao: t.conclusao } }) } } catch { /* sem a camada de fatos, a resposta fica só na lógica */ }
+    try { base = { ...logica, realidade: await cliente.realidade({ vocabulario: proposta.vocabulario, premissas: proposta.premissas, conclusao: proposta.conclusao, texto: { premissas: t.premissas, conclusao: t.conclusao }, ...(baseDeFatos ? { base: baseDeFatos } : {}) }) } } catch { /* sem a camada de fatos, a resposta fica só na lógica */ }
   }
   if (comando === 'verificar' && c.classeZ3 === 'independente' && cliente.ponte) {
     // o salto: o que falta para a conclusão valer, proposto pelo modelo e conferido pelo Z3
@@ -325,8 +326,8 @@ export const CONCLUSAO_REAL: Record<Classe, string> = {
 }
 /** A camada de fatos em texto: para o cofre e para o relatório. */
 export function textoDaRealidade(r: ResultadoRealidade): string[] {
-  const fonte = (ids: string[]) => ids.length ? ` [${ids.map((id) => { const f = fatoPorId(id); return f ? `${id}: ${f.fonte.nome}` : id }).join('; ')}]` : ''
-  const l = ['A realidade registrada:']
+  const fonte = (ids: string[]) => ids.length ? ` [${ids.map((id) => { const f = fatoDoResultado(r, id); return f ? `${id}: ${f.fonte.nome}` : id }).join('; ')}]` : ''
+  const l = [r.base ? `A base de fatos ${r.base.nome}:` : 'A realidade registrada:']
   for (const a of r.alinhamentos) l.push(`- entendi: "${a.leituraDe}" = "${a.leituraPara}"`)
   for (const t of r.tipagens) l.push(`- entendi: ${t.leituraTipo}`)
   for (const f of r.frases) l.push(`- ${f.conclusao ? 'Conclusão' : 'Frase'} "${f.frase}": ${SITUACAO_REAL[f.situacao]}${fonte(f.fatos)}`)

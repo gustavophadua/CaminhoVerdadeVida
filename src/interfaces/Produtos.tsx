@@ -39,10 +39,13 @@ function TurnoIA({ turno, novo, progresso, aoRefazer, aoRelatar }: { turno: Turn
   </section>
 }
 
-type EstadoIA = { estado: 'conectando' } | { estado: 'fora'; local: boolean } | { estado: 'ligada'; modelo: string; nuvem?: string; exigeSessao: boolean }
+type EstadoIA = { estado: 'conectando' } | { estado: 'fora'; local: boolean } | { estado: 'ligada'; modelo: string; nuvem?: string; exigeSessao: boolean; bases?: { nome: string; descricao: string }[] }
 // a escolha do modelo grande na nuvem fica neste aparelho; começa desligada (o texto sai do computador quando liga)
 const NUVEM_ESCOLHIDA = 'cosmos:conversa:nuvem'
 const lerEscolhaNuvem = () => { try { return localStorage.getItem(NUVEM_ESCOLHIDA) === '1' } catch { return false } }
+// a base de fatos escolhida (bases locais do serviço); vazio = a realidade-v1
+const BASE_ESCOLHIDA = 'cosmos:conversa:base'
+const lerEscolhaBase = () => { try { return localStorage.getItem(BASE_ESCOLHIDA) ?? '' } catch { return '' } }
 const ENDERECO_LOCAL = 'http://127.0.0.1:4175/cosmos/#/i-ai'
 const useSessaoIA = () => useSyncExternalStore(observarSessaoIA, obterSessaoIA)
 
@@ -82,6 +85,10 @@ function IAI() {
   // no remoto a nuvem vem primeiro (rápida no telefone) e o modelo do computador fica de reserva; a escolha é só do local
   const [escolhaNuvem, setUsarNuvem] = useState(lerEscolhaNuvem), usarNuvem = remoto || escolhaNuvem
   const escolherNuvem = (sim: boolean) => { setUsarNuvem(sim); try { localStorage.setItem(NUVEM_ESCOLHIDA, sim ? '1' : '0') } catch { /* fica só nesta página */ } }
+  const [escolhaBase, setEscolhaBase] = useState(lerEscolhaBase)
+  const escolherBase = (nome: string) => { setEscolhaBase(nome); try { localStorage.setItem(BASE_ESCOLHIDA, nome) } catch { /* fica só nesta página */ } }
+  // só vale uma base que o serviço tem agora; senão, a realidade-v1
+  const baseDeFatos = ia.estado === 'ligada' && ia.bases?.some((b) => b.nome === escolhaBase) ? escolhaBase : ''
   const [andamento, setAndamento] = useState<{ id: number; pergunta: string; progresso: string } | null>(null), [, atualizar] = useState(0)
   const input = useRef<HTMLTextAreaElement>(null), rolagem = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -90,7 +97,8 @@ function IAI() {
     let parado = false, timer: ReturnType<typeof setTimeout> | undefined
     const tentar = () => void cliente.carregar().then((o) => {
       if (parado) return
-      if (o.estado === 'pronto') setIa({ estado: 'ligada', modelo: o.modelo, exigeSessao: o.sessao === 'exigida', ...(o.nuvem ? { nuvem: o.nuvem } : {}) })
+      if (o.estado === 'pronto') setIa({ estado: 'ligada', modelo: o.modelo, exigeSessao: o.sessao === 'exigida', ...(o.nuvem ? { nuvem: o.nuvem } : {}),
+        ...(o.bases?.length ? { bases: o.bases.map(({ nome, descricao }) => ({ nome, descricao })) } : {}) })
       else { setIa({ estado: 'fora', local: true }); timer = setTimeout(tentar, 8000) }
     }, () => { if (!parado) { setIa({ estado: 'fora', local: true }); timer = setTimeout(tentar, 8000) } })
     tentar()
@@ -173,7 +181,7 @@ function IAI() {
       setAndamento({ id, pergunta, progresso: 'Começando…' })
       let resposta: string, resultado: ResultadoIA | undefined
       try {
-        resultado = await executar(clienteIA()!, pedido.comando, pedido.texto, (c) => lerProposta(c, vocabulario ?? null), (progresso) => setAndamento(a => a && { ...a, progresso }), undefined, { vocabulario, nuvem: usarNuvem && ia.estado === 'ligada' && !!ia.nuvem })
+        resultado = await executar(clienteIA()!, pedido.comando, pedido.texto, (c) => lerProposta(c, vocabulario ?? null), (progresso) => setAndamento(a => a && { ...a, progresso }), undefined, { vocabulario, nuvem: usarNuvem && ia.estado === 'ligada' && !!ia.nuvem, ...(baseDeFatos ? { base: baseDeFatos } : {}) })
         resposta = resumoEmTexto(resultado)
       } catch (e) {
         const m = (e as Error).message
@@ -256,6 +264,11 @@ function IAI() {
             : <LigarComSenha />)}
           {ia.estado === 'ligada' && ia.nuvem && !remoto && <label className="iai-nuvem"><input type="checkbox" checked={usarNuvem} onChange={e => escolherNuvem(e.target.checked)} />
             <span>Traduzir com o modelo grande na nuvem ({ia.nuvem}, no Groq): o texto do argumento sai deste computador.<span className="iai-nuvem-detalhe"> Lê melhor frases abstratas; o Z3 decide aqui do mesmo jeito.</span></span></label>}
+          {ia.estado === 'ligada' && !!ia.bases?.length && <label className="iai-base"><span>Conferir os fatos contra</span>
+            <select value={baseDeFatos} onChange={e => escolherBase(e.target.value)} aria-label="Base de fatos">
+              <option value="">a realidade registrada (realidade-v1)</option>
+              {ia.bases.map((b) => <option key={b.nome} value={b.nome} title={b.descricao}>a base local {b.nome}</option>)}
+            </select></label>}
           <p className="iai-estado" data-estado={sessaoPronta ? 'ligada' : ia.estado}>{ia.estado === 'ligada' ? (remoto ? `Pelo seu computador: tradução ${ia.nuvem ? `na nuvem (${ia.nuvem}), com o ${ia.modelo} de reserva` : `pelo ${ia.modelo}`} · o Z3 decide lá`
               : usarNuvem && ia.nuvem ? `Tradução na nuvem (${ia.nuvem}) · o Z3 decide neste computador` : `IA local (${ia.modelo})${sessaoPronta ? ' ligada à sua conta' : ''} · o Z3 decide · o texto não sai deste computador`)
             : ia.estado === 'conectando' ? 'Conectando à IA local…'

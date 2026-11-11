@@ -16,7 +16,8 @@ let ponte, api, server, encerrando = false
 const opcaoOllama = process.argv.find(a => a === '--ollama' || a.startsWith('--ollama='))
 // a IA só atende a conta dona (privado/ia-dono.json, fora do Git); --novo-dono deixa a próxima conta que entrar virar a dona
 const sessao = { arquivoDono: 'privado/ia-dono.json', novoDono: process.argv.includes('--novo-dono') }
-const ollama = opcaoOllama ? { ...(opcaoOllama.includes('=') ? { modelo: opcaoOllama.slice(9) } : {}), sessao } : null
+// as bases locais de fatos (privado/bases/*.json, fora do Git): a Conversa pode conferir contra elas em vez da realidade-v1
+const ollama = opcaoOllama ? { ...(opcaoOllama.includes('=') ? { modelo: opcaoOllama.slice(9) } : {}), sessao, pastaBases: 'privado/bases' } : null
 async function encerrar() {
   if (encerrando) return
   encerrando = true

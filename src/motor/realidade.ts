@@ -37,6 +37,14 @@ export interface ResultadoRealidade {
   mecanismos: Mecanismo[]
   /** a conclusão diante dos fatos e do que a pessoa relatou de compatível com eles (null: não deu para decidir) */
   conclusaoComRelato: Classe | null
+  /** com uma base local (bases.ts): o nome dela e os fatos citados, com a fonte (os da realidade-v1 a interface já tem) */
+  base?: { nome: string; fatos: Fato[] }
+}
+
+/** Os fatos que o resultado cita (nas frases e nos caminhos), na ordem da base. */
+export function fatosCitados(r: ResultadoRealidade, base: Base): Fato[] {
+  const ids = new Set([...r.frases.flatMap((f) => f.fatos), ...r.mecanismos.flatMap((m) => m.caminhos.flatMap((c) => c.fatos))])
+  return base.fatos.filter((f) => ids.has(f.id))
 }
 
 const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -198,7 +206,12 @@ export function lerResultadoRealidade(x: unknown): x is ResultadoRealidade {
     && lista<Mecanismo>(o.mecanismos, (y) => texto(y.frase) && lista<{ formula: string; leitura: string }>(y.implica, (z) => texto(z.formula) && texto(z.leitura))
       && lista<Caminho>(y.caminhos, (z) => texto(z.condicao, 300) && texto(z.leitura) && texto(z.produz) && ids(z.fatos)))
     && (o.conclusaoComRelato === null || ['segue', 'contradiz', 'independente'].includes(o.conclusaoComRelato))
+    && (o.base === undefined || (!!o.base && typeof o.base === 'object' && typeof o.base.nome === 'string' && /^[a-z0-9][a-z0-9-]{0,39}$/.test(o.base.nome)
+      && lista<Fato>(o.base.fatos, (f) => texto(f.id, 10) && texto(f.enunciado) && texto(f.formula) && !!f.fonte && texto(f.fonte.nome, 300)
+        && (f.fonte.url === undefined || (texto(f.fonte.url, 500) && f.fonte.url.startsWith('https://'))), 120)))
 }
 
 /** Os fatos citados, com a fonte, para mostrar ao lado de cada frase. */
 export const fatoPorId = (id: string, base: Base = BASE_REAL) => base.fatos.find((f) => f.id === id)
+/** O fato citado num resultado: da base local que ele trouxe ou, sem ela, da realidade-v1. */
+export const fatoDoResultado = (r: ResultadoRealidade, id: string) => (r.base ? r.base.fatos.find((f) => f.id === id) : fatoPorId(id))

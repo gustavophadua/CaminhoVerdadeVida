@@ -4,14 +4,14 @@
 import { useState } from 'react'
 import { CONCLUSAO_REAL, PASSO_DA_CADEIA, SITUACAO_REAL, tituloNaoDecidido, COMANDOS, leituraComVariavel, notasDaLeitura, provadoSoNaFormaForte, simboloDaLeitura, TITULO_DA_CLASSE, TITULO_FORMA_FORTE, type Comando, type ResultadoIA } from './assistente'
 import type { Termo } from '../motor/avaliacao'
-import { fatoPorId, type ResultadoRealidade, type Situacao } from '../motor/realidade'
+import { fatoDoResultado, type ResultadoRealidade, type Situacao } from '../motor/realidade'
 
 /** A camada de fatos no cartão: cada frase diante dos fatos registrados, o mecanismo por trás do que foi observado e as fontes. */
 function RealidadeRegistrada({ r }: { r: ResultadoRealidade }) {
   const ids = [...new Set([...r.frases.flatMap((f) => f.fatos), ...r.mecanismos.flatMap((m) => m.caminhos.flatMap((c) => c.fatos))])]
   const marcar = (xs: string[]) => xs.length ? <small> ({xs.join(', ')})</small> : null
   return <div className="iai-realidade">
-    <p><b>A realidade registrada</b></p>
+    <p><b>{r.base ? `A base de fatos ${r.base.nome}` : 'A realidade registrada'}</b></p>
     {r.alinhamentos.map((a, i) => <small key={`a${i}`} className="iai-entendi">entendi: "{a.leituraDe}" = "{a.leituraPara}"</small>)}
     {r.tipagens.map((t, i) => <small key={`t${i}`} className="iai-entendi">entendi: {t.leituraTipo}</small>)}
     <ul>{r.frases.map((f, i) => <li key={i} data-situacao={f.situacao}>{f.conclusao ? 'Conclusão' : 'Frase'} "{f.frase}": <b>{SITUACAO_REAL[f.situacao]}</b>{marcar(f.fatos)}</li>)}</ul>
@@ -24,7 +24,7 @@ function RealidadeRegistrada({ r }: { r: ResultadoRealidade }) {
     </div>)}
     {r.conclusaoComRelato && <p className="iai-nota">{CONCLUSAO_REAL[r.conclusaoComRelato]}</p>}
     {ids.length > 0 && <details><summary>Os fatos usados e as fontes</summary><ul>{ids.map((id) => {
-      const f = fatoPorId(id)
+      const f = fatoDoResultado(r, id)
       return f && <li key={id}>{id}. {f.enunciado} {f.fonte.url ? <a href={f.fonte.url} target="_blank" rel="noreferrer noopener">{f.fonte.nome}</a> : <i>({f.fonte.nome})</i>}</li>
     })}</ul></details>}
     <small>O que está como relato ou visão não foi chutado nem descartado: os fatos registrados só não decidem. Fato aqui é o que está na base, com fonte.</small>

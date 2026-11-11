@@ -9,7 +9,15 @@ const relatorioValido = (r: unknown): r is RelatorioRevisor => typeof r === 'obj
 /** A ligação que falta: a fórmula, a leitura em português e as premissas que a conclusão ainda usa; ou o motivo de não achar. */
 export interface OpcaoLigacao { ponte: string; leitura: string; essenciais: number[] }
 export type Ligacao = { opcoes: OpcaoLigacao[]; fonte: 'busca' | 'modelo'; outras: number } | { opcoes: []; motivo: string }
-export interface EstadoOllama { estado: 'pronto' | 'sem-modelo' | 'indisponivel'; modelo: string; digest?: string; ollama?: string; nuvem?: string; sessao?: 'exigida' | 'livre' }
+/** Uma base local que o serviço leu (bases.ts); `consistente` só aparece depois do primeiro uso, quando o Z3 já conferiu. */
+export interface BaseLocalInfo { nome: string; descricao: string; fatos: number; comRealidade: boolean; consistente?: boolean | null; colidem?: string[] }
+export interface EstadoOllama { estado: 'pronto' | 'sem-modelo' | 'indisponivel'; modelo: string; digest?: string; ollama?: string; nuvem?: string; sessao?: 'exigida' | 'livre'; bases?: BaseLocalInfo[] }
+const baseLocalValida = (b: unknown): b is BaseLocalInfo => {
+  const o = b as BaseLocalInfo
+  return !!o && typeof o === 'object' && typeof o.nome === 'string' && /^[a-z0-9][a-z0-9-]{0,39}$/.test(o.nome) && typeof o.descricao === 'string' && o.descricao.length <= 500
+    && Number.isSafeInteger(o.fatos) && typeof o.comRealidade === 'boolean' && (o.consistente === undefined || o.consistente === null || typeof o.consistente === 'boolean')
+    && (o.colidem === undefined || (Array.isArray(o.colidem) && o.colidem.length <= 600 && o.colidem.every((i) => typeof i === 'string' && i.length <= 10)))
+}
 
 /**
  * A formalização pelo Ollama local, pela ponte do serviço local (rotas ollama/estado e ollama). O navegador manda só
@@ -43,7 +51,8 @@ export function criarClienteOllama(origem: string, buscar: typeof fetch = fetch,
       const o = await chamar('ollama/estado', undefined, 15000, signal)
       if (o.formato !== 'cosmos-ollama-v1' || !['pronto', 'sem-modelo', 'indisponivel'].includes(o.estado as string) || typeof o.modelo !== 'string') throw new ErroIntegracoes('invalido')
       return { estado: o.estado as EstadoOllama['estado'], modelo: o.modelo, ...(typeof o.digest === 'string' ? { digest: o.digest } : {}), ...(typeof o.ollama === 'string' ? { ollama: o.ollama } : {}),
-        ...(typeof o.nuvem === 'string' && o.nuvem.length <= 80 ? { nuvem: o.nuvem } : {}), ...(o.sessao === 'exigida' || o.sessao === 'livre' ? { sessao: o.sessao } : {}) }
+        ...(typeof o.nuvem === 'string' && o.nuvem.length <= 80 ? { nuvem: o.nuvem } : {}), ...(o.sessao === 'exigida' || o.sessao === 'livre' ? { sessao: o.sessao } : {}),
+        ...(Array.isArray(o.bases) && o.bases.length > 0 && o.bases.length <= 20 && o.bases.every(baseLocalValida) ? { bases: o.bases as BaseLocalInfo[] } : {}) }
     },
     /** Na CPU, uma proposta leva cerca de um minuto; o prazo aqui é o mesmo da ponte. */
     async formalizar(texto: { premissas: string[]; conclusao: string; vocabulario?: Termo[]; nuvem?: boolean }, signal?: AbortSignal) {
@@ -73,8 +82,10 @@ export function criarClienteOllama(origem: string, buscar: typeof fetch = fetch,
       throw new ErroIntegracoes('invalido')
     },
     /** A camada de fatos: o argumento traduzido diante da base de fatos físicos, decidido pelo Z3 (sem modelo). */
-    async realidade(a: { vocabulario: Termo[]; premissas: string[]; conclusao: string; texto: { premissas: string[]; conclusao: string } }, signal?: AbortSignal): Promise<ResultadoRealidade> {
-      const o = await chamar('ollama/realidade', a, 620000, signal)
+    async realidade(a: { vocabulario: Termo[]; premissas: string[]; conclusao: string; texto: { premissas: string[]; conclusao: string }; base?: string }, signal?: AbortSignal): Promise<ResultadoRealidade> {
+      // sem `base`, a realidade-v1; com ela, a base local desse nome (o serviço recusa base contraditória)
+      const { base, ...resto } = a
+      const o = await chamar('ollama/realidade', base ? { ...resto, base } : resto, 620000, signal)
       if (o.formato !== 'cosmos-realidade-v1') throw new ErroIntegracoes('invalido')
       const { formato: _f, ...r } = o
       if (!lerResultadoRealidade(r)) throw new ErroIntegracoes('invalido')

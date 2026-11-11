@@ -10,7 +10,7 @@ import { validarTextoFormalizacao, type ConferidorZ3, type PropostaParaConferir 
 import { criarClienteOllama } from '../src/interfaces/ollama-cliente'
 import { ESQUEMA_CONCLUSAO, ESQUEMA_PREMISSAS, lerProposta } from '../src/motor/formalizacao'
 import { assinarMensagemLocalTeste, criarCofreTeste } from '../src/v4/carteira'
-import { mkdtempSync } from 'node:fs'
+import { mkdtempSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
@@ -37,7 +37,7 @@ function ollamaFalso(rodando = true, chats: string[] = []) {
 }
 
 type Chamada = { rota: string; metodo?: string; corpo?: unknown; headers?: Record<string, string | undefined> }
-async function ambiente(fn: (c: { cliente: ReturnType<typeof criarClienteOllama>; chamar: (o: Chamada) => Promise<number>; pedidos: { url: string; corpo: unknown }[] }) => Promise<void>, o: { ligado?: boolean; rodando?: boolean; ttlSessaoMs?: number; conferidor?: ConferidorZ3; chats?: string[]; groq?: typeof fetch; sessao?: { arquivoDono: string }; token?: () => string | null; reservaLocal?: boolean } = {}) {
+async function ambiente(fn: (c: { cliente: ReturnType<typeof criarClienteOllama>; chamar: (o: Chamada) => Promise<number>; pedidos: { url: string; corpo: unknown }[] }) => Promise<void>, o: { ligado?: boolean; rodando?: boolean; ttlSessaoMs?: number; conferidor?: ConferidorZ3; chats?: string[]; groq?: typeof fetch; sessao?: { arquivoDono: string }; token?: () => string | null; reservaLocal?: boolean; pastaBases?: string } = {}) {
   let ponte: ReturnType<typeof criarPonteIntegracoes> | undefined
   const server = createServer((q, r) => ponte!.tratar(q, r))
   await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', resolve))
@@ -53,7 +53,7 @@ async function ambiente(fn: (c: { cliente: ReturnType<typeof criarClienteOllama>
   try {
     const endereco = await api.iniciar(), token = api.emitirSessaoLocal().token
     ponte = criarPonteIntegracoes({ origem, portaApi: endereco.porta, token, ...(o.groq ? { groq: { chave: () => 'chave-de-teste-123', buscar: o.groq } } : {}),
-      ...(o.ligado === false ? {} : { ollama: { buscar: falso.buscar, ...(o.conferidor ? { conferidor: o.conferidor } : {}), ...(o.sessao ? { sessao: o.sessao } : {}), ...(o.reservaLocal ? { reservaLocal: true } : {}) } }) })
+      ...(o.ligado === false ? {} : { ollama: { buscar: falso.buscar, ...(o.conferidor ? { conferidor: o.conferidor } : {}), ...(o.sessao ? { sessao: o.sessao } : {}), ...(o.reservaLocal ? { reservaLocal: true } : {}), ...(o.pastaBases ? { pastaBases: o.pastaBases } : {}) } }) })
     const browser: typeof fetch = (url, init) => fetch(url, { ...init, headers: { ...init?.headers, Origin: origem, 'Sec-Fetch-Site': 'same-origin' } })
     await fn({ cliente: criarClienteOllama(origem, browser, o.token), chamar, pedidos: falso.pedidos })
   } finally {
@@ -61,6 +61,34 @@ async function ambiente(fn: (c: { cliente: ReturnType<typeof criarClienteOllama>
     await new Promise<void>((resolve) => { server.close(() => resolve()); server.closeAllConnections() })
   }
 }
+
+describe('Bases locais de fatos na ponte', () => {
+  // o Z3 de mentira: premissas com a fórmula ruim são inconsistentes; o resto segue
+  const RUIM = '∀x (Macieira(x) ⟹ ¬Macieira(x))'
+  const conferidor: ConferidorZ3 = {
+    conferir: async (p: PropostaParaConferir) => p.premissas.includes(RUIM) ? { classeZ3: null, aceita: false, motivo: 'as premissas são inconsistentes' } : { classeZ3: 'segue', aceita: true, motivo: '' },
+    parar: () => undefined,
+  }
+  const base = (nome: string, fatos: { id: string; formula: string }[]) => JSON.stringify({ formato: 'cosmos-base-v1', nome, descricao: `base ${nome}`,
+    vocabulario: [{ simbolo: 'Macieira', tipo: 'predicado', aridade: 1, leitura: 'x é uma macieira', sinonimos: ['macieira'] }],
+    fatos: fatos.map((f) => ({ ...f, enunciado: `fato ${f.id}`, fonte: { nome: 'exemplo' } })) })
+  const pedido = { vocabulario: [{ simbolo: 'Mac', tipo: 'predicado' as const, aridade: 1, leitura: 'x é uma macieira' }], premissas: ['∃x (Mac(x))'], conclusao: '∃x (Mac(x))',
+    texto: { premissas: ['Há macieiras.'], conclusao: 'Logo, há macieiras.' } }
+
+  it('o estado lista as bases; a pedida responde com o nome dela; a desconhecida é 404; a contraditória é recusada (409) com o fato que colide', async () => {
+    const pasta = mkdtempSync(join(tmpdir(), 'cosmos-bases-ponte-'))
+    writeFileSync(join(pasta, 'pomar.json'), base('pomar', [{ id: 'P01', formula: '∃x (Macieira(x))' }]))
+    writeFileSync(join(pasta, 'contra.json'), base('contra', [{ id: 'C01', formula: '∃x (Macieira(x))' }, { id: 'C02', formula: RUIM }]))
+    await ambiente(async (c) => {
+      expect((await c.cliente.carregar()).bases?.map((b) => b.nome)).toEqual(['contra', 'pomar'])
+      expect((await c.cliente.realidade({ ...pedido, base: 'pomar' })).base?.nome).toBe('pomar')
+      expect((await c.cliente.realidade(pedido)).base).toBeUndefined()
+      expect(await c.chamar({ rota: 'ollama/realidade', metodo: 'POST', corpo: { ...pedido, base: 'nao-existe' } })).toBe(404)
+      expect(await c.chamar({ rota: 'ollama/realidade', metodo: 'POST', corpo: { ...pedido, base: 'contra' } })).toBe(409)
+      expect((await c.cliente.carregar()).bases?.find((b) => b.nome === 'contra')).toMatchObject({ consistente: false, colidem: ['C02'] })
+    }, { conferidor, pastaBases: pasta })
+  })
+})
 
 describe('Formalização pelo Ollama local na ponte', () => {
   it('estado com digest; a proposta sai com o pedido fixo, só para 127.0.0.1, e se lê', async () => ambiente(async (c) => {
