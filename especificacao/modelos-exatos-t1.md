@@ -1,5 +1,7 @@
 # Modelos exatos — formato modelo-exato-t1-v1
 
+**English:** [modelos-exatos-t1.en.md](modelos-exatos-t1.en.md)
+
 Este arquivo define o certificado de um `sat` com números: um modelo que se
 confere sem busca e sem ponto flutuante. Ele vale junto com `traducao-z3-t1.md`
 (a semântica, seção 2) e com `gramatica-m2.md` (a árvore expandida). Os `sat`

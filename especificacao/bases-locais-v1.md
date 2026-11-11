@@ -1,5 +1,7 @@
 # Bases locais v1: conferir contra uma base de fatos que a pessoa mantém
 
+**English:** [bases-locais-v1.en.md](bases-locais-v1.en.md)
+
 Versão `cosmos-base-v1`, 11/11/2026. Código: `src/motor/bases.ts`, a rota `ollama/realidade` em
 `src/integracoes/ollama-node.ts` e a escolha da base na Conversa (`src/interfaces/Produtos.tsx`). Testes:
 `testes/bases.test.ts`, `testes/bases-consistencia.test.ts` e `testes/integracoes-ollama.test.ts`.

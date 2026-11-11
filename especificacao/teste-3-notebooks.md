@@ -1,5 +1,7 @@
 # Roteiro — o teste dos três notebooks (Fase 3 e testes de rede G01–G06)
 
+**English:** [teste-3-notebooks.en.md](teste-3-notebooks.en.md)
+
 A Fase 3 fica pronta quando três computadores de verdade trocam as cadeias por arquivo e cada um acusa qualquer
 alteração. Este roteiro diz o que fazer em cada um e o que tem de acontecer. A simulação dele, num aparelho só, está em
 `testes/rede-g01-g06.test.ts`; ela mostra que o software responde como o roteiro espera, mas não substitui o teste.

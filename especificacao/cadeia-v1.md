@@ -1,5 +1,7 @@
 # Cadeias — formato cadeia-v1
 
+**English:** [cadeia-v1.en.md](cadeia-v1.en.md)
+
 A cadeia pessoal é a Fase 3 do plano: a sequência dos registros de uma pessoa
 (`registros-v1.md`), cada um preso ao anterior pelo resumo e assinado pela chave
 dela. Quem recebe uma cadeia por arquivo confere tudo sem confiar em quem

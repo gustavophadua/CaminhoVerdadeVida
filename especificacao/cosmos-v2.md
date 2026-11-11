@@ -1,5 +1,7 @@
 # Cosmos Provenance Ledger v2 — perfil local inicial
 
+**English:** [cosmos-v2.en.md](cosmos-v2.en.md)
+
 Estado: implementação local experimental. Nenhum commit/push/deploy ou publicação externa nesta entrega. F0–F8 v1 são preservadas byte a byte. A v2 não redefine suas fases.
 
 ## 1. Canonicalização

@@ -1,5 +1,7 @@
 # Formalização assistida v1 e o piloto sem treino
 
+**English:** [formalizacao-v1.en.md](formalizacao-v1.en.md)
+
 A primeira peça da I-AI que trabalha no Cosmos. Um modelo de linguagem **propõe** a formalização de frases curtas em
 m2; o Cosmos lê a proposta, recusa o que não se lê e a **lê de volta em português**, sem modelo; a pessoa aprova ou
 corrige; a verificação (Z3 e cvc5, Carcara) decide se a conclusão segue. O modelo não aprova nada nem decide nada.

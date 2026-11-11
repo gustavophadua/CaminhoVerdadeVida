@@ -1,5 +1,7 @@
 # Realidade v1: traduzir a realidade física para a lógica
 
+**English:** [realidade-v1.en.md](realidade-v1.en.md)
+
 Versão `realidade-v1`, 01/11/2026. Código: `src/motor/realidade.ts` e `src/dados/realidade-v1.ts`. Testes:
 `testes/realidade.test.ts` e `testes/assistente.test.ts`.
 

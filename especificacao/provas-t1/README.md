@@ -1,5 +1,7 @@
 # Certificados dos exemplos da t1 — versão c3
 
+**English:** [README.en.md](README.en.md)
+
 Esta pasta guarda, para os 42 exemplos normativos da tradução t1
 (`../traducao-z3-t1-exemplos.json`), o problema exato que o Caderno manda ao Z3;
 para os unsat, uma prova passo a passo no formato Alethe; para os sat sem

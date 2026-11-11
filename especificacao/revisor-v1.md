@@ -1,5 +1,7 @@
 # Revisor de planos v1: fato e visão
 
+**English:** [revisor-v1.en.md](revisor-v1.en.md)
+
 Estado em 29/10/2026: código e testes prontos (`src/motor/revisor.ts`, `testes/revisor.test.ts`, rota no serviço local,
 tela Labs → Revisar plano). **Ainda não medido com o modelo real**: o número de quanto o extrator acerta só sai do
 teste em planos reais conferidos à mão (§5). Até lá, nenhuma taxa de acerto do revisor pode ser afirmada.

@@ -1,5 +1,7 @@
 # Remoto v1: o Cosmos pelo telefone, com login
 
+**English:** [remoto-v1.en.md](remoto-v1.en.md)
+
 Versão `remoto-v1`, 02/11/2026. Código: `src/integracoes/remoto-node.ts`, `scripts/cosmos-remoto.mjs`,
 `src/interfaces/modo-remoto.ts`. Testes: `testes/remoto.test.ts` e o teste da reserva em `testes/integracoes-ollama.test.ts`.
 

@@ -1,5 +1,7 @@
 # Registros de exemplo — registro-v1
 
+**English:** [README.en.md](README.en.md)
+
 Esta pasta tem os registros de exemplo do formato aberto
 (`../registros-v1.md`), válidos e inválidos, com os arquivos dos certificados.
 São eles que uma conferência independente tem de ler e conferir.

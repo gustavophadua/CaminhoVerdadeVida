@@ -1,5 +1,7 @@
 # Lote cego 1 de registros — registro-v1
 
+**English:** [README.en.md](README.en.md)
+
 O primeiro lote cego do formato aberto (`../../registros-v1.md`): 62 registros
 novos, de L01 a L62, com teorias e fórmulas que não estão nos exemplos
 normativos. Há válidos e inválidos, embaralhados, e todos vêm escritos como

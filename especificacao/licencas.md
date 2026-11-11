@@ -1,5 +1,7 @@
 # Inventário de licenças
 
+**English:** [licencas.en.md](licencas.en.md)
+
 Conferência local de 30/10/2026, complementada em 31/10/2026, sem instalação. Inventário declarativo, não parecer jurídico. As entradas npm abaixo vêm dos metadados de `package-lock.json`; licença declarada não equivale a auditoria de cada arquivo distribuído. Pacotes opcionais de outras plataformas constam porque estão no lockfile.
 
 ## Peças principais

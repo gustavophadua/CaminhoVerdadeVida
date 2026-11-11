@@ -1,5 +1,7 @@
 # Proveniência do corpus de treino
 
+**English:** [proveniencia-treino.en.md](proveniencia-treino.en.md)
+
 Conferência de 30/10/2026. Origem: `scripts/gerar-frases.py`; exportador: `testes/exportar-treino.test.ts`.
 
 ## Contagens e unidade

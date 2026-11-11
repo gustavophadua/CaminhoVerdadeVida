@@ -1,5 +1,7 @@
 # Implementação independente da t1
 
+**English:** [README.en.md](README.en.md)
+
 Estes arquivos foram escritos pelo GPT, da OpenAI, a pedido do autor do Caderno,
 só pela especificação. O leitor da gramática m2 saiu de
 `especificacao/gramatica-m2.md` e do pacote de conformidade (rodadas 12 a 16); a

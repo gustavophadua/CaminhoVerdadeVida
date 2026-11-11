@@ -1,5 +1,7 @@
 # Tradução para o Z3 — versão t1
 
+**English:** [traducao-z3-t1.en.md](traducao-z3-t1.en.md)
+
 Este arquivo define como o Caderno Lógico leva as fórmulas ao Z3 e o que a
 resposta do Z3 quer dizer. Ele vale junto com `gramatica-m2.md`, de onde vem a
 árvore expandida (seção 5), e com `traducao-z3-t1-exemplos.json`, os exemplos

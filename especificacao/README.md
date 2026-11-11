@@ -1,5 +1,7 @@
 # Pacote de conformidade da gramática — versão m2
 
+**English:** [README.en.md](README.en.md)
+
 Este pacote permite escrever outro leitor de fórmulas do Caderno Lógico sem
 olhar o código do Caderno, e comparar os dois.
 

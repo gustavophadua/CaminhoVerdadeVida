@@ -1,5 +1,7 @@
 # Gramática das fórmulas do Caderno Lógico — versão semântica m2
 
+**English:** [gramatica-m2.en.md](gramatica-m2.en.md)
+
 Este arquivo define como um texto vira árvore no Caderno Lógico. Ele vale junto
 com três arquivos de dados, nesta mesma pasta:
 

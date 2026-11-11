@@ -1,5 +1,7 @@
 # Registros — formato registro-v1
 
+**English:** [registros-v1.en.md](registros-v1.en.md)
+
 O registro é a unidade do formato aberto (a Fase 2 do plano): uma afirmação
 sobre uma fórmula e uma teoria, com o que se sabe dela e com o certificado que
 a confere. Este arquivo vale junto com `gramatica-m2.md` (a leitura e a árvore

@@ -1,5 +1,7 @@
 # Roteiro — a moeda de teste nos três notebooks (cosmos-teste-1)
 
+**English:** [teste-moeda-3-notebooks.en.md](teste-moeda-3-notebooks.en.md)
+
 A rede de teste fica pronta quando os três computadores do teste da Fase 3 trocam unidades de teste por arquivo e
 cada um acusa gasto acima do saldo, gasto duplo e alteração. As regras estão em `especificacao/moeda-teste.md`; a
 simulação de cada uma, num aparelho só, em `testes/moeda-teste.test.ts` (M01–M10).

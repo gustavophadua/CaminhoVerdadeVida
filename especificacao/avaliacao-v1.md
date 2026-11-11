@@ -1,5 +1,7 @@
 # Avaliação v1 — formalizar frases curtas (conjunto fechado)
 
+**English:** [avaliacao-v1.en.md](avaliacao-v1.en.md)
+
 O piloto da I-AI mede uma tarefa só, escolhida pelo dono em 26/10/2026: ler frases curtas em português (todo, algum,
 nenhum, nem todo, se… então, só se, ou, não) e escrever a formalização em m2 com a classe da conclusão. Este documento
 diz o que é um item, como uma resposta é avaliada e por que o conjunto fica fechado. O código é

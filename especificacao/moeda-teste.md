@@ -1,5 +1,7 @@
 # Moeda de teste — regras recomendadas e decididas
 
+**English:** [moeda-teste.en.md](moeda-teste.en.md)
+
 Este documento reúne o que é recomendado para a moeda de teste do Cosmos, a partir do plano do estudo I-AI, do que a
 rede local de teste já faz (`src/v4/localnet.ts`) e de fontes públicas sobre testnets e sobre a regulação no Brasil.
 **Não é parecer jurídico.** O dono do projeto aceitou as recomendações em 25/10/2026 (seção Decisão); nada aqui emite moeda por si só.
