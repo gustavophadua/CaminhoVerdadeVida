@@ -69,5 +69,5 @@ O Todo 43 propõe estudar a unidade efetivamente independente quando as tentativ
 
 - SHA-256 do Todo 43, conferido nos bytes contra o `.sha256` do GPT: `f17e374a69eb0a624122a863b98c76a02c23b5c3804dcc7423e998219b2f6efd`.
 - SHA-256 da v24 desta série: `a21e506a8858ecdd036a2e1b14e1bbc8f6a173d3e3662499af506cc8dc19885a`.
-- Commit remoto de partida: `3bca34623bafbb52bdcfc51b21c277350b9f0dbc`, o relatório completo v5–v24. No momento desta rodada, o Todo 43 estava na pasta local do GPT, conferido pelo SHA, mas ainda não tinha sido enviado ao remoto.
+- Commit remoto de partida: `3bca34623bafbb52bdcfc51b21c277350b9f0dbc`, o relatório completo v5–v24, que já contém o Todo 43 (commit `6c134cb`).
 - O hash desta v25 está no arquivo `.sha256` ao lado.
