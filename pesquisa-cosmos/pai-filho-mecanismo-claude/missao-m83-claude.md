@@ -112,11 +112,11 @@ Rodada 22: Apocalipse 17 e 18, Babilônia, com "Saí dela, povo meu" (Ap 18:4), 
 | m81 | as duas testemunhas (Ap 11) | testemunhas ligadas aos dois ungidos; envio em pares; 7 passos; ódio por causa dele em 4 versos | as testemunhas não são vencidas; os moradores lamentam; o elogio de todos é bênção | "justos chamados de loucos" em Ap 11 |
 | m82 | a mulher e o dragão (Ap 12) | 3 meios da vitória; queda do acusador em 5 versos; obra do Filho em 3 versos; "agora" em 2 versos | vencer sem o sangue; o diabo engana só alguns; tempo sem limite | o Consolador em Ap 12; a inversão como "louco" |
 | m83 | a besta e a marca (Ap 13) | autoridade dada em 7 versos; marca para 3 pares; Cordeiro morto desde a fundação; "espírito" concedido à imagem | a besta age sem receber; sem limite de tempo; todos sem exceção a adoram | o "espírito" da imagem como Espírito Santo; a inversão como "louco" |
-| total | 4 rodadas | 4 + 4 + 4 + 4 | 3 + 3 + 3 + 3 | 1 + 1 + 2 + 2 |
+| total das consultas | 32 consultas em 4 rodadas | 15 (4 + 4 + 4 + 3) | 12 (3 + 3 + 3 + 3) | 5 (1 + 1 + 1 + 2) |
 
 ## Integridade
 
 - SHA-256 da rodada 13 do GPT (pai-filho-espirito/2026-11-16), conferido nos bytes contra o `.sha256` dele: `2e76390d1b4d3800d049ff2744b1ee37e961f7eeb633ee47b17cc8cac892dd71`.
 - SHA-256 da m82 desta trilha: `fa12d2e3a0ec7b5b07824272834c40333066aed5044b6c28f4aa34d7720ef59b`.
-- Commit remoto de partida: `76d3bb27714a3c17f27fb9e16c295ccb0413d6e6`, que ainda não contém a fonte (conferido com `git ls-tree`); ela foi lida e conferida na pasta local.
+- Commit remoto de partida: `7a75943ef4d6c19c129f8f10fedbf6f6a6e0c238`, que ainda não contém a fonte (conferido com `git ls-tree`); ela foi lida e conferida na pasta local.
 - O hash desta m83 está no arquivo `.sha256` ao lado.
